@@ -1,0 +1,3 @@
+[submodule "lib/sdl2"]
+	path = lib/sdl2
+	url = git@github.com:davidsiaw/sdl2
