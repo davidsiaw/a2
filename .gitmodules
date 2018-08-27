@@ -1,3 +1,15 @@
 [submodule "lib/sdl2"]
 	path = lib/sdl2
 	url = git@github.com:davidsiaw/sdl2
+[submodule "lib/sdl2_image"]
+	path = lib/sdl2_image
+	url = git@github.com:davidsiaw/sdl2_image
+[submodule "lib/sdl2_mixer"]
+	path = lib/sdl2_mixer
+	url = git@github.com:davidsiaw/sdl2_mixer
+[submodule "lib/sdl2_ttf"]
+	path = lib/sdl2_ttf
+	url = git@github.com:davidsiaw/sdl2_ttf
+[submodule "lib/glm"]
+	path = lib/glm
+	url = git@github.com:davidsiaw/glm

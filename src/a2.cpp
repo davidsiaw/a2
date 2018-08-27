@@ -3,15 +3,71 @@
 #endif
 
 #include <SDL.h>
+#include <SDL_image.h>
+
+typedef struct Sprite
+{
+	SDL_Texture* texture;
+	Uint16 w;
+	Uint16 h;
+} Sprite;
+
+
+Sprite LoadSprite(const char* file, SDL_Renderer* renderer)
+{
+	Sprite result;
+	result.texture = NULL;
+	result.w = 0;
+	result.h = 0;
+
+	SDL_Surface* temp;
+
+	/* Load the sprite image */
+	temp = IMG_Load(file);
+	if (temp == NULL)
+	{
+		fprintf(stderr, "Couldn't load %s: %s\n", file, SDL_GetError());
+		return result;
+	}
+	result.w = temp->w;
+	result.h = temp->h;
+
+	/* Create texture from the image */
+	result.texture = SDL_CreateTextureFromSurface(renderer, temp);
+	if (!result.texture) {
+		fprintf(stderr, "Couldn't create texture: %s\n", SDL_GetError());
+		SDL_FreeSurface(temp);
+		return result;
+	}
+	SDL_FreeSurface(temp);
+
+	return result;
+}
+
+void draw(SDL_Window *window, SDL_Renderer* renderer, const Sprite sprite)
+{
+	int w, h;
+
+	SDL_GetWindowSize(window, &w, &h);
+	SDL_Rect destRect = { w / 2 - sprite.w / 2, h / 2 - sprite.h / 2, sprite.w, sprite.h };
+	/* Blit the sprite onto the screen */
+	SDL_RenderCopy(renderer, sprite.texture, NULL, &destRect);
+}
 
 int main(int argc, char *argv[])
 {
 	SDL_Window *window;
 	SDL_Renderer *renderer;
 
+	IMG_Init(IMG_INIT_JPG | IMG_INIT_PNG | IMG_INIT_TIF | IMG_INIT_WEBP);
+
 	if (SDL_CreateWindowAndRenderer(1024, 768, 0, &window, &renderer) < 0)
 		exit(2);
-	
+
+	Sprite sprite = LoadSprite("sample.png", renderer);
+	if (sprite.texture == NULL)
+		exit(2);
+
 	/* Main render loop */
 	Uint8 done = 0;
 	SDL_Event event;
@@ -32,6 +88,7 @@ int main(int argc, char *argv[])
 		SDL_SetRenderDrawColor(renderer, 0x0F, 0x00, 0x00, 0xFF);
 		SDL_RenderClear(renderer);
 
+		draw(window, renderer, sprite);
 
 		/* Update the screen! */
 		SDL_RenderPresent(renderer);
