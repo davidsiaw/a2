@@ -19,8 +19,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{F8832FEC-C574-441F-8C6B-8D61881A7E1B}</ProjectGuid>
-    <RootNamespace>libpng</RootNamespace>
+    <ProjectGuid>{A2074F14-F05A-4F16-B60C-E6A4874F7096}</ProjectGuid>
+    <RootNamespace>libtiff</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -74,8 +74,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>..\..\lib\sdl2_image\external\libpng-1.6.32;..\..\lib\sdl2_image\external\zlib-1.2.11;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\lib\sdl2_image\external\tiff-4.0.8\libtiff\;..\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -83,8 +82,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>..\..\lib\sdl2_image\external\libpng-1.6.32;..\..\lib\sdl2_image\external\zlib-1.2.11;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\lib\sdl2_image\external\tiff-4.0.8\libtiff\;..\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -114,29 +112,49 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\lib\sdl2_image\external\zlib-1.2.11\contrib\vstudio\vc14\zlibvc.vcxproj">
-      <Project>{8fd826f8-3739-44e6-8cc8-997122e53b8d}</Project>
-    </ProjectReference>
+    <ClCompile Include="..\..\..\lib\sdl2_image\external\tiff-4.0.8\libtiff\tif_aux.c" />
+    <ClCompile Include="..\..\..\lib\sdl2_image\external\tiff-4.0.8\libtiff\tif_close.c" />
+    <ClCompile Include="..\..\..\lib\sdl2_image\external\tiff-4.0.8\libtiff\tif_codec.c" />
+    <ClCompile Include="..\..\..\lib\sdl2_image\external\tiff-4.0.8\libtiff\tif_color.c" />
+    <ClCompile Include="..\..\..\lib\sdl2_image\external\tiff-4.0.8\libtiff\tif_compress.c" />
+    <ClCompile Include="..\..\..\lib\sdl2_image\external\tiff-4.0.8\libtiff\tif_dir.c" />
+    <ClCompile Include="..\..\..\lib\sdl2_image\external\tiff-4.0.8\libtiff\tif_dirinfo.c" />
+    <ClCompile Include="..\..\..\lib\sdl2_image\external\tiff-4.0.8\libtiff\tif_dirread.c" />
+    <ClCompile Include="..\..\..\lib\sdl2_image\external\tiff-4.0.8\libtiff\tif_dirwrite.c" />
+    <ClCompile Include="..\..\..\lib\sdl2_image\external\tiff-4.0.8\libtiff\tif_dumpmode.c" />
+    <ClCompile Include="..\..\..\lib\sdl2_image\external\tiff-4.0.8\libtiff\tif_error.c" />
+    <ClCompile Include="..\..\..\lib\sdl2_image\external\tiff-4.0.8\libtiff\tif_extension.c" />
+    <ClCompile Include="..\..\..\lib\sdl2_image\external\tiff-4.0.8\libtiff\tif_fax3.c" />
+    <ClCompile Include="..\..\..\lib\sdl2_image\external\tiff-4.0.8\libtiff\tif_fax3sm.c" />
+    <ClCompile Include="..\..\..\lib\sdl2_image\external\tiff-4.0.8\libtiff\tif_flush.c" />
+    <ClCompile Include="..\..\..\lib\sdl2_image\external\tiff-4.0.8\libtiff\tif_getimage.c" />
+    <ClCompile Include="..\..\..\lib\sdl2_image\external\tiff-4.0.8\libtiff\tif_jbig.c" />
+    <ClCompile Include="..\..\..\lib\sdl2_image\external\tiff-4.0.8\libtiff\tif_jpeg.c" />
+    <ClCompile Include="..\..\..\lib\sdl2_image\external\tiff-4.0.8\libtiff\tif_jpeg_12.c" />
+    <ClCompile Include="..\..\..\lib\sdl2_image\external\tiff-4.0.8\libtiff\tif_luv.c" />
+    <ClCompile Include="..\..\..\lib\sdl2_image\external\tiff-4.0.8\libtiff\tif_lzma.c" />
+    <ClCompile Include="..\..\..\lib\sdl2_image\external\tiff-4.0.8\libtiff\tif_lzw.c" />
+    <ClCompile Include="..\..\..\lib\sdl2_image\external\tiff-4.0.8\libtiff\tif_next.c" />
+    <ClCompile Include="..\..\..\lib\sdl2_image\external\tiff-4.0.8\libtiff\tif_ojpeg.c" />
+    <ClCompile Include="..\..\..\lib\sdl2_image\external\tiff-4.0.8\libtiff\tif_open.c" />
+    <ClCompile Include="..\..\..\lib\sdl2_image\external\tiff-4.0.8\libtiff\tif_packbits.c" />
+    <ClCompile Include="..\..\..\lib\sdl2_image\external\tiff-4.0.8\libtiff\tif_pixarlog.c" />
+    <ClCompile Include="..\..\..\lib\sdl2_image\external\tiff-4.0.8\libtiff\tif_predict.c" />
+    <ClCompile Include="..\..\..\lib\sdl2_image\external\tiff-4.0.8\libtiff\tif_print.c" />
+    <ClCompile Include="..\..\..\lib\sdl2_image\external\tiff-4.0.8\libtiff\tif_read.c" />
+    <ClCompile Include="..\..\..\lib\sdl2_image\external\tiff-4.0.8\libtiff\tif_strip.c" />
+    <ClCompile Include="..\..\..\lib\sdl2_image\external\tiff-4.0.8\libtiff\tif_swab.c" />
+    <ClCompile Include="..\..\..\lib\sdl2_image\external\tiff-4.0.8\libtiff\tif_thunder.c" />
+    <ClCompile Include="..\..\..\lib\sdl2_image\external\tiff-4.0.8\libtiff\tif_tile.c" />
+    <ClCompile Include="..\..\..\lib\sdl2_image\external\tiff-4.0.8\libtiff\tif_version.c" />
+    <ClCompile Include="..\..\..\lib\sdl2_image\external\tiff-4.0.8\libtiff\tif_warning.c" />
+    <ClCompile Include="..\..\..\lib\sdl2_image\external\tiff-4.0.8\libtiff\tif_win32.c" />
+    <ClCompile Include="..\..\..\lib\sdl2_image\external\tiff-4.0.8\libtiff\tif_write.c" />
+    <ClCompile Include="..\..\..\lib\sdl2_image\external\tiff-4.0.8\libtiff\tif_zip.c" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\lib\sdl2_image\external\libpng-1.6.32\png.c" />
-    <ClCompile Include="..\..\lib\sdl2_image\external\libpng-1.6.32\pngerror.c" />
-    <ClCompile Include="..\..\lib\sdl2_image\external\libpng-1.6.32\pngget.c" />
-    <ClCompile Include="..\..\lib\sdl2_image\external\libpng-1.6.32\pngmem.c" />
-    <ClCompile Include="..\..\lib\sdl2_image\external\libpng-1.6.32\pngpread.c" />
-    <ClCompile Include="..\..\lib\sdl2_image\external\libpng-1.6.32\pngread.c" />
-    <ClCompile Include="..\..\lib\sdl2_image\external\libpng-1.6.32\pngrio.c" />
-    <ClCompile Include="..\..\lib\sdl2_image\external\libpng-1.6.32\pngrtran.c" />
-    <ClCompile Include="..\..\lib\sdl2_image\external\libpng-1.6.32\pngrutil.c" />
-    <ClCompile Include="..\..\lib\sdl2_image\external\libpng-1.6.32\pngset.c" />
-    <ClCompile Include="..\..\lib\sdl2_image\external\libpng-1.6.32\pngtrans.c" />
-    <ClCompile Include="..\..\lib\sdl2_image\external\libpng-1.6.32\pngwio.c" />
-    <ClCompile Include="..\..\lib\sdl2_image\external\libpng-1.6.32\pngwrite.c" />
-    <ClCompile Include="..\..\lib\sdl2_image\external\libpng-1.6.32\pngwtran.c" />
-    <ClCompile Include="..\..\lib\sdl2_image\external\libpng-1.6.32\pngwutil.c" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\lib\sdl2_image\external\libpng-1.6.32\png.h" />
+    <ClInclude Include="..\config\tiffconf.h" />
+    <ClInclude Include="..\config\tif_config.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

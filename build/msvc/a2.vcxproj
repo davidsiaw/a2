@@ -89,7 +89,7 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>..\..\lib\sdl2\include;.\;..\..\lib\sdl2_image;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\lib\sdl2\include;.\;..\..\lib\sdl2_image;..\..\lib\sdl2_mixer;..\..\lib\sdl2_ttf;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -107,7 +107,7 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>..\..\lib\sdl2\include;.\;..\..\lib\sdl2_image;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\lib\sdl2\include;.\;..\..\lib\sdl2_image;..\..\lib\sdl2_mixer;..\..\lib\sdl2_ttf;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -174,16 +174,37 @@
     <ProjectReference Include="..\..\lib\sdl2_image\VisualC\SDL_image.vcxproj">
       <Project>{2bd5534e-00e2-4bea-ac96-d9a92ea24696}</Project>
     </ProjectReference>
-    <ProjectReference Include="libjpeg.vcxproj">
+    <ProjectReference Include="..\..\lib\sdl2_mixer\external\flac-1.3.2\src\libFLAC\libFLAC_static.vcxproj">
+      <Project>{4cefbc84-c215-11db-8314-0800200c9a66}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\lib\sdl2_mixer\external\libogg-1.3.2\win32\VS2010\libogg_static.vcxproj">
+      <Project>{15cbfeff-7965-41f5-b4e2-21e8795c9159}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\lib\sdl2_mixer\external\mpg123-1.25.6\ports\MSVC++\2015\win32\libmpg123\libmpg123.vcxproj">
+      <Project>{67caa87b-7cf1-4f93-bb67-21c513f40803}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\lib\sdl2_mixer\external\opus-1.0.3\src\opus.vcxproj">
+      <Project>{219ec965-228a-1824-174d-96449d05f88a}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\lib\sdl2_mixer\VisualC\SDL_mixer.vcxproj">
+      <Project>{f7e944b3-0815-40cd-b3e4-90b2a15b0e33}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\lib\sdl2_ttf\external\freetype-2.4.12\builds\win32\vc2010\freetype.vcxproj">
+      <Project>{78b079bd-9fc7-4b9e-b4a6-96da0f00248b}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\lib\sdl2_ttf\VisualC\SDL_ttf.vcxproj">
+      <Project>{dddbd07d-dc76-4af6-8d02-3e2deb6ee255}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libjpeg\libjpeg.vcxproj">
       <Project>{b5aaad5e-b63e-4ff3-aca0-2562319dbe31}</Project>
     </ProjectReference>
-    <ProjectReference Include="libpng.vcxproj">
+    <ProjectReference Include="libpng\libpng.vcxproj">
       <Project>{f8832fec-c574-441f-8c6b-8d61881a7e1b}</Project>
     </ProjectReference>
-    <ProjectReference Include="libtiff.vcxproj">
+    <ProjectReference Include="libtiff\libtiff.vcxproj">
       <Project>{a2074f14-f05a-4f16-b60c-e6a4874f7096}</Project>
     </ProjectReference>
-    <ProjectReference Include="libwebpdecode.vcxproj">
+    <ProjectReference Include="libwebpdecode\libwebpdecode.vcxproj">
       <Project>{6d03a7bf-323c-4802-9061-2b01b13887ef}</Project>
     </ProjectReference>
   </ItemGroup>

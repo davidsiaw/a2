@@ -19,8 +19,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{A2074F14-F05A-4F16-B60C-E6A4874F7096}</ProjectGuid>
-    <RootNamespace>libtiff</RootNamespace>
+    <ProjectGuid>{B5AAAD5E-B63E-4FF3-ACA0-2562319DBE31}</ProjectGuid>
+    <RootNamespace>libjpeg</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -74,7 +74,8 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>..\..\lib\sdl2_image\external\tiff-4.0.8\libtiff\;config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\lib\sdl2_image\external\jpeg-9b;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -82,7 +83,8 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>..\..\lib\sdl2_image\external\tiff-4.0.8\libtiff\;config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\lib\sdl2_image\external\jpeg-9b;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -112,49 +114,52 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\lib\sdl2_image\external\tiff-4.0.8\libtiff\tif_aux.c" />
-    <ClCompile Include="..\..\lib\sdl2_image\external\tiff-4.0.8\libtiff\tif_close.c" />
-    <ClCompile Include="..\..\lib\sdl2_image\external\tiff-4.0.8\libtiff\tif_codec.c" />
-    <ClCompile Include="..\..\lib\sdl2_image\external\tiff-4.0.8\libtiff\tif_color.c" />
-    <ClCompile Include="..\..\lib\sdl2_image\external\tiff-4.0.8\libtiff\tif_compress.c" />
-    <ClCompile Include="..\..\lib\sdl2_image\external\tiff-4.0.8\libtiff\tif_dir.c" />
-    <ClCompile Include="..\..\lib\sdl2_image\external\tiff-4.0.8\libtiff\tif_dirinfo.c" />
-    <ClCompile Include="..\..\lib\sdl2_image\external\tiff-4.0.8\libtiff\tif_dirread.c" />
-    <ClCompile Include="..\..\lib\sdl2_image\external\tiff-4.0.8\libtiff\tif_dirwrite.c" />
-    <ClCompile Include="..\..\lib\sdl2_image\external\tiff-4.0.8\libtiff\tif_dumpmode.c" />
-    <ClCompile Include="..\..\lib\sdl2_image\external\tiff-4.0.8\libtiff\tif_error.c" />
-    <ClCompile Include="..\..\lib\sdl2_image\external\tiff-4.0.8\libtiff\tif_extension.c" />
-    <ClCompile Include="..\..\lib\sdl2_image\external\tiff-4.0.8\libtiff\tif_fax3.c" />
-    <ClCompile Include="..\..\lib\sdl2_image\external\tiff-4.0.8\libtiff\tif_fax3sm.c" />
-    <ClCompile Include="..\..\lib\sdl2_image\external\tiff-4.0.8\libtiff\tif_flush.c" />
-    <ClCompile Include="..\..\lib\sdl2_image\external\tiff-4.0.8\libtiff\tif_getimage.c" />
-    <ClCompile Include="..\..\lib\sdl2_image\external\tiff-4.0.8\libtiff\tif_jbig.c" />
-    <ClCompile Include="..\..\lib\sdl2_image\external\tiff-4.0.8\libtiff\tif_jpeg.c" />
-    <ClCompile Include="..\..\lib\sdl2_image\external\tiff-4.0.8\libtiff\tif_jpeg_12.c" />
-    <ClCompile Include="..\..\lib\sdl2_image\external\tiff-4.0.8\libtiff\tif_luv.c" />
-    <ClCompile Include="..\..\lib\sdl2_image\external\tiff-4.0.8\libtiff\tif_lzma.c" />
-    <ClCompile Include="..\..\lib\sdl2_image\external\tiff-4.0.8\libtiff\tif_lzw.c" />
-    <ClCompile Include="..\..\lib\sdl2_image\external\tiff-4.0.8\libtiff\tif_next.c" />
-    <ClCompile Include="..\..\lib\sdl2_image\external\tiff-4.0.8\libtiff\tif_ojpeg.c" />
-    <ClCompile Include="..\..\lib\sdl2_image\external\tiff-4.0.8\libtiff\tif_open.c" />
-    <ClCompile Include="..\..\lib\sdl2_image\external\tiff-4.0.8\libtiff\tif_packbits.c" />
-    <ClCompile Include="..\..\lib\sdl2_image\external\tiff-4.0.8\libtiff\tif_pixarlog.c" />
-    <ClCompile Include="..\..\lib\sdl2_image\external\tiff-4.0.8\libtiff\tif_predict.c" />
-    <ClCompile Include="..\..\lib\sdl2_image\external\tiff-4.0.8\libtiff\tif_print.c" />
-    <ClCompile Include="..\..\lib\sdl2_image\external\tiff-4.0.8\libtiff\tif_read.c" />
-    <ClCompile Include="..\..\lib\sdl2_image\external\tiff-4.0.8\libtiff\tif_strip.c" />
-    <ClCompile Include="..\..\lib\sdl2_image\external\tiff-4.0.8\libtiff\tif_swab.c" />
-    <ClCompile Include="..\..\lib\sdl2_image\external\tiff-4.0.8\libtiff\tif_thunder.c" />
-    <ClCompile Include="..\..\lib\sdl2_image\external\tiff-4.0.8\libtiff\tif_tile.c" />
-    <ClCompile Include="..\..\lib\sdl2_image\external\tiff-4.0.8\libtiff\tif_version.c" />
-    <ClCompile Include="..\..\lib\sdl2_image\external\tiff-4.0.8\libtiff\tif_warning.c" />
-    <ClCompile Include="..\..\lib\sdl2_image\external\tiff-4.0.8\libtiff\tif_win32.c" />
-    <ClCompile Include="..\..\lib\sdl2_image\external\tiff-4.0.8\libtiff\tif_write.c" />
-    <ClCompile Include="..\..\lib\sdl2_image\external\tiff-4.0.8\libtiff\tif_zip.c" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="config\tiffconf.h" />
-    <ClInclude Include="config\tif_config.h" />
+    <ClCompile Include="..\..\..\lib\sdl2_image\external\jpeg-9b\jaricom.c" />
+    <ClCompile Include="..\..\..\lib\sdl2_image\external\jpeg-9b\jcapimin.c" />
+    <ClCompile Include="..\..\..\lib\sdl2_image\external\jpeg-9b\jcapistd.c" />
+    <ClCompile Include="..\..\..\lib\sdl2_image\external\jpeg-9b\jcarith.c" />
+    <ClCompile Include="..\..\..\lib\sdl2_image\external\jpeg-9b\jccoefct.c" />
+    <ClCompile Include="..\..\..\lib\sdl2_image\external\jpeg-9b\jccolor.c" />
+    <ClCompile Include="..\..\..\lib\sdl2_image\external\jpeg-9b\jcdctmgr.c" />
+    <ClCompile Include="..\..\..\lib\sdl2_image\external\jpeg-9b\jchuff.c" />
+    <ClCompile Include="..\..\..\lib\sdl2_image\external\jpeg-9b\jcinit.c" />
+    <ClCompile Include="..\..\..\lib\sdl2_image\external\jpeg-9b\jcmainct.c" />
+    <ClCompile Include="..\..\..\lib\sdl2_image\external\jpeg-9b\jcmarker.c" />
+    <ClCompile Include="..\..\..\lib\sdl2_image\external\jpeg-9b\jcmaster.c" />
+    <ClCompile Include="..\..\..\lib\sdl2_image\external\jpeg-9b\jcomapi.c" />
+    <ClCompile Include="..\..\..\lib\sdl2_image\external\jpeg-9b\jcparam.c" />
+    <ClCompile Include="..\..\..\lib\sdl2_image\external\jpeg-9b\jcprepct.c" />
+    <ClCompile Include="..\..\..\lib\sdl2_image\external\jpeg-9b\jcsample.c" />
+    <ClCompile Include="..\..\..\lib\sdl2_image\external\jpeg-9b\jctrans.c" />
+    <ClCompile Include="..\..\..\lib\sdl2_image\external\jpeg-9b\jdapimin.c" />
+    <ClCompile Include="..\..\..\lib\sdl2_image\external\jpeg-9b\jdapistd.c" />
+    <ClCompile Include="..\..\..\lib\sdl2_image\external\jpeg-9b\jdarith.c" />
+    <ClCompile Include="..\..\..\lib\sdl2_image\external\jpeg-9b\jdatadst.c" />
+    <ClCompile Include="..\..\..\lib\sdl2_image\external\jpeg-9b\jdatasrc.c" />
+    <ClCompile Include="..\..\..\lib\sdl2_image\external\jpeg-9b\jdcoefct.c" />
+    <ClCompile Include="..\..\..\lib\sdl2_image\external\jpeg-9b\jdcolor.c" />
+    <ClCompile Include="..\..\..\lib\sdl2_image\external\jpeg-9b\jddctmgr.c" />
+    <ClCompile Include="..\..\..\lib\sdl2_image\external\jpeg-9b\jdhuff.c" />
+    <ClCompile Include="..\..\..\lib\sdl2_image\external\jpeg-9b\jdinput.c" />
+    <ClCompile Include="..\..\..\lib\sdl2_image\external\jpeg-9b\jdmainct.c" />
+    <ClCompile Include="..\..\..\lib\sdl2_image\external\jpeg-9b\jdmarker.c" />
+    <ClCompile Include="..\..\..\lib\sdl2_image\external\jpeg-9b\jdmaster.c" />
+    <ClCompile Include="..\..\..\lib\sdl2_image\external\jpeg-9b\jdmerge.c" />
+    <ClCompile Include="..\..\..\lib\sdl2_image\external\jpeg-9b\jdpostct.c" />
+    <ClCompile Include="..\..\..\lib\sdl2_image\external\jpeg-9b\jdsample.c" />
+    <ClCompile Include="..\..\..\lib\sdl2_image\external\jpeg-9b\jdtrans.c" />
+    <ClCompile Include="..\..\..\lib\sdl2_image\external\jpeg-9b\jerror.c" />
+    <ClCompile Include="..\..\..\lib\sdl2_image\external\jpeg-9b\jfdctflt.c" />
+    <ClCompile Include="..\..\..\lib\sdl2_image\external\jpeg-9b\jfdctfst.c" />
+    <ClCompile Include="..\..\..\lib\sdl2_image\external\jpeg-9b\jfdctint.c" />
+    <ClCompile Include="..\..\..\lib\sdl2_image\external\jpeg-9b\jidctflt.c" />
+    <ClCompile Include="..\..\..\lib\sdl2_image\external\jpeg-9b\jidctfst.c" />
+    <ClCompile Include="..\..\..\lib\sdl2_image\external\jpeg-9b\jidctint.c" />
+    <ClCompile Include="..\..\..\lib\sdl2_image\external\jpeg-9b\jmemmgr.c" />
+    <ClCompile Include="..\..\..\lib\sdl2_image\external\jpeg-9b\jmemnobs.c" />
+    <ClCompile Include="..\..\..\lib\sdl2_image\external\jpeg-9b\jquant1.c" />
+    <ClCompile Include="..\..\..\lib\sdl2_image\external\jpeg-9b\jquant2.c" />
+    <ClCompile Include="..\..\..\lib\sdl2_image\external\jpeg-9b\jutils.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

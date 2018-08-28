@@ -15,54 +15,54 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\lib\sdl2_image\external\libpng-1.6.32\png.c">
+    <ClCompile Include="..\..\..\lib\sdl2_image\external\libpng-1.6.32\png.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\lib\sdl2_image\external\libpng-1.6.32\pngerror.c">
+    <ClCompile Include="..\..\..\lib\sdl2_image\external\libpng-1.6.32\pngerror.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\lib\sdl2_image\external\libpng-1.6.32\pngget.c">
+    <ClCompile Include="..\..\..\lib\sdl2_image\external\libpng-1.6.32\pngget.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\lib\sdl2_image\external\libpng-1.6.32\pngmem.c">
+    <ClCompile Include="..\..\..\lib\sdl2_image\external\libpng-1.6.32\pngmem.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\lib\sdl2_image\external\libpng-1.6.32\pngpread.c">
+    <ClCompile Include="..\..\..\lib\sdl2_image\external\libpng-1.6.32\pngpread.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\lib\sdl2_image\external\libpng-1.6.32\pngread.c">
+    <ClCompile Include="..\..\..\lib\sdl2_image\external\libpng-1.6.32\pngread.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\lib\sdl2_image\external\libpng-1.6.32\pngrio.c">
+    <ClCompile Include="..\..\..\lib\sdl2_image\external\libpng-1.6.32\pngrio.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\lib\sdl2_image\external\libpng-1.6.32\pngrtran.c">
+    <ClCompile Include="..\..\..\lib\sdl2_image\external\libpng-1.6.32\pngrtran.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\lib\sdl2_image\external\libpng-1.6.32\pngrutil.c">
+    <ClCompile Include="..\..\..\lib\sdl2_image\external\libpng-1.6.32\pngrutil.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\lib\sdl2_image\external\libpng-1.6.32\pngset.c">
+    <ClCompile Include="..\..\..\lib\sdl2_image\external\libpng-1.6.32\pngset.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\lib\sdl2_image\external\libpng-1.6.32\pngtrans.c">
+    <ClCompile Include="..\..\..\lib\sdl2_image\external\libpng-1.6.32\pngtrans.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\lib\sdl2_image\external\libpng-1.6.32\pngwio.c">
+    <ClCompile Include="..\..\..\lib\sdl2_image\external\libpng-1.6.32\pngwio.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\lib\sdl2_image\external\libpng-1.6.32\pngwrite.c">
+    <ClCompile Include="..\..\..\lib\sdl2_image\external\libpng-1.6.32\pngwrite.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\lib\sdl2_image\external\libpng-1.6.32\pngwtran.c">
+    <ClCompile Include="..\..\..\lib\sdl2_image\external\libpng-1.6.32\pngwtran.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\lib\sdl2_image\external\libpng-1.6.32\pngwutil.c">
+    <ClCompile Include="..\..\..\lib\sdl2_image\external\libpng-1.6.32\pngwutil.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\lib\sdl2_image\external\libpng-1.6.32\png.h">
+    <ClInclude Include="..\..\..\lib\sdl2_image\external\libpng-1.6.32\png.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
