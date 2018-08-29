@@ -96,7 +96,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>
       </AdditionalLibraryDirectories>
-      <AdditionalDependencies>ole32.lib;oleaut32.lib;imm32.lib;winmm.lib;version.lib;setupapi.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;uuid.lib;odbc32.lib;odbccp32.lib;ws2_32.lib;..\..\lib\mruby\$(Configuration)_$(Platform)_build\host\lib\libmruby.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>ole32.lib;oleaut32.lib;imm32.lib;winmm.lib;version.lib;setupapi.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;uuid.lib;odbc32.lib;odbccp32.lib;ws2_32.lib;..\..\lib\mruby\$(Configuration)_$(Platform)_build\host-debug\lib\libmruby.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PreLinkEvent>
       <Command>cd ..\..\lib\mruby &amp;&amp; ruby ..\build_mruby.rb "$(Configuration)" "$(Platform)"</Command>
@@ -121,7 +121,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>
       </AdditionalLibraryDirectories>
-      <AdditionalDependencies>ole32.lib;oleaut32.lib;imm32.lib;winmm.lib;version.lib;setupapi.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;uuid.lib;odbc32.lib;odbccp32.lib;ws2_32.lib;..\..\lib\mruby\$(Configuration)_$(Platform)_build\host\lib\libmruby.lib;..\..\lib\sdl2_image\external\zlib-1.2.11\contrib\vstudio\vc14\x64\ZlibDllDebug\zlibwapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>ole32.lib;oleaut32.lib;imm32.lib;winmm.lib;version.lib;setupapi.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;uuid.lib;odbc32.lib;odbccp32.lib;ws2_32.lib;..\..\lib\mruby\$(Configuration)_$(Platform)_build\host-debug\lib\libmruby.lib;..\..\lib\sdl2_image\external\zlib-1.2.11\contrib\vstudio\vc14\x64\ZlibDllDebug\zlibwapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PreLinkEvent>
       <Command>cd ..\..\lib\mruby &amp;&amp; ruby ..\build_mruby.rb "$(Configuration)" "$(Platform)"</Command>
