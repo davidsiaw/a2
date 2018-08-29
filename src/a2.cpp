@@ -6,6 +6,9 @@
 #include <SDL_image.h>
 #include <SDL_mixer.h>
 #include <SDL_ttf.h>
+#include <mruby.h>
+#include <mruby/compile.h>
+#include <mruby/variable.h>
 
 typedef struct Sprite
 {
@@ -56,8 +59,19 @@ void draw(SDL_Window *window, SDL_Renderer* renderer, const Sprite sprite)
 	SDL_RenderCopy(renderer, sprite.texture, NULL, &destRect);
 }
 
+
 int main(int argc, char *argv[])
 {
+	mrb_state *mrb = mrb_open();
+	mrb_load_string(mrb, "p 'hello world!'; $s = self; width = 1024;");
+	mrb_sym selfsym = mrb_intern_lit(mrb, "$s");
+	mrb_sym sym = mrb_intern_lit(mrb, "width");
+	mrb_value self = mrb_gv_get(mrb, selfsym);
+	mrb_value v = mrb_f_global_variables(mrb, self);
+
+	auto a = mrb_funcall(mrb, self, "width", 0);
+
+
 	SDL_Window *window;
 	SDL_Renderer *renderer;
 
