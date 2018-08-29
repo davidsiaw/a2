@@ -179,11 +179,67 @@
     </PreLinkEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\src\block.hpp" />
+    <ClInclude Include="..\..\src\bomb.hpp" />
+    <ClInclude Include="..\..\src\bonus.hpp" />
+    <ClInclude Include="..\..\src\compositescene.hpp" />
+    <ClInclude Include="..\..\src\computer.hpp" />
+    <ClInclude Include="..\..\src\constants_game.hpp" />
+    <ClInclude Include="..\..\src\constants_input.hpp" />
+    <ClInclude Include="..\..\src\constants_resolution.hpp" />
+    <ClInclude Include="..\..\src\corpse.hpp" />
+    <ClInclude Include="..\..\src\entity.hpp" />
+    <ClInclude Include="..\..\src\entityptr.hpp" />
+    <ClInclude Include="..\..\src\explosion.hpp" />
+    <ClInclude Include="..\..\src\fadescene.hpp" />
+    <ClInclude Include="..\..\src\floortile.hpp" />
+    <ClInclude Include="..\..\src\gamescene.hpp" />
+    <ClInclude Include="..\..\src\inputstate.hpp" />
+    <ClInclude Include="..\..\src\map.hpp" />
+    <ClInclude Include="..\..\src\menuscene.hpp" />
+    <ClInclude Include="..\..\src\player.hpp" />
+    <ClInclude Include="..\..\src\printlog.hpp" />
+    <ClInclude Include="..\..\src\propbomb.hpp" />
+    <ClInclude Include="..\..\src\propexplosion.hpp" />
+    <ClInclude Include="..\..\src\sceneresult.hpp" />
+    <ClInclude Include="..\..\src\scene_interface.hpp" />
+    <ClInclude Include="..\..\src\scriptapi.hpp" />
+    <ClInclude Include="..\..\src\setupscene.hpp" />
+    <ClInclude Include="..\..\src\softblock.hpp" />
+    <ClInclude Include="..\..\src\touchscreenkeyscene.hpp" />
+    <ClInclude Include="..\..\src\umpire.hpp" />
+    <ClInclude Include="..\..\src\utils.hpp" />
+    <ClInclude Include="..\..\src\victoryscene.hpp" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\src\a2.cpp" />
+    <ClCompile Include="..\..\src\block.cpp" />
+    <ClCompile Include="..\..\src\bomb.cpp" />
+    <ClCompile Include="..\..\src\bonus.cpp" />
+    <ClCompile Include="..\..\src\compositescene.cpp" />
+    <ClCompile Include="..\..\src\computer.cpp" />
+    <ClCompile Include="..\..\src\corpse.cpp" />
+    <ClCompile Include="..\..\src\entity.cpp" />
+    <ClCompile Include="..\..\src\explosion.cpp" />
+    <ClCompile Include="..\..\src\fadescene.cpp" />
+    <ClCompile Include="..\..\src\floortile.cpp" />
+    <ClCompile Include="..\..\src\gamescene.cpp" />
+    <ClCompile Include="..\..\src\inputstate.cpp" />
+    <ClCompile Include="..\..\src\main.cpp" />
+    <ClCompile Include="..\..\src\map.cpp" />
+    <ClCompile Include="..\..\src\menuscene.cpp" />
+    <ClCompile Include="..\..\src\player.cpp" />
+    <ClCompile Include="..\..\src\printlog.cpp" />
+    <ClCompile Include="..\..\src\propbomb.cpp" />
+    <ClCompile Include="..\..\src\propexplosion.cpp" />
+    <ClCompile Include="..\..\src\scriptapi.cpp" />
+    <ClCompile Include="..\..\src\setupscene.cpp" />
+    <ClCompile Include="..\..\src\softblock.cpp" />
+    <ClCompile Include="..\..\src\touchscreenkeyscene.cpp" />
+    <ClCompile Include="..\..\src\umpire.cpp" />
+    <ClCompile Include="..\..\src\utils.cpp" />
+    <ClCompile Include="..\..\src\victoryscene.cpp" />
     <ClCompile Include="stdafx.cpp" />
   </ItemGroup>
   <ItemGroup>
