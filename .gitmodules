@@ -16,3 +16,6 @@
 [submodule "lib/mruby"]
 	path = lib/mruby
 	url = https://github.com/mruby/mruby
+[submodule "lib/glew"]
+	path = lib/glew
+	url = git@github.com:davidsiaw/glew
