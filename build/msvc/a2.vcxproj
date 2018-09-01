@@ -179,11 +179,15 @@
     </PreLinkEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\src\initexception.hpp" />
+    <ClInclude Include="..\..\src\mruby.hpp" />
+    <ClInclude Include="..\..\src\sdlwrappers.hpp" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\a2.cpp" />
+    <ClCompile Include="..\..\src\initexception.cpp" />
     <ClCompile Include="stdafx.cpp" />
   </ItemGroup>
   <ItemGroup>

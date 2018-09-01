@@ -7,8 +7,25 @@
 
 #include "targetver.h"
 
+// stdlibs
+
 #include <cstdio>
 #include <cstdlib>
 #include <tchar.h>
+#include <string>
+#include <exception>
+#include <sstream>
+#include <functional>
+#include <algorithm>
 
-// TODO: reference additional headers your program requires here
+// libs
+
+#include <SDL.h>
+#include <SDL_image.h>
+#include <SDL_mixer.h>
+#include <SDL_ttf.h>
+#include <mruby.h>
+#include <mruby/compile.h>
+#include <mruby/variable.h>
+
+// local hpp

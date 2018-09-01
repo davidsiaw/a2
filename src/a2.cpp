@@ -2,13 +2,8 @@
 #include <stdafx.h>
 #endif
 
-#include <SDL.h>
-#include <SDL_image.h>
-#include <SDL_mixer.h>
-#include <SDL_ttf.h>
-#include <mruby.h>
-#include <mruby/compile.h>
-#include <mruby/variable.h>
+#include "mruby.hpp"
+#include "sdlwrappers.hpp"
 
 typedef struct Sprite
 {
@@ -59,43 +54,70 @@ void draw(SDL_Window *window, SDL_Renderer* renderer, const Sprite sprite)
 	SDL_RenderCopy(renderer, sprite.texture, NULL, &destRect);
 }
 
+mrb_value hello(mrb_state* mrb, mrb_value self)
+{
+	mrb_value* args;
+	int narg;
+	mrb_get_args(mrb, "*", &args, &narg);
+	return mrb_fixnum_value(5);
+}
+
+void hellow()
+{
+	SDL_Log("hello\n");
+}
+
 
 int main(int argc, char *argv[])
 {
-	mrb_state *mrb = mrb_open();
-	mrb_load_string(mrb, "p 'hello world!'; $s = self; width = 1024;");
-	mrb_sym selfsym = mrb_intern_lit(mrb, "$s");
-	mrb_sym sym = mrb_intern_lit(mrb, "width");
-	mrb_value self = mrb_gv_get(mrb, selfsym);
-	mrb_value v = mrb_f_global_variables(mrb, self);
+	SDL sdl;
+	SDLImage sdlImage;
+	SDLMixer sdlMixer;
+	SDLTTF sdlTTF;
 
-	auto a = mrb_funcall(mrb, self, "width", 0);
+	MRuby mruby;
+
+	int a = adder(2, 3, 4, 5, 6.0l, 2.0f);
+
+	//mruby.set_function("hellow", hellow);
+
+	int* x = new int();
+	auto play = mruby.create_module("Play");
+	play->create_module("Meow");
+	auto play2= mruby.get_module("Play");
+
+
+	mruby.set_class_variable("@width", "haha");
+	mruby.run("p @width");
+
+	mruby.run("p Play");
+	mruby.run("p Play::Meow");
+	
+
+	//mrb_state *mrb = mrb_open();
+	//mrb_sym hello_name_s = mrb_intern_cstr(mrb, "hello");
+	//mrb_value env[] = {
+	//	mrb_cptr_value(mrb, (void*)hello),  // 0: c function pointer
+	//	mrb_symbol_value(hello_name_s),          // 1: function name
+	//};
+	//RProc* hello_proc = mrb_proc_new_cfunc_with_env(mrb, hello, 2, env);
+	//auto kernelmod = mrb->kernel_module;
+	//mrb_method_t p;
+	//MRB_METHOD_FROM_PROC(p, hello_proc);
+	//mrb_define_method_raw(mrb, kernelmod, hello_name_s, p);
+	//
+	//mrb_load_string(mrb, "p 'hello world!'; $s = hello(5,3); width = 1024;");
+	//mrb_sym selfsym = mrb_intern_lit(mrb, "$s");
+	//mrb_value self = mrb_gv_get(mrb, selfsym);
+
 
 
 	SDL_Window *window;
 	SDL_Renderer *renderer;
 
-	if (SDL_Init(SDL_INIT_VIDEO | SDL_INIT_AUDIO) != 0) {
-		SDL_Log("Unable to initialize SDL: %s", SDL_GetError());
-		return 1;
-	}
-
-	IMG_Init(IMG_INIT_JPG | IMG_INIT_PNG | IMG_INIT_TIF | IMG_INIT_WEBP);
-	Mix_Init(MIX_INIT_FLAC | MIX_INIT_MOD  | MIX_INIT_MP3 | MIX_INIT_OGG | MIX_INIT_OPUS | MIX_INIT_MID);
 
 	if (SDL_CreateWindowAndRenderer(1024, 768, 0, &window, &renderer) < 0)
 	{
-		exit(2);
-	}
-
-	if (Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 1024) == -1)
-	{
-		printf("Mix_OpenAudio: %s\n", Mix_GetError());
-		exit(2);
-	}
-
-	if (TTF_Init() == -1) {
-		printf("TTF_Init: %s\n", TTF_GetError());
 		exit(2);
 	}
 
