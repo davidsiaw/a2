@@ -54,10 +54,32 @@ void draw(SDL_Window *window, SDL_Renderer* renderer, const Sprite sprite)
 	SDL_RenderCopy(renderer, sprite.texture, NULL, &destRect);
 }
 
-int aa(int a, int b, int c)
+void aa(int a, int b, int c)
 {
 	printf("%d %d %d\n", a, b, c);
-	return 100;
+}
+
+int ab(int a, int b, int c)
+{
+	printf("%d %d %d\n", a, b, c);
+	return a + b + c;
+}
+
+int abb(int a, int b, int c)
+{
+	printf("%d %d %d\n", a, b, c);
+	return a - b + c;
+}
+
+int ac()
+{
+	printf("le empty\n");
+	return 102;
+}
+
+void ad(int)
+{
+	printf("la empty\n");
 }
 
 class Cat
@@ -86,9 +108,17 @@ int main(int argc, char *argv[])
 		mruby.run("p @cat");
 
 		mruby.create_function("aa", aa);
+		mruby.create_function("ab", ab);
+		mruby.create_function("abb", abb);
+		mruby.create_function("ac", ac);
+		mruby.create_function("ad", ad);
 
 
 		mruby.run("p aa 5, 7, 8");
+		mruby.run("p ab 5, 7, 8");
+		mruby.run("p abb 5, 7, 8");
+		mruby.run("p ac");
+		mruby.run("p ad");
 
 		mruby.set_class_variable("@width", "haha");
 
