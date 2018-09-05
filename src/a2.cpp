@@ -54,71 +54,16 @@ void draw(SDL_Window *window, SDL_Renderer* renderer, const Sprite sprite)
 	SDL_RenderCopy(renderer, sprite.texture, NULL, &destRect);
 }
 
-mrb_value hello(mrb_state* mrb, mrb_value self)
-{
-	mrb_value* args;
-	int narg;
-	mrb_get_args(mrb, "*", &args, &narg);
-	return mrb_fixnum_value(5);
-}
-
-void hellow()
-{
-	SDL_Log("hello\n");
-}
-
-template<typename T, typename... Args>
-T adder(T first, Args... args) {
-	return add(first, args...);
-}
-
-template<typename T>
-T adder(T first) {
-	return first;
-}
-
-template<typename Fn, Fn fn, typename... Args>
-typename std::result_of<Fn(Args...)>::type MRubyFunction(Args&&... args) {
-	return fn(std::forward<Args>(args)...);
-}
-
-std::function<void()> arg_adder(std::function<void()> fun)
-{
-	return fun;
-}
-
-template<typename TArgHead, typename... TArgTail>
-typename std::function<void(TArgTail...)> arg_adder(std::function<void(TArgHead, TArgTail...)> fun, TArgHead h, TArgTail... args)
-{
-}
-
-template<typename TRet, typename... TArgs>
-class LeFun {
-	std::function<TRet(TArgs...)> func;
-public:
-	LeFun(std::function<TRet(TArgs...)> func) : func(func)
-	{
-	}
-
-	void testcall()
-	{
-	}
-
-};
-
-template<typename TRet, typename... TArgs>
-static typename LeFun<typename TRet, typename TArgs...> make(std::function<TRet(TArgs...)> func)
-{
-	return typename LeFun<TRet, TArgs...>(func);
-}
-
 int aa(int a, int b, int c)
 {
 	printf("%d %d %d\n", a, b, c);
 	return 100;
 }
 
+class Cat
+{
 
+};
 
 int main(int argc, char *argv[])
 {
@@ -132,15 +77,18 @@ int main(int argc, char *argv[])
 
 		//mruby.set_function("hellow", hellow);
 
-		int* x = new int();
 		auto play = mruby.create_module("Play");
 		play->create_module("Meow");
 		auto play2 = mruby.get_module("Play");
 
-		auto a = mruby.create_function(hello);
+		auto cat = mruby.create_class<Cat>("Cat");
+		mruby.run("@cat = Cat.new");
+		mruby.run("p @cat");
 
-		auto cat = mruby.create_class("Cat");
-		mruby.run("p Cat.new");
+		mruby.create_function("aa", aa);
+
+
+		mruby.run("p aa 5, 7, 8");
 
 		mruby.set_class_variable("@width", "haha");
 
