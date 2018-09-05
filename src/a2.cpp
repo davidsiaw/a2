@@ -67,6 +67,58 @@ void hellow()
 	SDL_Log("hello\n");
 }
 
+template<typename T, typename... Args>
+T adder(T first, Args... args) {
+	return add(first, args...);
+}
+
+template<typename T>
+T adder(T first) {
+	return first;
+}
+
+template<typename Fn, Fn fn, typename... Args>
+typename std::result_of<Fn(Args...)>::type MRubyFunction(Args&&... args) {
+	return fn(std::forward<Args>(args)...);
+}
+
+std::function<void()> arg_adder(std::function<void()> fun)
+{
+	return fun;
+}
+
+template<typename TArgHead, typename... TArgTail>
+typename std::function<void(TArgTail...)> arg_adder(std::function<void(TArgHead, TArgTail...)> fun, TArgHead h, TArgTail... args)
+{
+}
+
+template<typename TRet, typename... TArgs>
+class LeFun {
+	std::function<TRet(TArgs...)> func;
+public:
+	LeFun(std::function<TRet(TArgs...)> func) : func(func)
+	{
+	}
+
+	void testcall()
+	{
+	}
+
+};
+
+template<typename TRet, typename... TArgs>
+static typename LeFun<typename TRet, typename TArgs...> make(std::function<TRet(TArgs...)> func)
+{
+	return typename LeFun<TRet, TArgs...>(func);
+}
+
+int aa(int a, int b, int c)
+{
+	printf("%d %d %d\n", a, b, c);
+	return 100;
+}
+
+
 
 int main(int argc, char *argv[])
 {
@@ -75,23 +127,31 @@ int main(int argc, char *argv[])
 	SDLMixer sdlMixer;
 	SDLTTF sdlTTF;
 
-	MRuby mruby;
+	{
+		MRuby mruby;
 
-	int a = adder(2, 3, 4, 5, 6.0l, 2.0f);
+		//mruby.set_function("hellow", hellow);
 
-	//mruby.set_function("hellow", hellow);
+		int* x = new int();
+		auto play = mruby.create_module("Play");
+		play->create_module("Meow");
+		auto play2 = mruby.get_module("Play");
 
-	int* x = new int();
-	auto play = mruby.create_module("Play");
-	play->create_module("Meow");
-	auto play2= mruby.get_module("Play");
+		auto a = mruby.create_function(hello);
 
+		auto cat = mruby.create_class("Cat");
+		mruby.run("p Cat.new");
 
-	mruby.set_class_variable("@width", "haha");
-	mruby.run("p @width");
+		mruby.set_class_variable("@width", "haha");
 
-	mruby.run("p Play");
-	mruby.run("p Play::Meow");
+		mruby.run("p @width");
+
+		mruby.run("p Play");
+		mruby.run("p Play::Meow");
+	}
+
+	printf("s\n");
+	
 	
 
 	//mrb_state *mrb = mrb_open();
