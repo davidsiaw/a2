@@ -19,3 +19,6 @@
 [submodule "lib/glew"]
 	path = lib/glew
 	url = git@github.com:davidsiaw/glew
+[submodule "lib/mruby-cpp"]
+	path = lib/mruby-cpp
+	url = git@github.com:davidsiaw/mruby-cpp

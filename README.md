@@ -2,6 +2,12 @@
 
 Spiritual successor to Aldebaran
 
+# Getting the code
+
+```
+git clone https://github.com/davidsiaw/a2 --recursive
+```
+
 # Building
 
 ## MSVC
