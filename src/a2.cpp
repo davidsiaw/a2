@@ -84,7 +84,23 @@ void ad(int)
 
 class Cat
 {
-
+public:
+	Cat()
+	{
+		printf("cat live\n");
+	}
+	~Cat()
+	{
+		printf("cat die\n");
+	}
+	void meow()
+	{
+		printf("cat meow\n");
+	}
+	static void sss()
+	{
+		printf("cat sss\n");
+	}
 };
 
 int main(int argc, char *argv[])
@@ -104,14 +120,19 @@ int main(int argc, char *argv[])
 		auto play2 = mruby.get_module("Play");
 
 		auto cat = mruby.create_class<Cat>("Cat");
+		cat->bind_instance_method("meow", &Cat::meow);
+		cat->bind_method("sss", &Cat::sss);
+
 		mruby.run("@cat = Cat.new");
 		mruby.run("p @cat");
+		mruby.run("p Cat.sss");
+		mruby.run("p @cat.meow");
 
-		mruby.create_function("aa", aa);
-		mruby.create_function("ab", ab);
-		mruby.create_function("abb", abb);
-		mruby.create_function("ac", ac);
-		mruby.create_function("ad", ad);
+		mruby.bind_method("aa", aa);
+		mruby.bind_method("ab", ab);
+		mruby.bind_method("abb", abb);
+		mruby.bind_method("ac", ac);
+		mruby.bind_method("ad", ad);
 
 
 		mruby.run("p aa 5, 7, 8");
