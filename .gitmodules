@@ -22,3 +22,6 @@
 [submodule "lib/mruby-cpp"]
 	path = lib/mruby-cpp
 	url = git@github.com:davidsiaw/mruby-cpp
+[submodule "lib/sdl2_gfx"]
+	path = lib/sdl2_gfx
+	url = git@github.com:davidsiaw/sdl2_gfx

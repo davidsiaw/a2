@@ -92,7 +92,7 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;GLEW_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>..\..\lib\sdl2\include;.\;..\..\lib\sdl2_image;..\..\lib\sdl2_mixer;..\..\lib\sdl2_ttf;..\..\lib\glm;..\..\lib\mruby\include;..\..\lib\glew\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\lib\sdl2\include;.\;..\..\lib\sdl2_image;..\..\lib\sdl2_mixer;..\..\lib\sdl2_ttf;..\..\lib\glm;..\..\lib\mruby\include;..\..\lib\glew\include;..\..\lib\sdl2_gfx;..\..\lib\mruby-cpp</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -117,7 +117,7 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;GLEW_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>..\..\lib\sdl2\include;.\;..\..\lib\sdl2_image;..\..\lib\sdl2_mixer;..\..\lib\sdl2_ttf;..\..\lib\glm;..\..\lib\mruby\include;..\..\lib\glew\include;..\..\lib\mruby-cpp;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\lib\sdl2\include;.\;..\..\lib\sdl2_image;..\..\lib\sdl2_mixer;..\..\lib\sdl2_ttf;..\..\lib\glm;..\..\lib\mruby\include;..\..\lib\glew\include;..\..\lib\sdl2_gfx;..\..\lib\mruby-cpp</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -140,7 +140,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>..\..\lib\sdl2\include;.\;..\..\lib\sdl2_image;..\..\lib\sdl2_mixer;..\..\lib\sdl2_ttf;..\..\lib\glm;..\..\lib\mruby\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\lib\sdl2\include;.\;..\..\lib\sdl2_image;..\..\lib\sdl2_mixer;..\..\lib\sdl2_ttf;..\..\lib\glm;..\..\lib\mruby\include;..\..\lib\glew\include;..\..\lib\sdl2_gfx</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -164,7 +164,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>..\..\lib\sdl2\include;.\;..\..\lib\sdl2_image;..\..\lib\sdl2_mixer;..\..\lib\sdl2_ttf;..\..\lib\glm;..\..\lib\mruby\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\lib\sdl2\include;.\;..\..\lib\sdl2_image;..\..\lib\sdl2_mixer;..\..\lib\sdl2_ttf;..\..\lib\glm;..\..\lib\mruby\include;..\..\lib\glew\include;..\..\lib\sdl2_gfx</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -180,6 +180,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="..\..\lib\mruby-cpp\mruby.hpp" />
+    <ClInclude Include="..\..\lib\mruby-cpp\mrubyclass.hpp" />
+    <ClInclude Include="..\..\lib\mruby-cpp\mrubydefines.hpp" />
+    <ClInclude Include="..\..\lib\mruby-cpp\mrubyexception.hpp" />
+    <ClInclude Include="..\..\lib\mruby-cpp\mrubyfunctional.hpp" />
+    <ClInclude Include="..\..\lib\mruby-cpp\mrubymodule.hpp" />
+    <ClInclude Include="..\..\lib\mruby-cpp\mrubynativeobject.hpp" />
+    <ClInclude Include="..\..\lib\mruby-cpp\mrubytypebinder.hpp" />
+    <ClInclude Include="..\..\lib\mruby-cpp\mrubyvm.hpp" />
     <ClInclude Include="..\..\src\initexception.hpp" />
     <ClInclude Include="..\..\src\sdlwrappers.hpp" />
     <ClInclude Include="stdafx.h" />
@@ -199,6 +207,9 @@
     </ProjectReference>
     <ProjectReference Include="..\..\lib\sdl2\VisualC\SDL\SDL.vcxproj">
       <Project>{81ce8daf-ebb2-4761-8e45-b71abcca8c68}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\lib\sdl2_gfx\SDL2_gfx.vcxproj">
+      <Project>{ae22efd3-6e6d-48c0-af3d-ef190406bedc}</Project>
     </ProjectReference>
     <ProjectReference Include="..\..\lib\sdl2_image\external\zlib-1.2.11\contrib\vstudio\vc14\zlibvc.vcxproj">
       <Project>{8fd826f8-3739-44e6-8cc8-997122e53b8d}</Project>
@@ -224,8 +235,14 @@
     <ProjectReference Include="..\..\lib\sdl2_mixer\external\opus-1.0.3\src\opus.vcxproj">
       <Project>{219ec965-228a-1824-174d-96449d05f88a}</Project>
     </ProjectReference>
+    <ProjectReference Include="..\..\lib\sdl2_mixer\VisualC\native_midi\native_midi.vcxproj">
+      <Project>{ebda67ca-4a23-4f22-bfbc-b8dbe0580d4f}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\..\lib\sdl2_mixer\VisualC\SDL_mixer.vcxproj">
       <Project>{f7e944b3-0815-40cd-b3e4-90b2a15b0e33}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\lib\sdl2_mixer\VisualC\timidity\timidity.vcxproj">
+      <Project>{b162b6f1-e876-4d5f-a1f6-e3a6dc2f4a2c}</Project>
     </ProjectReference>
     <ProjectReference Include="..\..\lib\sdl2_ttf\external\freetype-2.4.12\builds\win32\vc2010\freetype.vcxproj">
       <Project>{78b079bd-9fc7-4b9e-b4a6-96da0f00248b}</Project>
@@ -247,6 +264,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\..\lib\mruby\build_config.rb" />
+    <None Include="..\..\lib\mruby\mrbgems\default.gembox" />
     <None Include="..\..\README.md" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -154,92 +154,30 @@ void testruby()
 int main(int argc, char *argv[])
 {
 	mruby::VM mrvm;
-	SDL sdl;
-	SDLImage sdlImage;
-	SDLMixer sdlMixer;
-	SDLTTF sdlTTF;
 
+	auto sdl = std::make_shared<SDL>(1024, 768);
+	
 	mrvm.run_file("main.rb");
 
-	SDL_Window *window;
-	SDL_Renderer *renderer;
+	auto font = sdl->LoadFont("sample.ttf");
+	auto text = font->DrawString("鼻血のハローdesu", 16, Color::Black());
+	auto image = sdl->LoadImage("sample.webp");
+	auto music = sdl->LoadMusic("sample.mp3");
 
+	music->Play();
 
-	if (SDL_CreateWindowAndRenderer(1024, 768, 0, &window, &renderer) < 0)
+	sdl->Images[0] = sdl->CenteredImage(image);
+	sdl->Images[1] = sdl->CenteredImage(text);
+
+	sdl->StartEventLoop([&](SDL_Event event)->bool 
 	{
-		exit(2);
-	}
-
-	// load font.ttf at size 16 into font
-	TTF_Font *font;
-	font = TTF_OpenFont("sample.ttf", 16);
-	if (!font) {
-		printf("TTF_OpenFont: %s\n", TTF_GetError());
-		// handle error
-	}
-
-	SDL_Color color = { 0,0,0 };
-	SDL_Surface *text_surface;
-
-
-	if (!(text_surface = TTF_RenderUTF8_Blended(font, "鼻血のハローdesu", color))) {
-		printf("TTF_RenderUNICODE_Solid: %s\n", TTF_GetError());
-	}
-	printf("%x\n", L'は');
-
-	Sprite t;
-	t.texture = SDL_CreateTextureFromSurface(renderer, text_surface);
-	if (!t.texture) {
-		fprintf(stderr, "Couldn't create texture: %s\n", SDL_GetError());
-		SDL_FreeSurface(text_surface);
-	}
-	t.w = text_surface->w;
-	t.h = text_surface->h;
-	SDL_FreeSurface(text_surface);
-
-	Sprite sprite = LoadSprite("sample.webp", renderer);
-	if (sprite.texture == NULL)
-	{
-		exit(2);
-	}
-
-	Mix_Music *music;
-	music = Mix_LoadMUS("sample.mp3");
-	if (!music) {
-		printf("Mix_LoadMUS: %s\n", Mix_GetError());
-	}
-
-	if (Mix_PlayMusic(music, -1) == -1) {
-		printf("Mix_PlayMusic: %s\n", Mix_GetError());
-		// well, there's no music, but most games don't break without music...
-	}
-
-	/* Main render loop */
-	Uint8 done = 0;
-	SDL_Event event;
-	while (!done)
-	{
-		/* Wait for events */
-		SDL_WaitEvent(&event);
-		do {
-			if (event.type == SDL_QUIT || event.type == SDL_KEYDOWN
-				|| event.type == SDL_FINGERDOWN)
-			{
-				done = 1;
-			}
-		} while (SDL_PollEvent(&event));
-
-
-		/* Draw a gray background */
-		SDL_SetRenderDrawColor(renderer, 0x0F, 0x00, 0x00, 0xFF);
-		SDL_RenderClear(renderer);
-
-		draw(window, renderer, sprite);
-		draw(window, renderer, t);
-
-		/* Update the screen! */
-		SDL_RenderPresent(renderer);
-	}
+		if (event.type == SDL_QUIT || event.type == SDL_KEYDOWN
+			|| event.type == SDL_FINGERDOWN)
+		{
+			return false;
+		}
+		return true;
+	});
 
 	return EXIT_SUCCESS;
 }
