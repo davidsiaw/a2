@@ -27,7 +27,7 @@
     <ClInclude Include="..\..\src\sdlwrappers.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\src\mruby.hpp">
+    <ClInclude Include="..\..\lib\mruby-cpp\mruby.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -98,79 +98,68 @@ public:
 	{
 		return printf("cat meow %d\n", m);
 	}
-	static void sss()
+	static std::string sss()
 	{
 		printf("cat sss\n");
+		return "LOLERINO";
 	}
 };
 
+int a()
+{
+	return 5;
+}
+
+void testruby()
+{
+	mruby::VM mrvm;
+
+	auto play = mrvm.create_module("Play");
+	play->create_module("Meow");
+	auto play2 = mrvm.get_module("Play");
+
+	play->bind_method("a", a);
+
+	auto cat = mrvm.create_class<Cat, int>("Cat");
+	cat->bind_instance_method("meow", &Cat::meow);
+	cat->bind_method("sss", &Cat::sss);
+
+	mrvm.run("@cat = Cat.new(5)");
+	mrvm.run("p @cat");
+	mrvm.run("p Cat.sss");
+	mrvm.run("p @cat.meow");
+	mrvm.run("p Play::a 1");
+
+	mrvm.bind_method("aa", aa);
+	mrvm.bind_method("ab", ab);
+	mrvm.bind_method("abb", abb);
+	mrvm.bind_method("ac", ac);
+	mrvm.bind_method("ad", ad);
+
+
+	mrvm.run("p aa 5, 7, 8");
+	mrvm.run("p ab 5, 7, 8");
+	mrvm.run("p abb 5, 7, 8");
+	mrvm.run("p ac");
+	mrvm.run("p ad");
+
+	mrvm.set_class_variable("@width", "haha");
+
+	mrvm.run("p @width");
+
+	mrvm.run("p Play");
+	mrvm.run("p Play::Meow");
+}
+
 int main(int argc, char *argv[])
 {
+	mruby::VM mrvm;
 	SDL sdl;
 	SDLImage sdlImage;
 	SDLMixer sdlMixer;
 	SDLTTF sdlTTF;
 
-	{
-		MRuby mruby;
-
-		//mruby.set_function("hellow", hellow);
-
-		auto play = mruby.create_module("Play");
-		play->create_module("Meow");
-		auto play2 = mruby.get_module("Play");
-
-		auto cat = mruby.create_class<Cat, int>("Cat");
-		cat->bind_instance_method("meow", &Cat::meow);
-		cat->bind_method("sss", &Cat::sss);
-
-		mruby.run("@cat = Cat.new(5)");
-		mruby.run("p @cat");
-		mruby.run("p Cat.sss 1");
-		mruby.run("p @cat.meow 1");
-
-		mruby.bind_method("aa", aa);
-		mruby.bind_method("ab", ab);
-		mruby.bind_method("abb", abb);
-		mruby.bind_method("ac", ac);
-		mruby.bind_method("ad", ad);
-
-
-		mruby.run("p aa 5, 7, 8");
-		mruby.run("p ab 5, 7, 8");
-		mruby.run("p abb 5, 7, 8");
-		mruby.run("p ac");
-		mruby.run("p ad");
-
-		mruby.set_class_variable("@width", "haha");
-
-		mruby.run("p @width");
-
-		mruby.run("p Play");
-		mruby.run("p Play::Meow");
-	}
-
-	printf("s\n");
-	
-	
-
-	//mrb_state *mrb = mrb_open();
-	//mrb_sym hello_name_s = mrb_intern_cstr(mrb, "hello");
-	//mrb_value env[] = {
-	//	mrb_cptr_value(mrb, (void*)hello),  // 0: c function pointer
-	//	mrb_symbol_value(hello_name_s),          // 1: function name
-	//};
-	//RProc* hello_proc = mrb_proc_new_cfunc_with_env(mrb, hello, 2, env);
-	//auto kernelmod = mrb->kernel_module;
-	//mrb_method_t p;
-	//MRB_METHOD_FROM_PROC(p, hello_proc);
-	//mrb_define_method_raw(mrb, kernelmod, hello_name_s, p);
-	//
-	//mrb_load_string(mrb, "p 'hello world!'; $s = hello(5,3); width = 1024;");
-	//mrb_sym selfsym = mrb_intern_lit(mrb, "$s");
-	//mrb_value self = mrb_gv_get(mrb, selfsym);
-
-
+	mrvm.run_file("main.rb");
 
 	SDL_Window *window;
 	SDL_Renderer *renderer;
