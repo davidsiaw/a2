@@ -50,12 +50,12 @@ public:
 	{
 	}
 
-	int Width() const
+	int get_width() const
 	{
 		return w;
 	}
 
-	int Height() const
+	int get_height() const
 	{
 		return h;
 	}
@@ -78,7 +78,7 @@ public:
 	{
 	}
 
-	SDL_Color AsSDLColor() const
+	SDL_Color as_sdl_color() const
 	{
 		SDL_Color c;
 		c.r = r * 255;
@@ -143,16 +143,17 @@ public:
 	{
 	}
 
-	std::shared_ptr<Image> DrawString(const std::string& text, int size, Color color)
+	mruby::NativeObject<Image> draw_string(const std::string& text, int size, mruby::NativeObject<Color> color)
 	{
-		auto surface = std::shared_ptr<SDL_Surface>(TTF_RenderUTF8_Blended(get_font(size).get(), text.c_str(), color.AsSDLColor()), SDL_FreeSurface);
+		auto surface = std::shared_ptr<SDL_Surface>(TTF_RenderUTF8_Blended(get_font(size).get(), text.c_str(), color->as_sdl_color()), SDL_FreeSurface);
 
 		if (!surface)
 		{
 			throw new InitException("TTF_RenderUNICODE_Solid", TTF_GetError());
 		}
 
-		return std::make_shared<Image>(renderer, surface);
+		auto ptr = std::make_shared<Image>(renderer, surface);
+		return mruby::NativeObject<Image>("Image", ptr);
 	}
 };
 
@@ -174,27 +175,34 @@ public:
 
 	}
 
-	void Play() const
+	void play()
 	{
-		Mix_PlayMusic(music.get(), -1);
+		Mix_PlayMusic(music.get(), 0);
 		Mix_VolumeMusic(MIX_MAX_VOLUME / 6);
 	}
 };
 
-struct PositionedImage
+class PositionedImage
 {
+public:
 	std::shared_ptr<Image> image;
 	int x, y;
-
-	PositionedImage()
-	{}
 
 	PositionedImage(std::shared_ptr<Image> image, int x, int y) : 
 		image(image), x(x), y(y)
 	{}
 };
 
-class SDL
+class Event
+{
+public:
+	Event(SDL_Event event)
+	{
+
+	}
+};
+
+class System
 {
 	int width;
 	int height;
@@ -205,9 +213,9 @@ class SDL
 	bool running = false;
 
 public:
-	std::map< int, PositionedImage > Images;
+	std::map< int, std::shared_ptr<PositionedImage> > Images;
 
-	SDL(int width, int height) : background_color(Color::Black()), width(width), height(height)
+	System(int width, int height) : background_color(Color::Black()), width(width), height(height)
 	{
 		if (SDL_Init(SDL_INIT_EVERYTHING) != 0)
 		{
@@ -247,7 +255,7 @@ public:
 		
 	}
 
-	~SDL()
+	~System()
 	{
 		TTF_Quit();
 		Mix_CloseAudio();
@@ -256,27 +264,31 @@ public:
 		SDL_Quit();
 	}
 
-	std::shared_ptr<Font> LoadFont(const std::string& filename)
+	mruby::NativeObject<Font> load_font(const std::string& filename)
 	{
-		return std::make_shared<Font>(renderer, filename);
+		auto ptr = std::make_shared<Font>(renderer, filename);
+		return mruby::NativeObject<Font>("Font", ptr);
 	}
 
-	std::shared_ptr<Image> LoadImage(const std::string& filename)
+	mruby::NativeObject<Image> load_image(const std::string& filename)
 	{
-		return std::make_shared<Image>(renderer, filename);
+		auto ptr = std::make_shared<Image>(renderer, filename);
+		return mruby::NativeObject<Image>("Image", ptr);
 	}
 
-	std::shared_ptr<Music> LoadMusic(const std::string& filename)
+	mruby::NativeObject<Music> load_music(const std::string& filename)
 	{
-		return std::make_shared<Music>(filename);
+		auto ptr = std::make_shared<Music>(filename);
+		return mruby::NativeObject<Music>("Music", ptr);
 	}
 
-	PositionedImage CenteredImage(std::shared_ptr<Image> image)
+	mruby::NativeObject<PositionedImage> centered_image(mruby::NativeObject<Image> image)
 	{
-		return PositionedImage(image, (width - image->Width()) / 2, (height - image->Height()) / 2);
+		auto ptr = std::make_shared<PositionedImage>(image.get_shared_instance(), (width - image->get_width()) / 2, (height - image->get_height()) / 2);
+		return mruby::NativeObject<PositionedImage>("Font", ptr);
 	}
 
-	void StartEventLoop(std::function<bool(SDL_Event)> onEvent)
+	void start_event_loop(mruby::Function<bool(mruby::NativeObject<Event>)> onEvent)
 	{
 		running = true;
 		SDL_Event event;
@@ -285,17 +297,17 @@ public:
 			SDL_WaitEvent(&event);
 			do
 			{
-				running = onEvent(event);
+				running = onEvent.invoke( mruby::NativeObject<Event>("Event", std::make_shared<Event>(event)) );
 			} while (SDL_PollEvent(&event));
 
-			auto bgcolor = background_color.AsSDLColor();
+			auto bgcolor = background_color.as_sdl_color();
 			SDL_SetRenderDrawColor(renderer.get(), bgcolor.r, bgcolor.g, bgcolor.b, bgcolor.a);
 			SDL_RenderClear(renderer.get());
 
 			for (auto k : Images)
 			{
-				SDL_Rect dest_rect = { k.second.x, k.second.y, k.second.image->Width(), k.second.image->Height() };
-				SDL_RenderCopy(renderer.get(), k.second.image->Texture().get(), NULL, &dest_rect);
+				SDL_Rect dest_rect = { k.second->x, k.second->y, k.second->image->get_width(), k.second->image->get_height() };
+				SDL_RenderCopy(renderer.get(), k.second->image->Texture().get(), NULL, &dest_rect);
 			}
 			
 			SDL_RenderPresent(renderer.get());

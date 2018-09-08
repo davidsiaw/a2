@@ -183,6 +183,7 @@
     <ClInclude Include="..\..\lib\mruby-cpp\mrubyclass.hpp" />
     <ClInclude Include="..\..\lib\mruby-cpp\mrubydefines.hpp" />
     <ClInclude Include="..\..\lib\mruby-cpp\mrubyexception.hpp" />
+    <ClInclude Include="..\..\lib\mruby-cpp\mrubyfunction.hpp" />
     <ClInclude Include="..\..\lib\mruby-cpp\mrubyfunctional.hpp" />
     <ClInclude Include="..\..\lib\mruby-cpp\mrubymodule.hpp" />
     <ClInclude Include="..\..\lib\mruby-cpp\mrubynativeobject.hpp" />

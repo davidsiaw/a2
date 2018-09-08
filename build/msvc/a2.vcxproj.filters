@@ -54,6 +54,9 @@
     <ClInclude Include="..\..\lib\mruby-cpp\mrubyvm.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\lib\mruby-cpp\mrubyfunction.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
