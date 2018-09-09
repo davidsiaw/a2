@@ -212,8 +212,9 @@ class System
 	Color background_color;
 	bool running = false;
 
+	std::map< int, std::shared_ptr<PositionedImage> > images;
+
 public:
-	std::map< int, std::shared_ptr<PositionedImage> > Images;
 
 	System(int width, int height) : background_color(Color::Black()), width(width), height(height)
 	{
@@ -282,6 +283,11 @@ public:
 		return mruby::NativeObject<Music>("Music", ptr);
 	}
 
+	void set_image(int idx, mruby::NativeObject<PositionedImage> image)
+	{
+		images[idx] = image.get_shared_instance();
+	}
+
 	mruby::NativeObject<PositionedImage> centered_image(mruby::NativeObject<Image> image)
 	{
 		auto ptr = std::make_shared<PositionedImage>(image.get_shared_instance(), (width - image->get_width()) / 2, (height - image->get_height()) / 2);
@@ -304,7 +310,7 @@ public:
 			SDL_SetRenderDrawColor(renderer.get(), bgcolor.r, bgcolor.g, bgcolor.b, bgcolor.a);
 			SDL_RenderClear(renderer.get());
 
-			for (auto k : Images)
+			for (auto k : images)
 			{
 				SDL_Rect dest_rect = { k.second->x, k.second->y, k.second->image->get_width(), k.second->image->get_height() };
 				SDL_RenderCopy(renderer.get(), k.second->image->Texture().get(), NULL, &dest_rect);

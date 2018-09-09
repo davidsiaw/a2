@@ -17,6 +17,8 @@ int main(int argc, char *argv[])
 	system_class->bind_instance_method("load_image", &System::load_image);
 	system_class->bind_instance_method("load_music", &System::load_music);
 	system_class->bind_instance_method("centered_image", &System::centered_image);
+	system_class->bind_instance_method("start_event_loop", &System::start_event_loop);
+	system_class->bind_instance_method("set_image", &System::set_image);
 
 	auto image_class = mrvm.create_closed_class<Image>("Image");
 
@@ -37,6 +39,8 @@ int main(int argc, char *argv[])
 	positioned_image_class->bind_instance_variable("y", &PositionedImage::y);
 
 	auto event_class = mrvm.create_closed_class<Event>("Event");
+
+
 
 	mrvm.run_file("main.rb");
 
