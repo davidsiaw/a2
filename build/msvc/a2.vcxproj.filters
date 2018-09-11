@@ -13,6 +13,12 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\mruby">
+      <UniqueIdentifier>{0a4ea14d-498e-44d3-b42a-43a0613a94a1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\sdlwrappers">
+      <UniqueIdentifier>{afaaafb8-dc26-406f-9dbe-d97bcb99ad1f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -28,34 +34,58 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\lib\mruby-cpp\mruby.hpp">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\mruby</Filter>
     </ClInclude>
     <ClInclude Include="..\..\lib\mruby-cpp\mrubyclass.hpp">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\mruby</Filter>
     </ClInclude>
     <ClInclude Include="..\..\lib\mruby-cpp\mrubydefines.hpp">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\mruby</Filter>
     </ClInclude>
     <ClInclude Include="..\..\lib\mruby-cpp\mrubyexception.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\lib\mruby-cpp\mrubyfunctional.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\lib\mruby-cpp\mrubymodule.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\lib\mruby-cpp\mrubynativeobject.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\lib\mruby-cpp\mrubytypebinder.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\lib\mruby-cpp\mrubyvm.hpp">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\mruby</Filter>
     </ClInclude>
     <ClInclude Include="..\..\lib\mruby-cpp\mrubyfunction.hpp">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\mruby</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\lib\mruby-cpp\mrubyfunctional.hpp">
+      <Filter>Header Files\mruby</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\lib\mruby-cpp\mrubymodule.hpp">
+      <Filter>Header Files\mruby</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\lib\mruby-cpp\mrubynativeobject.hpp">
+      <Filter>Header Files\mruby</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\lib\mruby-cpp\mrubytypebinder.hpp">
+      <Filter>Header Files\mruby</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\lib\mruby-cpp\mrubyvm.hpp">
+      <Filter>Header Files\mruby</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\internalsystem.hpp">
+      <Filter>Header Files\sdlwrappers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\color.hpp">
+      <Filter>Header Files\sdlwrappers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\font.hpp">
+      <Filter>Header Files\sdlwrappers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\image.hpp">
+      <Filter>Header Files\sdlwrappers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\event.hpp">
+      <Filter>Header Files\sdlwrappers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\system.hpp">
+      <Filter>Header Files\sdlwrappers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\music.hpp">
+      <Filter>Header Files\sdlwrappers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\positionedimage.hpp">
+      <Filter>Header Files\sdlwrappers</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -66,6 +96,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\..\src\initexception.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sdlwrappers.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -189,14 +189,23 @@
     <ClInclude Include="..\..\lib\mruby-cpp\mrubynativeobject.hpp" />
     <ClInclude Include="..\..\lib\mruby-cpp\mrubytypebinder.hpp" />
     <ClInclude Include="..\..\lib\mruby-cpp\mrubyvm.hpp" />
+    <ClInclude Include="..\..\src\color.hpp" />
+    <ClInclude Include="..\..\src\event.hpp" />
+    <ClInclude Include="..\..\src\font.hpp" />
+    <ClInclude Include="..\..\src\image.hpp" />
     <ClInclude Include="..\..\src\initexception.hpp" />
+    <ClInclude Include="..\..\src\internalsystem.hpp" />
+    <ClInclude Include="..\..\src\music.hpp" />
+    <ClInclude Include="..\..\src\positionedimage.hpp" />
     <ClInclude Include="..\..\src\sdlwrappers.hpp" />
+    <ClInclude Include="..\..\src\system.hpp" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\a2.cpp" />
     <ClCompile Include="..\..\src\initexception.cpp" />
+    <ClCompile Include="..\..\src\sdlwrappers.cpp" />
     <ClCompile Include="stdafx.cpp" />
   </ItemGroup>
   <ItemGroup>

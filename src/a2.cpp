@@ -8,8 +8,6 @@
 
 int main(int argc, char *argv[])
 {
-	//auto sdl = std::make_shared<SDL>(1024, 768);
-
 	mruby::VM mrvm;
 
 	auto system_class = mrvm.create_class<System, int, int>("System");
@@ -27,6 +25,8 @@ int main(int argc, char *argv[])
 	color_class->bind_instance_variable("g", &Color::g);
 	color_class->bind_instance_variable("b", &Color::b);
 	color_class->bind_instance_variable("a", &Color::a);
+	color_class->bind_method("Black", &Color::Black);
+	color_class->bind_method("Red", &Color::Red);
 
 	auto font_class = mrvm.create_closed_class<Font>("Font");
 	font_class->bind_instance_method("draw_string", &Font::draw_string);
@@ -39,39 +39,10 @@ int main(int argc, char *argv[])
 	positioned_image_class->bind_instance_variable("y", &PositionedImage::y);
 
 	auto event_class = mrvm.create_closed_class<Event>("Event");
-
-
+	event_class->bind_instance_method("gettype", &Event
+		::gettype);
 
 	mrvm.run_file("main.rb");
-
-	auto m = mrvm.get_global_variable< mruby::Function<int(int)> >("$m");
-	auto n = mrvm.get_global_variable< mruby::Function<void(int)> >("$m");
-	auto o = mrvm.get_global_variable< mruby::Function<int()> >("$m");
-	auto p = mrvm.get_global_variable< mruby::Function<void()> >("$m");
-	int a = m.invoke(5);
-	m.invoke(5);
-	int b = o.invoke();
-	p.invoke();
-
-	//auto font = sdl->load_font("sample.ttf");
-	//auto text = font->draw_string("鼻血のハローdesu", 16, Color::Black());
-	//auto image = sdl->load_image("sample.webp");
-	//auto music = sdl->load_music("sample.mp3");
-
-	//music->play();
-
-	//sdl->Images[0] = sdl->centered_image(image);
-	//sdl->Images[1] = sdl->centered_image(text);
-
-	//sdl->start_event_loop([&](SDL_Event event)->bool 
-	//{
-	//	if (event.type == SDL_QUIT || event.type == SDL_KEYDOWN
-	//		|| event.type == SDL_FINGERDOWN)
-	//	{
-	//		return false;
-	//	}
-	//	return true;
-	//});
 
 	return EXIT_SUCCESS;
 }
