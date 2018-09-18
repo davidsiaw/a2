@@ -62,7 +62,7 @@ public:
 		images[idx] = image.get_shared_instance();
 	}
 
-	mruby::NativeObject<PositionedImage> centered_image(mruby::NativeObject<Image> image)
+	mruby::NativeObject<PositionedImage> centered_image(mruby::NativeObject<IImage> image)
 	{
 		auto ptr = std::make_shared<PositionedImage>(image.get_shared_instance(), (width - image->get_width()) / 2, (height - image->get_height()) / 2);
 		return mruby::NativeObject<PositionedImage>("Font", ptr);
@@ -84,10 +84,13 @@ public:
 			SDL_SetRenderDrawColor(get_renderer().get(), bgcolor.r, bgcolor.g, bgcolor.b, bgcolor.a);
 			SDL_RenderClear(get_renderer().get());
 
+			Uint32 current_time_ms = SDL_GetTicks();
+
 			for (auto k : images)
 			{
 				SDL_Rect dest_rect = { k.second->x, k.second->y, k.second->image->get_width(), k.second->image->get_height() };
-				SDL_RenderCopy(get_renderer().get(), k.second->image->Texture().get(), NULL, &dest_rect);
+				SDL_Rect src_rect = k.second->image->get_rect(current_time_ms);
+				SDL_RenderCopy(get_renderer().get(), k.second->image->get_texture().get(), &src_rect, &dest_rect);
 			}
 
 			SDL_RenderPresent(get_renderer().get());

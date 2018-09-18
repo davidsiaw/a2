@@ -4,7 +4,19 @@
 #include <stdafx.h>
 #endif
 
-class Image
+// For unused expressions
+#define UNUSED(expr) do { (void)(expr); } while (0)
+
+class IImage
+{
+public:
+	virtual int get_width() const = 0;
+	virtual int get_height() const = 0;
+	virtual std::shared_ptr<SDL_Texture> get_texture() const = 0;
+	virtual SDL_Rect get_rect(Uint32 current_time_ms) const = 0;
+};
+
+class Image : public IImage
 {
 	std::shared_ptr<InternalSystem> intsys;
 	std::shared_ptr<SDL_Texture> texture;
@@ -59,8 +71,19 @@ public:
 		return h;
 	}
 
-	std::shared_ptr<SDL_Texture> Texture() const
+	std::shared_ptr<SDL_Texture> get_texture() const
 	{
 		return texture;
+	}
+
+	SDL_Rect get_rect(Uint32  current_time_ms) const
+	{
+		UNUSED(current_time_ms);
+		SDL_Rect r;
+		r.x = 0;
+		r.y = 0;
+		r.w = w;
+		r.h = h;
+		return r;
 	}
 };

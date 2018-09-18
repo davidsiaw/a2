@@ -7,10 +7,10 @@
 class PositionedImage
 {
 public:
-	std::shared_ptr<Image> image;
+	std::shared_ptr<IImage> image;
 	int x, y;
 
-	PositionedImage(std::shared_ptr<Image> image, int x, int y) :
+	PositionedImage(std::shared_ptr<IImage> image, int x, int y) :
 		image(image), x(x), y(y)
 	{}
 };

@@ -39,8 +39,7 @@ int main(int argc, char *argv[])
 	positioned_image_class->bind_instance_variable("y", &PositionedImage::y);
 
 	auto event_class = mrvm.create_closed_class<Event>("Event");
-	event_class->bind_instance_method("gettype", &Event
-		::gettype);
+	event_class->bind_instance_method("gettype", &Event::gettype);
 
 	mrvm.run_file("main.rb");
 

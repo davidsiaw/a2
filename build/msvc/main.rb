@@ -9,7 +9,7 @@ begin
 
 	postext = sys.centered_image(text);
 
-	music = sys.load_music("sample.mp3")
+	music = sys.load_music("sample.flac")
 	music.play
 
 	img = sys.load_image("sample.png")
