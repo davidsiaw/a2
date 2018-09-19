@@ -56,4 +56,9 @@ public:
 	{
 		return renderer;
 	}
+
+	std::shared_ptr<SDL_Window> get_window() const
+	{
+		return window;
+	}
 };

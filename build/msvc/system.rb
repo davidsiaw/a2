@@ -32,4 +32,12 @@ class System
 	def begin_loop(&block)
 		start_event_loop(Proc.new(&block)) if block
 	end
+
+	def window_title=(value)
+		set_window_title value
+	end
+
+	def window_title()
+		return get_window_title
+	end
 end

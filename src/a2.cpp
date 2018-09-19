@@ -17,6 +17,8 @@ int main(int argc, char *argv[])
 	system_class->bind_instance_method("centered_image", &System::centered_image);
 	system_class->bind_instance_method("start_event_loop", &System::start_event_loop);
 	system_class->bind_instance_method("set_image", &System::set_image);
+	system_class->bind_instance_method("set_window_title", &System::set_window_title);
+	system_class->bind_instance_method("get_window_title", &System::get_window_title);
 
 	auto image_class = mrvm.create_closed_class<Image>("Image");
 
@@ -40,6 +42,10 @@ int main(int argc, char *argv[])
 
 	auto event_class = mrvm.create_closed_class<Event>("Event");
 	event_class->bind_instance_method("gettype", &Event::gettype);
+
+	auto sprite_class = mrvm.create_class<Sprite, mruby::NativeObject<Image>, int, int, int, int>("Sprite");
+	sprite_class->bind_instance_variable("xframe", &Sprite::xframe);
+	sprite_class->bind_instance_variable("yframe", &Sprite::yframe);
 
 	mrvm.run_file("main.rb");
 

@@ -87,6 +87,12 @@
     <ClInclude Include="..\..\src\positionedimage.hpp">
       <Filter>Header Files\sdlwrappers</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\src\iimage.hpp">
+      <Filter>Header Files\sdlwrappers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sprite.hpp">
+      <Filter>Header Files\sdlwrappers</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">

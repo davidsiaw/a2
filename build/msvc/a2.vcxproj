@@ -192,12 +192,14 @@
     <ClInclude Include="..\..\src\color.hpp" />
     <ClInclude Include="..\..\src\event.hpp" />
     <ClInclude Include="..\..\src\font.hpp" />
+    <ClInclude Include="..\..\src\iimage.hpp" />
     <ClInclude Include="..\..\src\image.hpp" />
     <ClInclude Include="..\..\src\initexception.hpp" />
     <ClInclude Include="..\..\src\internalsystem.hpp" />
     <ClInclude Include="..\..\src\music.hpp" />
     <ClInclude Include="..\..\src\positionedimage.hpp" />
     <ClInclude Include="..\..\src\sdlwrappers.hpp" />
+    <ClInclude Include="..\..\src\sprite.hpp" />
     <ClInclude Include="..\..\src\system.hpp" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
