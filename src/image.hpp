@@ -69,7 +69,7 @@ public:
 		return texture;
 	}
 
-	virtual SDL_Rect get_rect() const
+	virtual SDL_Rect get_rect()
 	{
 		SDL_Rect r;
 		r.x = 0;

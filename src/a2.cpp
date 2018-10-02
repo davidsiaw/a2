@@ -42,10 +42,16 @@ int main(int argc, char *argv[])
 
 	auto event_class = mrvm.create_closed_class<Event>("Event");
 	event_class->bind_instance_method("gettype", &Event::gettype);
+	event_class->bind_instance_method("getusercode", &Event::getusercode);
 
 	auto sprite_class = mrvm.create_class<Sprite, mruby::NativeObject<Image>, int, int, int, int>("Sprite");
 	sprite_class->bind_instance_variable("xframe", &Sprite::xframe);
 	sprite_class->bind_instance_variable("yframe", &Sprite::yframe);
+
+	auto animated_sprite_class = mrvm.create_class<AnimatedSprite, mruby::NativeObject<Image>, int, int, int, int>("AnimatedSprite");
+	animated_sprite_class->bind_instance_variable("xframe", &AnimatedSprite::xframe);
+	animated_sprite_class->bind_instance_variable("yframe", &AnimatedSprite::yframe);
+	animated_sprite_class->bind_instance_variable("animating", &AnimatedSprite::animating);
 
 	mrvm.run_file("main.rb");
 

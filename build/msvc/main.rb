@@ -22,7 +22,7 @@ begin
 	sprimg = sys.load_image("x36.png")
 
 	for i in 0..3
-		sprite = Sprite.new(sprimg, 0, i*64*4, 48, 64)
+		sprite = AnimatedSprite.new(sprimg, 0, i*64*4, 48, 64)
 		sprite.yframe = 2
 		#sprite xframe = 0
 
@@ -36,8 +36,8 @@ begin
 
 	sys.begin_loop do |x|
 		return false if x.type == :quit
-		#p x.type
-		#p x.gettype
+		p x.type
+		p x.gettype
 		return true;
 	end
 

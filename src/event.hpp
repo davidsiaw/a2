@@ -17,5 +17,10 @@ public:
 	{
 		return event.type;
 	}
+
+	int getusercode()
+	{
+		return event.user.code;
+	}
 };
  

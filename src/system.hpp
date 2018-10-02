@@ -78,8 +78,31 @@ public:
 		return mruby::NativeObject<PositionedImage>("PositionedImage", ptr);
 	}
 
+	static Uint32 send_render(Uint32 interval, void *param)
+	{
+		SDL_Event event;
+		SDL_UserEvent userevent;
+
+		/* In this example, our callback pushes a function
+		into the queue, and causes our callback to be called again at the
+		same interval: */
+
+		userevent.type = SDL_USEREVENT;
+		userevent.code = 0;
+		userevent.data1 = NULL;
+		userevent.data2 = NULL;
+
+		event.type = SDL_USEREVENT;
+		event.user = userevent;
+
+		SDL_PushEvent(&event);
+		return interval;
+	}
+
 	void start_event_loop(mruby::Function<bool(mruby::NativeObject<Event>)> onEvent)
 	{
+		SDL_TimerID render_trigger = SDL_AddTimer(50, send_render, NULL);
+
 		running = true;
 		SDL_Event event;
 		while (running)

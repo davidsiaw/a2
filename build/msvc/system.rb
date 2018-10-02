@@ -2,6 +2,10 @@ puts "hello"
 
 class Event
 	def type
+		@userevents = {
+			0 => :render
+		}
+
 		@eventcodes = {
 			0x100 => :quit,
 
@@ -21,10 +25,15 @@ class Event
 			0x402 => :mousebuttonup,
 			0x403 => :mousewheel,
 
-			0x800 => :userevent,
+			0x8000 => :userevent,
 		}
 
-		@eventcodes[gettype]
+		event_code = @eventcodes[gettype]
+		if event_code == :userevent
+			@userevents[getusercode]
+		else
+			event_code
+		end
 	end
 end
 

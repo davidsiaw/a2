@@ -33,7 +33,7 @@ public:
 		return img->get_texture();
 	}
 
-	virtual SDL_Rect get_rect() const
+	virtual SDL_Rect get_rect()
 	{
 		SDL_Rect r;
 		r.x = x + w * xframe;
@@ -41,5 +41,30 @@ public:
 		r.w = w;
 		r.h = h;
 		return r;
+	}
+};
+
+class AnimatedSprite : public Sprite
+{
+	Uint32 last_update;
+public:
+	bool animating;
+	AnimatedSprite(mruby::NativeObject<Image> img, int x, int y, int w, int h) : 
+		Sprite(img, x, y, w, h), last_update(0), animating(true)
+	{}
+
+	virtual SDL_Rect get_rect()
+	{
+		Uint32 now = SDL_GetTicks();
+		if (animating)
+		{
+			if (now - last_update > 200)
+			{
+				xframe += 1;
+				xframe = xframe % 4;
+				this->last_update = now;
+			}
+		}
+		return Sprite::get_rect();
 	}
 };
