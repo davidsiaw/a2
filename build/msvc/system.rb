@@ -1,5 +1,3 @@
-puts "hello"
-
 class Event
 	def type
 		@userevents = {

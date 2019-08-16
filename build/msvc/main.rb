@@ -1,6 +1,7 @@
-require "./system"
+require "./system.rb"
 
 
+puts 'hello'
 begin
 	sys = System.new(1024,768)
 	sys.window_title = "The Living Fossil"
@@ -36,11 +37,13 @@ begin
 
 	sys.begin_loop do |x|
 		return false if x.type == :quit
-		p x.type
-		p x.gettype
+		#p x.type
+		#p x.gettype
 		return true;
 	end
 
 rescue => e
 	puts e
 end
+
+
