@@ -1,0 +1,15 @@
+
+build/msvc/.vs/
+build/msvc/Release/
+build/msvc/Win32/
+build/msvc/a2.VC.db
+build/msvc/libjpeg/Release/
+build/msvc/libjpeg/x64/
+build/msvc/libpng/Release/
+build/msvc/libpng/x64/
+build/msvc/libtiff/Release/
+build/msvc/libtiff/x64/
+build/msvc/libwebpdecode/Release/
+build/msvc/libwebpdecode/x64/
+build/msvc/objs/
+build/msvc/x64/

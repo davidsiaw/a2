@@ -117,7 +117,7 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;GLEW_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>..\..\lib\sdl2\include;.\;..\..\lib\sdl2_image;..\..\lib\sdl2_mixer;..\..\lib\sdl2_ttf;..\..\lib\glm;..\..\lib\mruby\include;..\..\lib\glew\include;..\..\lib\sdl2_gfx;..\lib\mruby-cpp</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\lib\sdl2\include;.\;..\..\lib\sdl2_image;..\..\lib\sdl2_mixer;..\..\lib\sdl2_ttf;..\..\lib\glm;..\..\lib\mruby\include;..\..\lib\glew\include;..\..\lib\sdl2_gfx;..\..\lib\mruby-cpp</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
