@@ -1,8 +1,5 @@
 #pragma once
-
-#ifdef _WIN32
-#include <stdafx.h>
-#endif
+#include "top.h"
 
 #include "image.hpp"
 

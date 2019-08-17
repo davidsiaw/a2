@@ -1,49 +1,48 @@
-require "./system.rb"
+# frozen_string_literal: true
 
+require './system.rb'
 
 puts 'hello'
 begin
-	sys = System.new(1024,768)
-	sys.window_title = "The Living Fossil"
+  sys = System.new(1024, 768)
+  sys.window_title = 'The Living Fossil'
 
-	font = sys.load_font("sample.ttf")
-	text = font.draw_string("がんばルビィ！", 20, Color.Red)
+  font = sys.load_font('sample.ttf')
+  text = font.draw_string('がんばルビィ！', 20, Color.Red)
 
-	postext = sys.centered_image(text);
+  postext = sys.centered_image(text)
 
-	music = sys.load_music("sample.flac")
-	music.play
+  music = sys.load_music('sample.flac')
+  music.play
 
-	img = sys.load_image("sample.png")
-	
-	#posimg = sys.centered_image(img)
+  img = sys.load_image('sample.png')
 
-	#sys.set_image 0, posimg
+  # posimg = sys.centered_image(img)
 
-	sprimg = sys.load_image("x36.png")
+  # sys.set_image 0, posimg
 
-	for i in 0..3
-		sprite = AnimatedSprite.new(sprimg, 0, i*64*4, 48, 64)
-		sprite.yframe = 2
-		#sprite xframe = 0
+  sprimg = sys.load_image('x36.png')
 
-		posspr = sys.centered_image(sprite)
-		sys.set_image 3-i, posspr		
-	end
+  (0..3).each do |i|
+    sprite = AnimatedSprite.new(sprimg, 0, i * 64 * 4, 48, 64)
+    sprite.yframe = 2
+    # sprite xframe = 0
 
-	p postext.class
-	postext.y += 40
-	sys.set_image 4, postext
+    posspr = sys.centered_image(sprite)
+    sys.set_image 3 - i, posspr
+  end
 
-	sys.begin_loop do |x|
-		return false if x.type == :quit
-		#p x.type
-		#p x.gettype
-		return true;
-	end
+  p postext.class
+  postext.y += 40
+  sys.set_image 4, postext
 
-rescue => e
-	puts e
+  sys.begin_loop do |x|
+    return false if x.type == :quit
+
+    # p x.type
+    # p x.gettype
+    return true
+  end
+rescue StandardError => e
+  puts e
 end
-
-

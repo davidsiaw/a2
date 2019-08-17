@@ -5,20 +5,24 @@
 
 #pragma once
 
+#ifdef _WIN32
 #include "targetver.h"
+#include <tchar.h>
+#endif
 
 // stdlibs
 
 #include <cstdio>
 #include <cstdlib>
-#include <tchar.h>
-#include <string>
-#include <map>
-#include <vector>
-#include <exception>
-#include <sstream>
-#include <functional>
+
 #include <algorithm>
+#include <exception>
+#include <functional>
+#include <map>
+#include <memory>
+#include <sstream>
+#include <string>
+#include <vector>
 
 // libs
 
@@ -31,8 +35,5 @@
 #include <SDL2_imageFilter.h>
 #include <SDL2_framerate.h>
 #include <SDL2_rotozoom.h>
-#include <mruby.h>
-#include <mruby/compile.h>
-#include <mruby/variable.h>
 
 // local hpp

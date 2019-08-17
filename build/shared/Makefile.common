@@ -1,0 +1,120 @@
+-include $(PWD)/build/shared/Makefile.utils
+
+V = 0
+AT_0 := @
+AT_1 :=
+REDIR_0 := > /dev/null
+REDIR_1 :=
+AT = $(AT_$(V))
+REDIR = $(REDIR_$(V))
+
+LIBPREFIX=$(PWD)/$(BUILD_DIR)/build
+SDL2MAIN=$(LIBPREFIX)/lib/libSDL2.$(EXTENSION)
+SDL2IMAGE=$(LIBPREFIX)/lib/libSDL2_image.$(EXTENSION)
+SDL2MIXER=$(LIBPREFIX)/lib/libSDL2_mixer.$(EXTENSION)
+SDL2TTF=$(LIBPREFIX)/lib/libSDL2_ttf.$(EXTENSION)
+SDL2GFX=$(LIBPREFIX)/lib/libSDL2_gfx.$(EXTENSION)
+SDL2CONFIG=$(LIBPREFIX)/bin/sdl2-config
+FREETYPE=$(LIBPREFIX)/lib/libfreetype.la
+MRUBY=$(LIBPREFIX)/lib/libmruby.a
+
+FREETYPE_SRCDIR=$(PWD)/lib/sdl2_ttf/external/freetype-2.4.12
+MRUBYCPP_SRCDIR=$(PWD)/lib/mruby-cpp
+MRUBY_SRCDIR=$(PWD)/lib/mruby
+
+CXXFLAGS=$(EXTRA_CFLAGS) \
+	$(shell $(SDL2CONFIG) --cflags) \
+	-I$(PWD)/lib/sdl2_gfx \
+	-I$(PWD)/lib/mruby-cpp \
+	-I$(PWD)/lib/mruby/include
+
+LDFLAGS=$(shell $(SDL2CONFIG) --libs) -lSDL2_image -lSDL2_mixer -lSDL2_ttf -lSDL2_gfx -lstdc++ -ldl $(OPENGL_LDFLAGS) -lm
+
+SRCDIR=$(PWD)/src
+MRUBY_CPPFILES=$(filter-out $(shell find $(MRUBYCPP_SRCDIR)/tests -name "*.cpp"), $(shell find $(MRUBYCPP_SRCDIR) -name "*.cpp"))
+SRC=$(MRUBY_CPPFILES) $(shell find $(SRCDIR) -name "*.cpp")
+
+OUT=$(PWD)/$(BUILD_DIR)/obj
+OBJS=$(SRC:%.cpp=$(OUT)/%.o)
+DEPS=$(SRC:%.cpp=$(OUT)/%.d)
+NODEPS=clean
+
+.PHONY = all clean
+
+.SECONDEXPANSION:
+
+all: $(TARGET)
+	$(AT)echo "Building for $(OS)"
+
+clean:
+	$(AT)cd lib/mruby && ruby minirake clean
+	-rm -rf $(TARGET) $(OUT) $(LIBPREFIX)
+
+ifeq (0, $(words $(findstring $(MAKECMDGOALS), $(NODEPS))))
+	-include $(DEPS)
+endif
+
+$(TARGET): $(OBJS) $(MRUBY)
+	$(AT)echo [LINK] $@
+	$(AT)$(CXX) $(CXXFLAGS) $^ $(LDFLAGS) -o $@ 
+
+%/.f:
+	$(AT)echo [MKDIR] $(dir $@)
+	$(AT)mkdir -p $(dir $@) 
+	$(AT)touch $@
+
+$(OUT)/%.d:%.cpp $$(@D)/.f $(SDL2MAIN) $(SDL2IMAGE) $(SDL2MIXER) $(SDL2TTF) $(SDL2GFX) $(MRUBY)
+	$(AT)echo [DEP] $<
+	$(AT)$(CXX) $(CXXFLAGS) -MM -MT '$(patsubst %.d,%.o,$@)' $< -MF $@
+
+$(OUT)/%.o:%.cpp $(OUT)/%.d
+	$(AT)echo [C++] $<
+	$(AT)$(CXX) $< $(CXXFLAGS) -c -o $@
+
+$(FREETYPE):
+	$(AT)echo [BLD] $@
+	$(AT)chmod +x $(FREETYPE_SRCDIR)/configure
+	$(AT)cd $(FREETYPE_SRCDIR) && ./configure --prefix=$(LIBPREFIX) $(REDIR)
+	$(AT)cd $(FREETYPE_SRCDIR) && make all install $(REDIR)
+
+$(SDL2MAIN):
+	$(AT)echo [BLD] $@
+	$(AT)chmod +x lib/sdl2/autogen.sh
+	$(AT)cd lib/sdl2 && ./autogen.sh $(REDIR)
+	$(AT)cd lib/sdl2 && ./configure --prefix=$(LIBPREFIX) $(REDIR)
+	$(AT)make -C lib/sdl2 all install $(REDIR)
+
+$(SDL2IMAGE): $(SDL2MAIN)
+	$(AT)echo [BLD] $@
+	$(AT)chmod +x lib/sdl2_image/autogen.sh
+	$(AT)cd lib/sdl2_image && ./autogen.sh $(REDIR)
+	$(AT)cd lib/sdl2_image && ./configure --prefix=$(LIBPREFIX) $(REDIR)
+	$(AT)make -C lib/sdl2_image all install $(REDIR)
+
+$(SDL2MIXER): $(SDL2MAIN) $(FREETYPE)
+	$(AT)echo [BLD] $@
+	$(AT)chmod +x lib/sdl2_mixer/autogen.sh $(REDIR)
+	$(AT)cd lib/sdl2_mixer && ./autogen.sh $(REDIR)
+	$(AT)cd lib/sdl2_mixer && ./configure --prefix=$(LIBPREFIX) $(REDIR)
+	$(AT)make -C lib/sdl2_mixer all install $(REDIR)
+
+$(SDL2TTF): $(SDL2MAIN)
+	$(AT)echo [BLD] $@
+	$(AT)chmod +x lib/sdl2_ttf/autogen.sh $(REDIR)
+	$(AT)cd lib/sdl2_ttf && ./autogen.sh $(REDIR)
+	$(AT)cd lib/sdl2_ttf && ./configure --prefix=$(LIBPREFIX) --with-freetype-exec-prefix=$(LIBPREFIX) $(REDIR)
+	$(AT)make -C lib/sdl2_ttf all install $(REDIR)
+
+$(SDL2GFX): $(SDL2MAIN)
+	$(AT)echo [BLD] $@
+	$(AT)chmod +x lib/sdl2_gfx/autogen.sh $(REDIR)
+	$(AT)cd lib/sdl2_gfx && ./autogen.sh $(REDIR)
+	$(AT)cd lib/sdl2_gfx && ./configure --prefix=$(LIBPREFIX) $(REDIR)
+	$(AT)make -C lib/sdl2_gfx all install $(REDIR)
+
+$(MRUBY):
+	$(AT)echo [BLD] $@
+	$(AT)cd lib/mruby && ruby minirake $(REDIR)
+	$(AT)mv lib/mruby/build/host/lib/libmruby.a $(MRUBY)
+
+.PRECIOUS: %/.f

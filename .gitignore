@@ -13,3 +13,7 @@ build/msvc/libwebpdecode/Release/
 build/msvc/libwebpdecode/x64/
 build/msvc/objs/
 build/msvc/x64/
+sample
+build/linux/bin/a2
+build/linux/build/
+build/linux/obj/

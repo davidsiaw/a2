@@ -1,10 +1,8 @@
-#ifdef _WIN32
-#include <stdafx.h>
-#endif
-
+#include "top.h"
 #include "mruby.hpp"
 #include "sdlwrappers.hpp"
 
+#include <iostream>
 
 int main(int argc, char *argv[])
 {

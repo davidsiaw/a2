@@ -1,8 +1,5 @@
 #pragma once
-
-#ifdef _WIN32
-#include <stdafx.h>
-#endif
+#include "top.h"
 
 class InternalSystem
 {
@@ -11,7 +8,7 @@ class InternalSystem
 public:
 	InternalSystem(int width, int height)
 	{
-		if (SDL_Init(SDL_INIT_EVERYTHING) != 0)
+		if (SDL_Init(SDL_INIT_AUDIO | SDL_INIT_VIDEO | SDL_INIT_EVENTS | SDL_INIT_JOYSTICK | SDL_INIT_GAMECONTROLLER) != 0)
 		{
 			throw new InitException("Unable to initialize " "SDL", SDL_GetError());
 		}
@@ -41,7 +38,6 @@ public:
 
 		window = std::shared_ptr<SDL_Window>(win, SDL_DestroyWindow);
 		renderer = std::shared_ptr<SDL_Renderer>(rend, SDL_DestroyRenderer);
-
 	}
 
 	~InternalSystem()

@@ -12,6 +12,8 @@ git clone https://github.com/davidsiaw/a2 --recursive
 
 ## MSVC
 
+Windows being Windows is a little less user-friendly when it comes to development, but where there is a will there is a way.
+
 ### Requirements
 
 1. You will need to install Ruby and Bison on your PC before building.
@@ -31,7 +33,18 @@ TODO
 
 ## Linux
 
-TODO
+### Requirements
+
+```
+rvm install 2.6
+
+```
+
+### Build
+
+```
+make run
+```
 
 ## Android
 
