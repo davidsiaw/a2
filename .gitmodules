@@ -1,21 +1,21 @@
 [submodule "lib/sdl2"]
 	path = lib/sdl2
-	url = git@github.com:davidsiaw/sdl2
+	url = https://github.com/SDL-mirror/SDL
 [submodule "lib/sdl2_image"]
 	path = lib/sdl2_image
-	url = git@github.com:davidsiaw/sdl2_image
+	url = https://github.com/SDL-mirror/SDL_image
 [submodule "lib/sdl2_mixer"]
 	path = lib/sdl2_mixer
-	url = git@github.com:davidsiaw/sdl2_mixer
+	url = https://github.com/SDL-mirror/SDL_mixer
 [submodule "lib/sdl2_ttf"]
 	path = lib/sdl2_ttf
-	url = git@github.com:davidsiaw/sdl2_ttf
+	url = https://github.com/SDL-mirror/SDL_ttf
 [submodule "lib/glm"]
 	path = lib/glm
 	url = git@github.com:davidsiaw/glm
 [submodule "lib/mruby"]
 	path = lib/mruby
-	url = https://github.com/mruby/mruby
+	url = https://github.com/davidsiaw/mruby
 [submodule "lib/glew"]
 	path = lib/glew
 	url = git@github.com:davidsiaw/glew
