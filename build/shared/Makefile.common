@@ -18,6 +18,7 @@ SDL2CONFIG=$(LIBPREFIX)/bin/sdl2-config
 MRUBY=$(LIBPREFIX)/lib/libmruby.a
 
 FREETYPE=$(LIBPREFIX)/lib/libfreetype.la
+FREETYPE=$(LIBPREFIX)/lib/libharfbuzz.la
 
 LIBJPEG=$(LIBPREFIX)/lib/libjpeg.la
 LIBPNG=$(LIBPREFIX)/lib/libpng.la
@@ -25,22 +26,32 @@ LIBWEBP=$(LIBPREFIX)/lib/libwebp.la
 LIBTIFF=$(LIBPREFIX)/lib/libtiff.la
 ZLIB=$(LIBPREFIX)/lib/libz.a
 
-LIBFLAC=$(LIBPREFIX)/lib/libflac.la
+LIBFLAC=$(LIBPREFIX)/lib/libFLAC.la
 LIBMODPLUG=$(LIBPREFIX)/lib/libmodplug.la
 LIBOGG=$(LIBPREFIX)/lib/libogg.la
 LIBVORBIS=$(LIBPREFIX)/lib/libvorbis.la
 LIBVORBISIDEC=$(LIBPREFIX)/lib/libvorbisidec.la
-LIBMPG=$(LIBPREFIX)/lib/libmpg.la
+LIBMPG=$(LIBPREFIX)/lib/libmpg123.la
 LIBOPUS=$(LIBPREFIX)/lib/libopus.la
 LIBOPUSFILE=$(LIBPREFIX)/lib/libopusfile.la
 
-FREETYPE_SRCDIR=$(PWD)/lib/sdl2_ttf/external/freetype-2.4.12
+FREETYPE_SRCDIR=$(PWD)/lib/sdl2_ttf/external/freetype-2.9.1
+HARFBUZZ_SRCDIR=$(PWD)/lib/sdl2_ttf/external/harfbuzz-2.3.1
 
 LIBJPEGSRC="$(PWD)/lib/sdl2_image/external/jpeg-9b"
-LIBPNGSRC="$(PWD)/lib/sdl2_image/external/libpng-1.6.32"
-LIBWEBPSRC="$(PWD)/lib/sdl2_image/external/libwebp-0.6.0"
-LIBTIFFSRC="$(PWD)/lib/sdl2_image/external/tiff-4.0.8"
+LIBPNGSRC="$(PWD)/lib/sdl2_image/external/libpng-1.6.37"
+LIBWEBPSRC="$(PWD)/lib/sdl2_image/external/libwebp-1.0.2"
+LIBTIFFSRC="$(PWD)/lib/sdl2_image/external/tiff-4.0.9"
 ZLIBSRC="$(PWD)/lib/sdl2_image/external/zlib-1.2.11"
+
+LIBFLACSRC="$(PWD)/lib/sdl2_mixer/external/flac-1.3.2"
+LIBMODPLUGSRC="$(PWD)/lib/sdl2_mixer/external/libmodplug-0.8.9.0"
+LIBOGGSRC="$(PWD)/lib/sdl2_mixer/external/libogg-1.3.2"
+LIBVORBISSRC="$(PWD)/lib/sdl2_mixer/external/libvorbis-1.3.5"
+LIBVORBISIDECSRC="$(PWD)/lib/sdl2_mixer/external/libvorbisidec-1.2.1"
+LIBMPGSRC="$(PWD)/lib/sdl2_mixer/external/mpg123-1.25.6"
+LIBOPUSSRC="$(PWD)/lib/sdl2_mixer/external/opus-1.0.3"
+LIBOPUSFILESRC="$(PWD)/lib/sdl2_mixer/external/opusfile-0.10"
 
 MRUBYCPP_SRCDIR=$(PWD)/lib/mruby-cpp
 MRUBY_SRCDIR=$(PWD)/lib/mruby
@@ -107,25 +118,26 @@ $(SDL2MAIN):
 	$(AT)cd lib/sdl2 && ./configure --prefix=$(LIBPREFIX) $(REDIR)
 	$(AT)make -C lib/sdl2 all install $(REDIR)
 
+
 $(SDL2IMAGE): $(SDL2MAIN) $(LIBJPEG) $(LIBPNG) $(LIBWEBP) $(LIBTIFF)
 	$(AT)echo [BLD] $@
 	$(AT)chmod +x lib/sdl2_image/autogen.sh
 	$(AT)cd lib/sdl2_image && ./autogen.sh $(REDIR)
-	$(AT)cd lib/sdl2_image && ./configure --prefix=$(LIBPREFIX) $(REDIR)
+	$(AT)cd lib/sdl2_image && ./configure --with-sdl-prefix=$(LIBPREFIX) --prefix=$(LIBPREFIX) LIBWEBP_CFLAGS=-I$(LIBWEBPSRC)/src LIBWEBP_LIBS=-L$(LIBPREFIX) LIBS=-lm $(REDIR)
 	$(AT)make -C lib/sdl2_image all install $(REDIR)
 
-$(SDL2MIXER): $(SDL2MAIN) $(FREETYPE)
+$(SDL2MIXER): $(SDL2MAIN) $(LIBFLAC) $(LIBMODPLUG) $(LIBOGG) $(LIBVORBIS) $(LIBMPG) $(LIBOPUS) $(LIBOPUSFILE)
 	$(AT)echo [BLD] $@
 	$(AT)chmod +x lib/sdl2_mixer/autogen.sh $(REDIR)
 	$(AT)cd lib/sdl2_mixer && ./autogen.sh $(REDIR)
-	$(AT)cd lib/sdl2_mixer && ./configure --prefix=$(LIBPREFIX) $(REDIR)
+	$(AT)cd lib/sdl2_mixer && ./configure --with-sdl-prefix=$(LIBPREFIX) --prefix=$(LIBPREFIX) $(REDIR)
 	$(AT)make -C lib/sdl2_mixer all install $(REDIR)
 
-$(SDL2TTF): $(SDL2MAIN)
+$(SDL2TTF): $(SDL2MAIN) $(FREETYPE)
 	$(AT)echo [BLD] $@
 	$(AT)chmod +x lib/sdl2_ttf/autogen.sh $(REDIR)
 	$(AT)cd lib/sdl2_ttf && ./autogen.sh $(REDIR)
-	$(AT)cd lib/sdl2_ttf && ./configure --prefix=$(LIBPREFIX) --with-freetype-exec-prefix=$(LIBPREFIX) $(REDIR)
+	$(AT)cd lib/sdl2_ttf && ./configure --with-sdl-prefix=$(LIBPREFIX) --prefix=$(LIBPREFIX) --with-freetype-exec-prefix=$(LIBPREFIX) $(REDIR)
 	$(AT)make -C lib/sdl2_ttf all install $(REDIR)
 
 $(SDL2GFX): $(SDL2MAIN)
@@ -167,7 +179,59 @@ $(LIBTIFF): $(ZLIB) $(LIBJPEG)
 	$(AT)echo [BLD] $@
 	$(AT)chmod +x $(LIBTIFFSRC)/autogen.sh $(REDIR)
 	$(AT)cd $(LIBTIFFSRC) && ./autogen.sh $(REDIR)
-	$(AT)cd $(LIBTIFFSRC) && ./configure --prefix=$(LIBPREFIX) --enable-shared=no --with-zlib-include-dir=$(ZLIBSRC) --with-zlib-lib-dir=$(ZLIB) $(REDIR)
+	$(AT)cd $(LIBTIFFSRC) && ./configure --prefix=$(LIBPREFIX) --enable-shared=no --with-zlib-include-dir=$(ZLIBSRC) --disable-lzma --disable-jbig --with-zlib-lib-dir=$(ZLIB) $(REDIR)
 	$(AT)cd $(LIBTIFFSRC) && make install $(REDIR)
+
+
+$(LIBFLAC): 
+	$(AT)echo [BLD] $@
+	$(AT)cd $(LIBFLACSRC) && autoreconf --install $(REDIR)
+	$(AT)cd $(LIBFLACSRC) && ./configure --prefix=$(LIBPREFIX) $(REDIR)
+	$(AT)cd $(LIBFLACSRC) && make install $(REDIR)
+
+$(LIBMODPLUG): 
+	$(AT)echo [BLD] $@
+	$(AT)cd $(LIBMODPLUGSRC) && autoreconf --install $(REDIR)
+	$(AT)cd $(LIBMODPLUGSRC) && ./configure --prefix=$(LIBPREFIX) $(REDIR)
+	$(AT)cd $(LIBMODPLUGSRC) && make install $(REDIR)
+
+$(LIBOGG): 
+	$(AT)echo [BLD] $@
+	$(AT)cd $(LIBOGGSRC) && autoreconf -fi $(REDIR)
+	$(AT)cd $(LIBOGGSRC) && ./configure --prefix=$(LIBPREFIX) $(REDIR)
+	$(AT)cd $(LIBOGGSRC) && make install $(REDIR)
+
+$(LIBVORBIS): 
+	$(AT)echo [BLD] $@
+	$(AT)cd $(LIBMODPLUGSRC) && autoreconf --install $(REDIR)
+	$(AT)cd $(LIBVORBISSRC) && ./configure --prefix=$(LIBPREFIX) --with-ogg-libraries=$(LIBPREFIX)/lib --with-ogg-includes=$(LIBOGGSRC)/include $(REDIR)
+	$(AT)cd $(LIBVORBISSRC) && make install $(REDIR)
+
+$(LIBVORBISIDEC): 
+	$(AT)echo [BLD] $@
+	$(AT)cd $(LIBVORBISIDECSRC) && cp $(PWD)/lib/vorbisidec-autogen.sh autogen.sh $(REDIR)
+	$(AT)chmod +x $(LIBVORBISIDECSRC)/autogen.sh $(REDIR)
+	$(AT)cd $(LIBVORBISIDECSRC) && ./autogen.sh $(REDIR)
+	$(AT)cd $(LIBVORBISIDECSRC) && ./configure --prefix=$(LIBPREFIX) --with-ogg-libraries=$(LIBPREFIX)/lib --with-ogg-includes=$(LIBOGGSRC)/include $(REDIR)
+	$(AT)cd $(LIBVORBISIDECSRC) && make install $(REDIR)
+
+$(LIBMPG): 
+	$(AT)echo [BLD] $@
+	$(AT)cd $(LIBMODPLUGSRC) && autoreconf --install $(REDIR)
+	$(AT)cd $(LIBMPGSRC) && ./configure --prefix=$(LIBPREFIX) $(REDIR)
+	$(AT)cd $(LIBMPGSRC) && make install $(REDIR)
+
+$(LIBOPUS): 
+	$(AT)echo [BLD] $@
+	$(AT)cd $(LIBMODPLUGSRC) && autoreconf --install $(REDIR)
+	$(AT)cd $(LIBOPUSSRC) && ./configure --prefix=$(LIBPREFIX) $(REDIR)
+	$(AT)cd $(LIBOPUSSRC) && make install $(REDIR)
+
+$(LIBOPUSFILE): 
+	$(AT)echo [BLD] $@
+	$(AT)cd $(LIBMODPLUGSRC) && autoreconf --install $(REDIR)
+	$(AT)cd $(LIBOPUSFILESRC) && ./configure --prefix=$(LIBPREFIX) --enable-shared=no --with-pic PKG_CONFIG_PATH="$(PKG_CONFIG_PATH):$(LIBOPUSSRC):$(LIBOGGSRC)" $(REDIR)
+	$(AT)cd $(LIBOPUSFILESRC) && make install $(REDIR)
+
 
 .PRECIOUS: %/.f
