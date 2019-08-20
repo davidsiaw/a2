@@ -35,6 +35,8 @@ TODO
 
 ### Requirements
 
+Make sure you install Ruby and have some sort of sound system installed (I tested with PulseAudio and ALSA).
+
 ```
 rvm install 2.6
 
@@ -44,6 +46,10 @@ rvm install 2.6
 
 ```
 make run
+```
+
+```
+make run V=1 # To see the verbose output
 ```
 
 ## Android

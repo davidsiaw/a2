@@ -8,4 +8,4 @@ TARGET=$(BUILD_DIR)/bin/$(TARGET_NAME)
 -include $(BUILD_DIR)/Makefile
 
 run: all
-	cd $(WORK_DIR) && $(PWD)/$(TARGET)
+	cd $(WORK_DIR) && LD_LIBRARY_PATH=$(PWD)/$(BUILD_DIR)/lib $(PWD)/$(TARGET)

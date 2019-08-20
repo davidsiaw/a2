@@ -15,11 +15,11 @@ begin
   music = sys.load_music('sample.flac')
   music.play
 
-  img = sys.load_image('sample.png')
+  img = sys.load_image('sample.webp')
 
-  # posimg = sys.centered_image(img)
+  posimg = sys.centered_image(img)
+  p posimg
 
-  # sys.set_image 0, posimg
 
   sprimg = sys.load_image('x36.png')
 
@@ -36,6 +36,7 @@ begin
   postext.y += 40
   sys.set_image 4, postext
 
+  sys.set_image -100, posimg
   sys.begin_loop do |x|
     return false if x.type == :quit
 

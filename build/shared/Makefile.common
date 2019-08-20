@@ -18,7 +18,7 @@ SDL2CONFIG=$(LIBPREFIX)/bin/sdl2-config
 MRUBY=$(LIBPREFIX)/lib/libmruby.a
 
 FREETYPE=$(LIBPREFIX)/lib/libfreetype.la
-FREETYPE=$(LIBPREFIX)/lib/libharfbuzz.la
+HARFBUZZ=$(LIBPREFIX)/lib/libharfbuzz.la
 
 LIBJPEG=$(LIBPREFIX)/lib/libjpeg.la
 LIBPNG=$(LIBPREFIX)/lib/libpng.la
@@ -62,7 +62,7 @@ CXXFLAGS=$(EXTRA_CFLAGS) \
 	-I$(PWD)/lib/mruby-cpp \
 	-I$(PWD)/lib/mruby/include
 
-LDFLAGS=$(shell $(SDL2CONFIG) --libs) -L$(LIBPREFIX) -lSDL2_image -lSDL2_mixer -lSDL2_ttf -lSDL2_gfx -lstdc++ -ldl $(OPENGL_LDFLAGS) -lm
+LDFLAGS=$(shell $(SDL2CONFIG) --libs) -L$(LIBPREFIX) -lSDL2_image -lSDL2_mixer -lSDL2_ttf -lSDL2_gfx -lstdc++ -ldl $(OPENGL_LDFLAGS) -lm -lfreetype
 
 SRCDIR=$(PWD)/src
 MRUBY_CPPFILES=$(filter-out $(shell find $(MRUBYCPP_SRCDIR)/tests -name "*.cpp"), $(shell find $(MRUBYCPP_SRCDIR) -name "*.cpp"))
@@ -78,11 +78,12 @@ NODEPS=clean
 .SECONDEXPANSION:
 
 all: $(TARGET)
-	$(AT)echo "Building for $(OS)"
+	$(AT)echo "Building for $(ENV)"
+	$(AT)cp -r $(PWD)/$(BUILD_DIR)/build/lib $(PWD)/$(BUILD_DIR)/
 
 clean:
 	$(AT)cd lib/mruby && ruby minirake clean
-	-rm -rf $(TARGET) $(OUT) $(LIBPREFIX)
+	-rm -rf $(TARGET) $(OUT) $(LIBPREFIX) $(PWD)/$(BUILD_DIR)/build/lib 
 
 ifeq (0, $(words $(findstring $(MAKECMDGOALS), $(NODEPS))))
 	-include $(DEPS)
@@ -97,11 +98,11 @@ $(TARGET): $(OBJS) $(MRUBY)
 	$(AT)mkdir -p $(dir $@) 
 	$(AT)touch $@
 
-$(OUT)/%.d:%.cpp $$(@D)/.f $(SDL2MAIN) $(SDL2IMAGE) $(SDL2MIXER) $(SDL2TTF) $(SDL2GFX) $(MRUBY)
+$(OUT)/%.d:%.cpp $$(@D)/.f 
 	$(AT)echo [DEP] $<
 	$(AT)$(CXX) $(CXXFLAGS) -MM -MT '$(patsubst %.d,%.o,$@)' $< -MF $@
 
-$(OUT)/%.o:%.cpp $(OUT)/%.d
+$(OUT)/%.o:%.cpp $(OUT)/%.d $(MRUBY) $(SDL2MAIN) $(SDL2IMAGE) $(SDL2MIXER) $(SDL2TTF) $(SDL2GFX)
 	$(AT)echo [C++] $<
 	$(AT)$(CXX) $< $(CXXFLAGS) -c -o $@
 
@@ -110,6 +111,12 @@ $(FREETYPE):
 	$(AT)chmod +x $(FREETYPE_SRCDIR)/configure
 	$(AT)cd $(FREETYPE_SRCDIR) && ./configure --prefix=$(LIBPREFIX) $(REDIR)
 	$(AT)cd $(FREETYPE_SRCDIR) && make all install $(REDIR)
+
+$(HARFBUZZ):
+	$(AT)echo [BLD] $@
+	$(AT)chmod +x $(HARFBUZZ_SRCDIR)/configure
+	$(AT)cd $(HARFBUZZ_SRCDIR) && ./configure --prefix=$(LIBPREFIX) $(REDIR)
+	$(AT)cd $(HARFBUZZ_SRCDIR) && make all install $(REDIR)
 
 $(SDL2MAIN):
 	$(AT)echo [BLD] $@
@@ -130,14 +137,15 @@ $(SDL2MIXER): $(SDL2MAIN) $(LIBFLAC) $(LIBMODPLUG) $(LIBOGG) $(LIBVORBIS) $(LIBM
 	$(AT)echo [BLD] $@
 	$(AT)chmod +x lib/sdl2_mixer/autogen.sh $(REDIR)
 	$(AT)cd lib/sdl2_mixer && ./autogen.sh $(REDIR)
-	$(AT)cd lib/sdl2_mixer && ./configure --with-sdl-prefix=$(LIBPREFIX) --prefix=$(LIBPREFIX) $(REDIR)
-	$(AT)make -C lib/sdl2_mixer all install $(REDIR)
+	$(AT)cd lib/sdl2_mixer && ./configure --with-sdl-prefix=$(LIBPREFIX) --prefix=$(LIBPREFIX)  --enable-music-ogg LDFLAGS=-L$(LIBPREFIX)/lib CFLAGS=-I$(LIBPREFIX)/include $(REDIR)
+	$(AT)cd lib/sdl2_mixer && make install $(REDIR)
 
-$(SDL2TTF): $(SDL2MAIN) $(FREETYPE)
+$(SDL2TTF): $(SDL2MAIN) $(FREETYPE) $(ZLIB)
 	$(AT)echo [BLD] $@
+	$(AT)make -C lib/sdl2_ttf clean $(REDIR)
 	$(AT)chmod +x lib/sdl2_ttf/autogen.sh $(REDIR)
 	$(AT)cd lib/sdl2_ttf && ./autogen.sh $(REDIR)
-	$(AT)cd lib/sdl2_ttf && ./configure --with-sdl-prefix=$(LIBPREFIX) --prefix=$(LIBPREFIX) --with-freetype-exec-prefix=$(LIBPREFIX) $(REDIR)
+	$(AT)cd lib/sdl2_ttf && ./configure --with-sdl-prefix=$(LIBPREFIX) --prefix=$(LIBPREFIX) $(REDIR)
 	$(AT)make -C lib/sdl2_ttf all install $(REDIR)
 
 $(SDL2GFX): $(SDL2MAIN)
@@ -149,12 +157,14 @@ $(SDL2GFX): $(SDL2MAIN)
 
 $(MRUBY):
 	$(AT)echo [BLD] $@
-	$(AT)cd lib/mruby && ruby minirake $(REDIR)
+	$(AT)cd lib/mruby && make $(REDIR)
+	$(AT)mkdir -p $(LIBPREFIX)/lib
 	$(AT)mv lib/mruby/build/host/lib/libmruby.a $(MRUBY)
 
 $(ZLIB):
 	$(AT)echo [BLD] $@
-	$(AT)cd $(ZLIBSRC) && ./configure --prefix=$(LIBPREFIX) --static $(REDIR)
+	$(AT)cd $(ZLIBSRC) && make clean $(REDIR)
+	$(AT)cd $(ZLIBSRC) && CFLAGS=-fPIC ./configure --prefix=$(LIBPREFIX) --static $(REDIR)
 	$(AT)cd $(ZLIBSRC) && make install $(REDIR)
 
 $(LIBJPEG):
@@ -230,7 +240,7 @@ $(LIBOPUS):
 $(LIBOPUSFILE): 
 	$(AT)echo [BLD] $@
 	$(AT)cd $(LIBMODPLUGSRC) && autoreconf --install $(REDIR)
-	$(AT)cd $(LIBOPUSFILESRC) && ./configure --prefix=$(LIBPREFIX) --enable-shared=no --with-pic PKG_CONFIG_PATH="$(PKG_CONFIG_PATH):$(LIBOPUSSRC):$(LIBOGGSRC)" $(REDIR)
+	$(AT)cd $(LIBOPUSFILESRC) && ./configure --prefix=$(LIBPREFIX) --disable-examples --disable-doc --enable-shared=no --with-pic PKG_CONFIG_PATH="$(PKG_CONFIG_PATH):$(LIBOPUSSRC):$(LIBOGGSRC)" DEPS_LIBS="$(LIBOPUS) $(LIBOGG)" $(REDIR)
 	$(AT)cd $(LIBOPUSFILESRC) && make install $(REDIR)
 
 
