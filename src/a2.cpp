@@ -4,7 +4,7 @@
 
 #include <iostream>
 
-int main(int argc, char *argv[])
+void run()
 {
 	mruby::VM mrvm;
 
@@ -52,6 +52,13 @@ int main(int argc, char *argv[])
 	animated_sprite_class->bind_instance_variable("animating", &AnimatedSprite::animating);
 
 	mrvm.run_file("main.rb");
+}
+
+int main(int argc, char *argv[])
+{
+	run();
+	exit(0);
 
 	return EXIT_SUCCESS;
 }
+

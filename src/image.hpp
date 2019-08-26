@@ -8,7 +8,7 @@
 
 class Image : public IImage
 {
-	std::shared_ptr<InternalSystem> intsys;
+	std::weak_ptr<InternalSystem> intsys;
 	std::shared_ptr<SDL_Texture> texture;
 	int w, h;
 
@@ -37,12 +37,12 @@ class Image : public IImage
 	}
 
 public:
-	Image(std::shared_ptr<InternalSystem> intsys, std::shared_ptr<SDL_Renderer> renderer, std::shared_ptr<SDL_Surface> surface) :
+	Image(std::weak_ptr<InternalSystem> intsys, std::shared_ptr<SDL_Renderer> renderer, std::shared_ptr<SDL_Surface> surface) :
 		texture(load_texture(renderer, surface)), intsys(intsys)
 	{
 	}
 
-	Image(std::shared_ptr<InternalSystem> intsys, std::shared_ptr<SDL_Renderer> renderer, const std::string& filename) :
+	Image(std::weak_ptr<InternalSystem> intsys, std::shared_ptr<SDL_Renderer> renderer, const std::string& filename) :
 		texture(load_texture(renderer, load_image(renderer, filename))), intsys(intsys)
 	{
 	}

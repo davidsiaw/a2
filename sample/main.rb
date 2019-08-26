@@ -20,7 +20,6 @@ begin
   posimg = sys.centered_image(img)
   p posimg
 
-
   sprimg = sys.load_image('x36.png')
 
   (0..3).each do |i|
@@ -36,9 +35,19 @@ begin
   postext.y += 40
   sys.set_image 4, postext
 
-  sys.set_image -100, posimg
+  #sys.set_image(-100, posimg)
+
+  start = postext.y
+  count = 0
+
   sys.begin_loop do |x|
     return false if x.type == :quit
+
+    count -= 1
+    postext.y = start + count
+    sys.set_image 4, postext
+
+    count = 0 if count < -100
 
     # p x.type
     # p x.gettype

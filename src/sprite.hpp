@@ -15,6 +15,10 @@ public:
 	{
 	}
 
+	virtual ~Sprite()
+	{
+	}
+
 	virtual int get_width() const
 	{
 		return w;
@@ -48,7 +52,12 @@ public:
 	bool animating;
 	AnimatedSprite(mruby::NativeObject<Image> img, int x, int y, int w, int h) : 
 		Sprite(img, x, y, w, h), last_update(0), animating(true)
-	{}
+	{
+	}
+
+	virtual ~AnimatedSprite()
+	{
+	}
 
 	virtual SDL_Rect get_rect()
 	{

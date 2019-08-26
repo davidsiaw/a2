@@ -31,8 +31,20 @@ public:
 		}
 	}
 
+	System(const System& other) :
+		intsys(other.intsys),
+		width(other.width),
+		height(other.height),
+		background_color(other.background_color),
+		running(other.running),
+		images(other.images)
+	{ }
+
 	~System()
 	{
+		#ifdef __linux__
+		system("pulseaudio -k");	// hack to stop pulseaudio from hanging Mix_CloseAudio
+		#endif
 		Mix_CloseAudio();
 	}
 

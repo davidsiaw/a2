@@ -57,6 +57,7 @@ MRUBYCPP_SRCDIR=$(PWD)/lib/mruby-cpp
 MRUBY_SRCDIR=$(PWD)/lib/mruby
 
 CXXFLAGS=$(EXTRA_CFLAGS) \
+	-g \
 	$(shell $(SDL2CONFIG) --cflags) \
 	-I$(PWD)/lib/sdl2_gfx \
 	-I$(PWD)/lib/mruby-cpp \
@@ -65,8 +66,9 @@ CXXFLAGS=$(EXTRA_CFLAGS) \
 LDFLAGS=$(shell $(SDL2CONFIG) --libs) -L$(LIBPREFIX) -lSDL2_image -lSDL2_mixer -lSDL2_ttf -lSDL2_gfx -lstdc++ -ldl $(OPENGL_LDFLAGS) -lm -lfreetype
 
 SRCDIR=$(PWD)/src
-MRUBY_CPPFILES=$(filter-out $(shell find $(MRUBYCPP_SRCDIR)/tests -name "*.cpp"), $(shell find $(MRUBYCPP_SRCDIR) -name "*.cpp"))
-SRC=$(MRUBY_CPPFILES) $(shell find $(SRCDIR) -name "*.cpp")
+MRUBY_CPPFILES=$(shell find $(MRUBYCPP_SRCDIR) -name "*.hpp")
+HEADERS=$(shell find $(SRCDIR) -name "*.hpp")
+SRC=$(shell find $(SRCDIR) -name "*.cpp")
 
 OUT=$(PWD)/$(BUILD_DIR)/obj
 OBJS=$(SRC:%.cpp=$(OUT)/%.o)
@@ -93,7 +95,7 @@ $(TARGET): $(OBJS) $(MRUBY)
 	$(AT)echo [LINK] $@
 	$(AT)$(CXX) $(CXXFLAGS) $^ $(LDFLAGS) -o $@ 
 
-%/.f:
+%/.f: $(MRUBY_CPPFILES) $(HEADERS)
 	$(AT)echo [MKDIR] $(dir $@)
 	$(AT)mkdir -p $(dir $@) 
 	$(AT)touch $@

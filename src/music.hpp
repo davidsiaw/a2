@@ -16,7 +16,6 @@ public:
 
 	~Music()
 	{
-
 	}
 
 	void play()

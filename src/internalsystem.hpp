@@ -1,6 +1,8 @@
 #pragma once
 #include "top.h"
 
+#include <iostream>
+
 class InternalSystem
 {
 	std::shared_ptr<SDL_Window> window;
