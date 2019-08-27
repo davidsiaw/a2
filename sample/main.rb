@@ -18,6 +18,8 @@ begin
   img = sys.load_image('sample.webp')
 
   posimg = sys.centered_image(img)
+  posimg.x = 0
+  posimg.y = 0
   p posimg
 
   sprimg = sys.load_image('x36.png')
@@ -34,6 +36,7 @@ begin
   p postext.class
   postext.y += 40
   sys.set_image 4, postext
+  sys.set_image -100, posimg
 
   start = postext.y
   count = 0

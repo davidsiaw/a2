@@ -4,4 +4,4 @@
 config_string = ARGV[0]
 platform_string = ARGV[1]
 ENV["MRUBY_BUILD_DIR"] = "#{config_string}_#{platform_string}_build"
-exec "ruby minirake"
+exec "ruby minirake --verbose"
