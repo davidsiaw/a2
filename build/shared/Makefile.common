@@ -142,7 +142,7 @@ $(SDL2MIXER): $(SDL2MAIN) $(LIBFLAC) $(LIBMODPLUG) $(LIBOGG) $(LIBVORBIS) $(LIBM
 
 $(SDL2TTF): $(SDL2MAIN) $(FREETYPE) $(ZLIB)
 	$(AT)echo [BLD] $@
-	$(AT)make -C lib/sdl2_ttf clean $(REDIR)
+	#$(AT)make -C lib/sdl2_ttf clean $(REDIR)
 	$(AT)chmod +x lib/sdl2_ttf/autogen.sh $(REDIR)
 	$(AT)cd lib/sdl2_ttf && ./autogen.sh $(REDIR)
 	$(AT)cd lib/sdl2_ttf && ./configure --with-sdl-prefix=$(LIBPREFIX) --prefix=$(LIBPREFIX) $(REDIR)
@@ -163,7 +163,7 @@ $(MRUBY):
 
 $(ZLIB):
 	$(AT)echo [BLD] $@
-	$(AT)cd $(ZLIBSRC) && make clean $(REDIR)
+	#$(AT)cd $(ZLIBSRC) && make clean $(REDIR)
 	$(AT)cd $(ZLIBSRC) && CFLAGS=-fPIC ./configure --prefix=$(LIBPREFIX) --static $(REDIR)
 	$(AT)cd $(ZLIBSRC) && make install $(REDIR)
 
@@ -240,7 +240,7 @@ $(LIBOPUS):
 $(LIBOPUSFILE): 
 	$(AT)echo [BLD] $@
 	$(AT)cd $(LIBMODPLUGSRC) && autoreconf --install $(REDIR)
-	$(AT)cd $(LIBOPUSFILESRC) && ./configure --prefix=$(LIBPREFIX) --disable-examples --disable-doc --enable-shared=no --with-pic PKG_CONFIG_PATH="$(PKG_CONFIG_PATH):$(LIBOPUSSRC):$(LIBOGGSRC)" DEPS_LIBS="$(LIBOPUS) $(LIBOGG)" $(REDIR)
+	$(AT)cd $(LIBOPUSFILESRC) && ./configure --prefix=$(LIBPREFIX) --disable-examples --disable-doc --enable-shared=no --with-pic PKG_CONFIG_PATH="$(PKG_CONFIG_PATH):$(EXTRA_PKG_CONFIG_PATHS):$(LIBOPUSSRC):$(LIBOGGSRC)" DEPS_LIBS="$(LIBOPUS) $(LIBOGG)" $(REDIR)
 	$(AT)cd $(LIBOPUSFILESRC) && make install $(REDIR)
 
 
