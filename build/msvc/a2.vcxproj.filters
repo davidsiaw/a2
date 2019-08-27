@@ -110,7 +110,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\README.md" />
-    <None Include="..\..\lib\mruby\mrbgems\default.gembox" />
-    <None Include="..\..\lib\mruby\build_config.rb" />
+    <None Include="..\shared\mruby-config.rb">
+      <Filter>Source Files</Filter>
+    </None>
   </ItemGroup>
 </Project>

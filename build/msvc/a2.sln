@@ -6,6 +6,7 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "a2", "a2.vcxproj", "{7E0D5A42-2708-4D43-B831-3641897AF251}"
 	ProjectSection(ProjectDependencies) = postProject
 		{A2074F14-F05A-4F16-B60C-E6A4874F7096} = {A2074F14-F05A-4F16-B60C-E6A4874F7096}
+		{6ACF7897-50DC-4F9D-A868-59970EAA30E8} = {6ACF7897-50DC-4F9D-A868-59970EAA30E8}
 		{6D03A7BF-323C-4802-9061-2B01B13887EF} = {6D03A7BF-323C-4802-9061-2B01B13887EF}
 	EndProjectSection
 EndProject
@@ -50,6 +51,8 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "glew_static", "..\..\lib\glew\build\vc14\glew_static.vcxproj", "{664E6F0D-6784-4760-9565-D54F8EB1EDF4}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SDL2_gfx", "..\..\lib\sdl2_gfx\SDL2_gfx.vcxproj", "{AE22EFD3-6E6D-48C0-AF3D-EF190406BEDC}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "sqlite", "sqlite\sqlite.vcxproj", "{6ACF7897-50DC-4F9D-A868-59970EAA30E8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -235,6 +238,14 @@ Global
 		{AE22EFD3-6E6D-48C0-AF3D-EF190406BEDC}.Release|x64.Build.0 = Release|x64
 		{AE22EFD3-6E6D-48C0-AF3D-EF190406BEDC}.Release|x86.ActiveCfg = Release|Win32
 		{AE22EFD3-6E6D-48C0-AF3D-EF190406BEDC}.Release|x86.Build.0 = Release|Win32
+		{6ACF7897-50DC-4F9D-A868-59970EAA30E8}.Debug|x64.ActiveCfg = Debug|x64
+		{6ACF7897-50DC-4F9D-A868-59970EAA30E8}.Debug|x64.Build.0 = Debug|x64
+		{6ACF7897-50DC-4F9D-A868-59970EAA30E8}.Debug|x86.ActiveCfg = Debug|Win32
+		{6ACF7897-50DC-4F9D-A868-59970EAA30E8}.Debug|x86.Build.0 = Debug|Win32
+		{6ACF7897-50DC-4F9D-A868-59970EAA30E8}.Release|x64.ActiveCfg = Release|x64
+		{6ACF7897-50DC-4F9D-A868-59970EAA30E8}.Release|x64.Build.0 = Release|x64
+		{6ACF7897-50DC-4F9D-A868-59970EAA30E8}.Release|x86.ActiveCfg = Release|Win32
+		{6ACF7897-50DC-4F9D-A868-59970EAA30E8}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

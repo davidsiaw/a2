@@ -117,7 +117,7 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;GLEW_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>..\..\lib\sdl2\include;.\;..\..\lib\sdl2_image;..\..\lib\sdl2_mixer;..\..\lib\sdl2_ttf;..\..\lib\glm;..\..\lib\mruby\include;..\..\lib\glew\include;..\..\lib\sdl2_gfx;..\..\lib\mruby-cpp;..\..\src</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\lib\sdl2\include;.\;..\..\lib\sdl2_image;..\..\lib\sdl2_mixer;..\..\lib\sdl2_ttf;..\..\lib\glm;..\..\lib\mruby\include;..\..\lib\glew\include;..\..\lib\sdl2_gfx;..\..\lib\mruby-cpp;..\..\src;..\..\lib\sqlite</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -127,7 +127,7 @@
       <AdditionalDependencies>ole32.lib;oleaut32.lib;imm32.lib;winmm.lib;version.lib;setupapi.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;uuid.lib;odbc32.lib;odbccp32.lib;ws2_32.lib;opengl32.lib;..\..\lib\mruby\$(Configuration)_$(Platform)_build\host-debug\lib\libmruby.lib;..\..\lib\sdl2_image\external\zlib-1.2.11\contrib\vstudio\vc14\x64\ZlibDllDebug\zlibwapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PreLinkEvent>
-      <Command>cd ..\..\lib\mruby &amp;&amp; ruby ..\build_mruby.rb "$(Configuration)" "$(Platform)"</Command>
+      <Command>cd ..\..\lib\mruby &amp;&amp; ruby ..\build_mruby.rb "$(Configuration)" "$(Platform)" $(SolutionDir)\..\shared\mruby-config.rb </Command>
     </PreLinkEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -274,11 +274,13 @@
     <ProjectReference Include="libwebpdecode\libwebpdecode.vcxproj">
       <Project>{6d03a7bf-323c-4802-9061-2b01b13887ef}</Project>
     </ProjectReference>
+    <ProjectReference Include="sqlite\sqlite.vcxproj">
+      <Project>{6acf7897-50dc-4f9d-a868-59970eaa30e8}</Project>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\lib\mruby\build_config.rb" />
-    <None Include="..\..\lib\mruby\mrbgems\default.gembox" />
     <None Include="..\..\README.md" />
+    <None Include="..\shared\mruby-config.rb" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

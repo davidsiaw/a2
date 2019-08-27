@@ -2,6 +2,8 @@
 #include "mruby.hpp"
 #include "sdlwrappers.hpp"
 
+#include "sqlite3.h"
+
 #include <iostream>
 
 void run()
@@ -56,9 +58,11 @@ void run()
 
 int main(int argc, char *argv[])
 {
+	sqlite3 *db;
+	sqlite3_open("abc.db", &db);
+	sqlite3_close(db);
 	run();
 	exit(0);
 
 	return EXIT_SUCCESS;
 }
-
