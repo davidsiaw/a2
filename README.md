@@ -56,10 +56,36 @@ make run V=1 # To see the verbose output
 
 TODO
 
-## XCode OS X
+## Mac OS X (On the console)
+
+You will need openssl
+
+```
+brew install openssl
+```
+
+Make sure you install Ruby and have some sort of sound system installed (I tested with PulseAudio and ALSA).
+
+```
+rvm install 2.6
+```
+
+### Build
+
+```
+make run
+```
+
+```
+make run V=1 # To see the verbose output
+```
+
+## Mac OS X (Using XCode)
 
 TODO
 
-## XCode iOS
+## iOS
+
+You can only build this using XCode.
 
 TODO

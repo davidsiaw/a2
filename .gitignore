@@ -1,3 +1,4 @@
+.DS_Store
 
 build/msvc/.vs/
 build/msvc/Release/
@@ -17,3 +18,6 @@ sample
 build/linux/bin/a2
 build/linux/build/
 build/linux/obj/
+build/darwin/bin/a2
+build/darwin/build/
+build/darwin/obj/

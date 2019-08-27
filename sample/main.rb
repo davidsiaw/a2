@@ -35,11 +35,10 @@ begin
   postext.y += 40
   sys.set_image 4, postext
 
-  #sys.set_image(-100, posimg)
-
   start = postext.y
   count = 0
 
+  sys.set_image(-100, posimg)
   sys.begin_loop do |x|
     return false if x.type == :quit
 
