@@ -190,6 +190,9 @@
     <ClInclude Include="..\..\lib\mruby-cpp\mrubytypebinder.hpp" />
     <ClInclude Include="..\..\lib\mruby-cpp\mrubyvm.hpp" />
     <ClInclude Include="..\..\src\color.hpp" />
+    <ClInclude Include="..\..\src\database\database.hpp" />
+    <ClInclude Include="..\..\src\database\db_result.hpp" />
+    <ClInclude Include="..\..\src\database\db_statement.hpp" />
     <ClInclude Include="..\..\src\event.hpp" />
     <ClInclude Include="..\..\src\font.hpp" />
     <ClInclude Include="..\..\src\iimage.hpp" />

@@ -35,7 +35,7 @@ begin
 
   p postext.class
   postext.y += 40
-  sys.set_image 4, postext
+  sys.set_image -4, postext
   sys.set_image -100, posimg
 
   start = postext.y
@@ -47,7 +47,6 @@ begin
 
     count -= 1
     postext.y = start + count
-    sys.set_image 4, postext
 
     count = 0 if count < -100
 

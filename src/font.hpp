@@ -3,7 +3,7 @@
 
 class Font
 {
-	std::weak_ptr<InternalSystem> intsys;
+	std::shared_ptr<InternalSystem> intsys;
 	std::shared_ptr<SDL_Renderer> renderer;
 	std::string filename;
 	std::map< int, std::shared_ptr<TTF_Font> > size_map;
@@ -25,7 +25,7 @@ class Font
 	}
 
 public:
-	Font(std::weak_ptr<InternalSystem> intsys, std::shared_ptr<SDL_Renderer> renderer, const std::string& filename) :
+	Font(std::shared_ptr<InternalSystem> intsys, std::shared_ptr<SDL_Renderer> renderer, const std::string& filename) :
 		renderer(renderer),
 		filename(filename),
 		intsys(intsys)
