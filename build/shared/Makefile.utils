@@ -6,6 +6,7 @@ SDL2TTF=$(LIBPREFIX)/lib/libSDL2_ttf.$(EXTENSION)
 SDL2GFX=$(LIBPREFIX)/lib/libSDL2_gfx.$(EXTENSION)
 SDL2CONFIG=$(LIBPREFIX)/bin/sdl2-config
 MRUBY=$(LIBPREFIX)/lib/libmruby.a
+LIBSQLITE=$(LIBPREFIX)/lib/libsqlite3.a
 
 FREETYPE=$(LIBPREFIX)/lib/libfreetype.la
 HARFBUZZ=$(LIBPREFIX)/lib/libharfbuzz.la
@@ -47,3 +48,5 @@ MRUBYCPP_SRCDIR=$(PWD)/lib/mruby-cpp
 MRUBY_SRCDIR=$(PWD)/lib/mruby
 
 MRUBY_CONFIG=$(PWD)/build/shared/mruby-config.rb
+
+LIBSQLITE_SRCDIR=$(PWD)/lib/sqlite

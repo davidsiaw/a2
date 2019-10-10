@@ -15,7 +15,7 @@ CXXFLAGS=$(EXTRA_CFLAGS) \
 	-I$(PWD)/lib/mruby-cpp \
 	-I$(PWD)/lib/mruby/include
 
-LDFLAGS=$(shell $(SDL2CONFIG) --libs) -L$(LIBPREFIX) -lSDL2_image -lSDL2_mixer -lSDL2_ttf -lSDL2_gfx -lstdc++ -ldl $(OPENGL_LDFLAGS) -lm -lfreetype
+LDFLAGS=$(shell $(SDL2CONFIG) --libs) -L$(LIBPREFIX) -lSDL2_image -lSDL2_mixer -lSDL2_ttf -lSDL2_gfx -lstdc++ -ldl $(OPENGL_LDFLAGS) -lm -lfreetype -lsqlite3
 
 SRCDIR=$(PWD)/src
 MRUBY_CPPFILES=$(shell find $(MRUBYCPP_SRCDIR) -name "*.hpp")
@@ -56,7 +56,7 @@ $(OUT)/%.d:%.cpp $$(@D)/.f
 	$(AT)echo [DEP] $<
 	$(AT)$(CXX) $(CXXFLAGS) -MM -MT '$(patsubst %.d,%.o,$@)' $< -MF $@
 
-$(OUT)/%.o:%.cpp $(OUT)/%.d $(MRUBY) $(SDL2MAIN) $(SDL2IMAGE) $(SDL2MIXER) $(SDL2TTF) $(SDL2GFX)
+$(OUT)/%.o:%.cpp $(OUT)/%.d $(MRUBY) $(SDL2MAIN) $(SDL2IMAGE) $(SDL2MIXER) $(SDL2TTF) $(SDL2GFX) $(LIBSQLITE)
 	$(AT)echo [C++] $<
 	$(AT)$(CXX) $< $(CXXFLAGS) -c -o $@
 
@@ -197,5 +197,8 @@ $(LIBOPUSFILE):
 	$(AT)cd $(LIBOPUSFILESRC) && ./configure --prefix=$(LIBPREFIX) --disable-examples --disable-doc --enable-shared=no --with-pic PKG_CONFIG_PATH="$(PKG_CONFIG_PATH):$(EXTRA_PKG_CONFIG_PATHS):$(LIBOPUSSRC):$(LIBOGGSRC)" DEPS_LIBS="$(LIBOPUS) $(LIBOGG)" $(REDIR)
 	$(AT)cd $(LIBOPUSFILESRC) && make install $(REDIR)
 
+$(LIBSQLITE):
+	$(AT)echo [BLD] $@
+	$(AT)cd $(LIBSQLITE_SRCDIR) && gcc -D SQLITE_ENABLE_COLUMN_METADATA -c -o sqlite3.o sqlite3.c && ar rcs $(LIBSQLITE) sqlite3.o
 
 .PRECIOUS: %/.f
