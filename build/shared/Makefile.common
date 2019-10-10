@@ -199,6 +199,6 @@ $(LIBOPUSFILE):
 
 $(LIBSQLITE):
 	$(AT)echo [BLD] $@
-	$(AT)cd $(LIBSQLITE_SRCDIR) && gcc -D SQLITE_ENABLE_COLUMN_METADATA -c -o sqlite3.o sqlite3.c && ar rcs $(LIBSQLITE) sqlite3.o
+	$(AT)cd $(LIBSQLITE_SRCDIR) && gcc -D SQLITE_ENABLE_COLUMN_METADATA -c -o $(OUT)/sqlite3.o sqlite3.c && ar rcs $(LIBSQLITE) $(OUT)/sqlite3.o
 
 .PRECIOUS: %/.f
