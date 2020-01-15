@@ -2,7 +2,10 @@
 #include "mruby.hpp"
 #include "sdlwrappers.hpp"
 
+#include "database/database.hpp"
+
 #include <iostream>
+#include <string>
 
 void run()
 {
@@ -51,6 +54,28 @@ void run()
 	animated_sprite_class->bind_instance_variable("yframe", &AnimatedSprite::yframe);
 	animated_sprite_class->bind_instance_variable("animating", &AnimatedSprite::animating);
 
+	auto database_class = mrvm.create_class<Database, const std::string&>("Database");
+	database_class->bind_instance_method("prepare", &Database::prepare);
+
+	auto db_statement_class = mrvm.create_closed_class<DbStatement>("DbStatement");
+	db_statement_class->bind_instance_method("bind_null", &DbStatement::bind_null);
+	db_statement_class->bind_instance_method("bind_int", &DbStatement::bind_int);
+	db_statement_class->bind_instance_method("bind_double", &DbStatement::bind_double);
+	db_statement_class->bind_instance_method("bind_text", &DbStatement::bind_text);
+	db_statement_class->bind_instance_method("param_index", &DbStatement::param_index);
+	db_statement_class->bind_instance_method("param_count", &DbStatement::param_count);
+	db_statement_class->bind_instance_method("param_name", &DbStatement::param_name);
+	db_statement_class->bind_instance_method("last_status", &DbStatement::last_status);
+	db_statement_class->bind_instance_method("step", &DbStatement::step);
+	db_statement_class->bind_instance_method("reset", &DbStatement::reset);
+
+	auto db_result_class = mrvm.create_closed_class<DbResult>("DbResult");
+	db_result_class->bind_instance_method("column_count", &DbResult::column_count);
+	db_result_class->bind_instance_method("column_name", &DbResult::column_name);
+	db_result_class->bind_instance_method("int_result", &DbResult::int_result);
+	db_result_class->bind_instance_method("double_result", &DbResult::double_result);
+	db_result_class->bind_instance_method("text_result", &DbResult::text_result);
+
 	mrvm.run_file("main.rb");
 }
 
@@ -61,4 +86,3 @@ int main(int argc, char *argv[])
 
 	return EXIT_SUCCESS;
 }
-

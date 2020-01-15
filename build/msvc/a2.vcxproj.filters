@@ -19,6 +19,9 @@
     <Filter Include="Header Files\sdlwrappers">
       <UniqueIdentifier>{afaaafb8-dc26-406f-9dbe-d97bcb99ad1f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\database">
+      <UniqueIdentifier>{97825dda-d45a-4adc-9920-27f787e1d133}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -93,6 +96,15 @@
     <ClInclude Include="..\..\src\sprite.hpp">
       <Filter>Header Files\sdlwrappers</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\src\database\database.hpp">
+      <Filter>Header Files\database</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\database\db_statement.hpp">
+      <Filter>Header Files\database</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\database\db_result.hpp">
+      <Filter>Header Files\database</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -110,7 +122,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\README.md" />
-    <None Include="..\..\lib\mruby\mrbgems\default.gembox" />
-    <None Include="..\..\lib\mruby\build_config.rb" />
+    <None Include="..\shared\mruby-config.rb">
+      <Filter>Source Files</Filter>
+    </None>
   </ItemGroup>
 </Project>
