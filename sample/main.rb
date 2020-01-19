@@ -2,7 +2,6 @@
 
 require './system.rb'
 
-puts 'hello'
 begin
   sys = System.new(1024, 768)
   sys.window_title = 'The Living Fossil'
