@@ -1,5 +1,6 @@
 #pragma once
 #include "top.h"
+#include "video_subsystem.hpp"
 
 class System
 {
@@ -14,7 +15,7 @@ class System
 
 	std::shared_ptr<SDL_Renderer> get_renderer() const
 	{
-		return intsys->get_renderer();
+        return intsys->get_renderer();
 	}
 
 public:
@@ -107,10 +108,34 @@ public:
 		SDL_PushEvent(&event);
 		return interval;
 	}
-
+    
+    static int get_display_count()
+    {
+        VideoSubsystem v;
+        return v.get_display_count();
+    }
+    
+    static int get_video_width(int display)
+    {
+        VideoSubsystem v;
+        return v.get_video_width(display);
+    }
+    
+    static int get_video_height(int display)
+    {
+        VideoSubsystem v;
+        return v.get_video_height(display);
+    }
+    
+    static int get_video_refresh(int display)
+    {
+        VideoSubsystem v;
+        return v.get_video_refresh(display);
+    }
+    
 	void start_event_loop(mruby::Function<bool(mruby::NativeObject<Event>)> onEvent)
 	{
-		SDL_TimerID render_trigger = SDL_AddTimer(50, send_render, NULL);
+        SDL_TimerID render_trigger = SDL_AddTimer(50, send_render, NULL);
 
 		running = true;
 		SDL_Event event;

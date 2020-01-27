@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:a2/a2.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:sdl2_gfx/SDL2_gfx.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:sdl2_ttf/SDL_ttf.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:sdl2_mixer/SDL_mixer.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:sdl2_image/SDL_image.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:mruby/../sqlite/sqlite.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:mruby/mruby.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../../lib/sdl2/Xcode-iOS/SDL/SDL.xcodeproj">
+   </FileRef>
+</Workspace>

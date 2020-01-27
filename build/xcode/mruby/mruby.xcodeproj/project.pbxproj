@@ -1,0 +1,3004 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		53939C8B23DC482A001C97E3 /* mrblib.c in Sources */ = {isa = PBXBuildFile; fileRef = 53939C8A23DC482A001C97E3 /* mrblib.c */; };
+		53939DA323DC48DF001C97E3 /* mrblib.o in Frameworks */ = {isa = PBXBuildFile; fileRef = 53939C9223DC48DE001C97E3 /* mrblib.o */; };
+		53939DA523DC48DF001C97E3 /* mrblib.c in Sources */ = {isa = PBXBuildFile; fileRef = 53939C9423DC48DE001C97E3 /* mrblib.c */; };
+		53939DA723DC48DF001C97E3 /* gem_init.c in Sources */ = {isa = PBXBuildFile; fileRef = 53939C9823DC48DE001C97E3 /* gem_init.c */; };
+		53939DAC23DC48DF001C97E3 /* gem_init.c in Sources */ = {isa = PBXBuildFile; fileRef = 53939C9F23DC48DE001C97E3 /* gem_init.c */; };
+		53939DB023DC48DF001C97E3 /* gem_init.c in Sources */ = {isa = PBXBuildFile; fileRef = 53939CA423DC48DE001C97E3 /* gem_init.c */; };
+		53939DB423DC48DF001C97E3 /* gem_init.o in Frameworks */ = {isa = PBXBuildFile; fileRef = 53939CAA23DC48DE001C97E3 /* gem_init.o */; };
+		53939DB523DC48DF001C97E3 /* gem_init.c in Sources */ = {isa = PBXBuildFile; fileRef = 53939CAB23DC48DE001C97E3 /* gem_init.c */; };
+		53939DBA23DC48DF001C97E3 /* codegen.o in Frameworks */ = {isa = PBXBuildFile; fileRef = 53939CB223DC48DE001C97E3 /* codegen.o */; };
+		53939DBB23DC48DF001C97E3 /* y.tab.o in Frameworks */ = {isa = PBXBuildFile; fileRef = 53939CB323DC48DE001C97E3 /* y.tab.o */; };
+		53939DBD23DC48DF001C97E3 /* gem_init.c in Sources */ = {isa = PBXBuildFile; fileRef = 53939CB623DC48DE001C97E3 /* gem_init.c */; };
+		53939DBF23DC48DF001C97E3 /* method.o in Frameworks */ = {isa = PBXBuildFile; fileRef = 53939CB923DC48DE001C97E3 /* method.o */; };
+		53939DC123DC48DF001C97E3 /* gem_init.o in Frameworks */ = {isa = PBXBuildFile; fileRef = 53939CBC23DC48DE001C97E3 /* gem_init.o */; };
+		53939DC223DC48DF001C97E3 /* gem_init.c in Sources */ = {isa = PBXBuildFile; fileRef = 53939CBD23DC48DE001C97E3 /* gem_init.c */; };
+		53939DC423DC48DF001C97E3 /* pack.o in Frameworks */ = {isa = PBXBuildFile; fileRef = 53939CC023DC48DE001C97E3 /* pack.o */; };
+		53939DC623DC48DF001C97E3 /* gem_init.o in Frameworks */ = {isa = PBXBuildFile; fileRef = 53939CC323DC48DE001C97E3 /* gem_init.o */; };
+		53939DC723DC48DF001C97E3 /* gem_init.c in Sources */ = {isa = PBXBuildFile; fileRef = 53939CC423DC48DE001C97E3 /* gem_init.c */; };
+		53939DC923DC48DF001C97E3 /* gem_init.o in Frameworks */ = {isa = PBXBuildFile; fileRef = 53939CC723DC48DE001C97E3 /* gem_init.o */; };
+		53939DCA23DC48DF001C97E3 /* gem_init.c in Sources */ = {isa = PBXBuildFile; fileRef = 53939CC823DC48DE001C97E3 /* gem_init.c */; };
+		53939DCD23DC48DF001C97E3 /* math.o in Frameworks */ = {isa = PBXBuildFile; fileRef = 53939CCC23DC48DE001C97E3 /* math.o */; };
+		53939DCE23DC48DF001C97E3 /* gem_init.o in Frameworks */ = {isa = PBXBuildFile; fileRef = 53939CCE23DC48DE001C97E3 /* gem_init.o */; };
+		53939DCF23DC48DF001C97E3 /* gem_init.c in Sources */ = {isa = PBXBuildFile; fileRef = 53939CCF23DC48DE001C97E3 /* gem_init.c */; };
+		53939DD123DC48DF001C97E3 /* range.o in Frameworks */ = {isa = PBXBuildFile; fileRef = 53939CD223DC48DE001C97E3 /* range.o */; };
+		53939DD323DC48DF001C97E3 /* gem_init.o in Frameworks */ = {isa = PBXBuildFile; fileRef = 53939CD523DC48DE001C97E3 /* gem_init.o */; };
+		53939DD423DC48DF001C97E3 /* gem_init.c in Sources */ = {isa = PBXBuildFile; fileRef = 53939CD623DC48DE001C97E3 /* gem_init.c */; };
+		53939DD623DC48DF001C97E3 /* gem_init.o in Frameworks */ = {isa = PBXBuildFile; fileRef = 53939CD923DC48DE001C97E3 /* gem_init.o */; };
+		53939DD723DC48DF001C97E3 /* gem_init.c in Sources */ = {isa = PBXBuildFile; fileRef = 53939CDA23DC48DE001C97E3 /* gem_init.c */; };
+		53939DD923DC48DF001C97E3 /* mruby_objectspace.o in Frameworks */ = {isa = PBXBuildFile; fileRef = 53939CDD23DC48DE001C97E3 /* mruby_objectspace.o */; };
+		53939DDB23DC48DF001C97E3 /* gem_init.o in Frameworks */ = {isa = PBXBuildFile; fileRef = 53939CE023DC48DE001C97E3 /* gem_init.o */; };
+		53939DDC23DC48DF001C97E3 /* gem_init.c in Sources */ = {isa = PBXBuildFile; fileRef = 53939CE123DC48DE001C97E3 /* gem_init.c */; };
+		53939DE023DC48DF001C97E3 /* kernel.o in Frameworks */ = {isa = PBXBuildFile; fileRef = 53939CE623DC48DE001C97E3 /* kernel.o */; };
+		53939DE123DC48DF001C97E3 /* sprintf.o in Frameworks */ = {isa = PBXBuildFile; fileRef = 53939CE723DC48DE001C97E3 /* sprintf.o */; };
+		53939DE223DC48DF001C97E3 /* gem_init.o in Frameworks */ = {isa = PBXBuildFile; fileRef = 53939CE923DC48DE001C97E3 /* gem_init.o */; };
+		53939DE323DC48DF001C97E3 /* gem_init.c in Sources */ = {isa = PBXBuildFile; fileRef = 53939CEA23DC48DE001C97E3 /* gem_init.c */; };
+		53939DE523DC48DF001C97E3 /* metaprog.o in Frameworks */ = {isa = PBXBuildFile; fileRef = 53939CED23DC48DE001C97E3 /* metaprog.o */; };
+		53939DE723DC48DF001C97E3 /* gem_init.o in Frameworks */ = {isa = PBXBuildFile; fileRef = 53939CF023DC48DE001C97E3 /* gem_init.o */; };
+		53939DE823DC48DF001C97E3 /* gem_init.c in Sources */ = {isa = PBXBuildFile; fileRef = 53939CF123DC48DE001C97E3 /* gem_init.c */; };
+		53939DEB23DC48DF001C97E3 /* print.o in Frameworks */ = {isa = PBXBuildFile; fileRef = 53939CF523DC48DE001C97E3 /* print.o */; };
+		53939DEC23DC48DF001C97E3 /* gem_init.o in Frameworks */ = {isa = PBXBuildFile; fileRef = 53939CF723DC48DE001C97E3 /* gem_init.o */; };
+		53939DED23DC48DF001C97E3 /* gem_init.c in Sources */ = {isa = PBXBuildFile; fileRef = 53939CF823DC48DE001C97E3 /* gem_init.c */; };
+		53939DF023DC48DF001C97E3 /* random.o in Frameworks */ = {isa = PBXBuildFile; fileRef = 53939CFC23DC48DE001C97E3 /* random.o */; };
+		53939DF623DC48DF001C97E3 /* gem_init.c in Sources */ = {isa = PBXBuildFile; fileRef = 53939D0423DC48DE001C97E3 /* gem_init.c */; };
+		53939DF723DC48DF001C97E3 /* gem_init.o in Frameworks */ = {isa = PBXBuildFile; fileRef = 53939D0623DC48DE001C97E3 /* gem_init.o */; };
+		53939DF823DC48DF001C97E3 /* gem_init.c in Sources */ = {isa = PBXBuildFile; fileRef = 53939D0723DC48DE001C97E3 /* gem_init.c */; };
+		53939DFB23DC48DF001C97E3 /* kernel.o in Frameworks */ = {isa = PBXBuildFile; fileRef = 53939D0B23DC48DE001C97E3 /* kernel.o */; };
+		53939DFD23DC48DF001C97E3 /* gem_init.o in Frameworks */ = {isa = PBXBuildFile; fileRef = 53939D0E23DC48DE001C97E3 /* gem_init.o */; };
+		53939DFE23DC48DF001C97E3 /* gem_init.c in Sources */ = {isa = PBXBuildFile; fileRef = 53939D0F23DC48DE001C97E3 /* gem_init.c */; };
+		53939E0123DC48DF001C97E3 /* class.o in Frameworks */ = {isa = PBXBuildFile; fileRef = 53939D1323DC48DE001C97E3 /* class.o */; };
+		53939E0223DC48DF001C97E3 /* gem_init.o in Frameworks */ = {isa = PBXBuildFile; fileRef = 53939D1523DC48DE001C97E3 /* gem_init.o */; };
+		53939E0323DC48DF001C97E3 /* gem_init.c in Sources */ = {isa = PBXBuildFile; fileRef = 53939D1623DC48DE001C97E3 /* gem_init.c */; };
+		53939E0523DC48DF001C97E3 /* numeric_ext.o in Frameworks */ = {isa = PBXBuildFile; fileRef = 53939D1923DC48DE001C97E3 /* numeric_ext.o */; };
+		53939E0723DC48DF001C97E3 /* gem_init.o in Frameworks */ = {isa = PBXBuildFile; fileRef = 53939D1C23DC48DE001C97E3 /* gem_init.o */; };
+		53939E0823DC48DF001C97E3 /* gem_init.c in Sources */ = {isa = PBXBuildFile; fileRef = 53939D1D23DC48DE001C97E3 /* gem_init.c */; };
+		53939E0A23DC48DF001C97E3 /* gem_init.o in Frameworks */ = {isa = PBXBuildFile; fileRef = 53939D2023DC48DE001C97E3 /* gem_init.o */; };
+		53939E0B23DC48DF001C97E3 /* gem_init.c in Sources */ = {isa = PBXBuildFile; fileRef = 53939D2123DC48DE001C97E3 /* gem_init.c */; };
+		53939E0E23DC48DF001C97E3 /* fiber.o in Frameworks */ = {isa = PBXBuildFile; fileRef = 53939D2523DC48DE001C97E3 /* fiber.o */; };
+		53939E0F23DC48DF001C97E3 /* gem_init.o in Frameworks */ = {isa = PBXBuildFile; fileRef = 53939D2723DC48DE001C97E3 /* gem_init.o */; };
+		53939E1023DC48DF001C97E3 /* gem_init.c in Sources */ = {isa = PBXBuildFile; fileRef = 53939D2823DC48DE001C97E3 /* gem_init.c */; };
+		53939E1223DC48DF001C97E3 /* time.o in Frameworks */ = {isa = PBXBuildFile; fileRef = 53939D2B23DC48DE001C97E3 /* time.o */; };
+		53939E1423DC48DF001C97E3 /* gem_init.o in Frameworks */ = {isa = PBXBuildFile; fileRef = 53939D2E23DC48DE001C97E3 /* gem_init.o */; };
+		53939E1523DC48DF001C97E3 /* gem_init.c in Sources */ = {isa = PBXBuildFile; fileRef = 53939D2F23DC48DE001C97E3 /* gem_init.c */; };
+		53939E1A23DC48DF001C97E3 /* file.o in Frameworks */ = {isa = PBXBuildFile; fileRef = 53939D3523DC48DE001C97E3 /* file.o */; };
+		53939E1B23DC48DF001C97E3 /* io.o in Frameworks */ = {isa = PBXBuildFile; fileRef = 53939D3623DC48DE001C97E3 /* io.o */; };
+		53939E1C23DC48DF001C97E3 /* file_test.o in Frameworks */ = {isa = PBXBuildFile; fileRef = 53939D3723DC48DE001C97E3 /* file_test.o */; };
+		53939E1E23DC48DF001C97E3 /* mruby_io_gem.o in Frameworks */ = {isa = PBXBuildFile; fileRef = 53939D3923DC48DE001C97E3 /* mruby_io_gem.o */; };
+		53939E1F23DC48DF001C97E3 /* gem_init.o in Frameworks */ = {isa = PBXBuildFile; fileRef = 53939D3B23DC48DE001C97E3 /* gem_init.o */; };
+		53939E2023DC48DF001C97E3 /* gem_init.c in Sources */ = {isa = PBXBuildFile; fileRef = 53939D3C23DC48DE001C97E3 /* gem_init.c */; };
+		53939E2223DC48DF001C97E3 /* proc.o in Frameworks */ = {isa = PBXBuildFile; fileRef = 53939D3F23DC48DE001C97E3 /* proc.o */; };
+		53939E2423DC48DF001C97E3 /* gem_init.o in Frameworks */ = {isa = PBXBuildFile; fileRef = 53939D4223DC48DE001C97E3 /* gem_init.o */; };
+		53939E2523DC48DF001C97E3 /* gem_init.c in Sources */ = {isa = PBXBuildFile; fileRef = 53939D4323DC48DE001C97E3 /* gem_init.c */; };
+		53939E2723DC48DF001C97E3 /* symbol.o in Frameworks */ = {isa = PBXBuildFile; fileRef = 53939D4623DC48DE001C97E3 /* symbol.o */; };
+		53939E2923DC48DF001C97E3 /* gem_init.o in Frameworks */ = {isa = PBXBuildFile; fileRef = 53939D4923DC48DE001C97E3 /* gem_init.o */; };
+		53939E2A23DC48DF001C97E3 /* gem_init.c in Sources */ = {isa = PBXBuildFile; fileRef = 53939D4A23DC48DE001C97E3 /* gem_init.c */; };
+		53939E2D23DC48DF001C97E3 /* string.o in Frameworks */ = {isa = PBXBuildFile; fileRef = 53939D4E23DC48DE001C97E3 /* string.o */; };
+		53939E2E23DC48DF001C97E3 /* gem_init.o in Frameworks */ = {isa = PBXBuildFile; fileRef = 53939D5023DC48DE001C97E3 /* gem_init.o */; };
+		53939E2F23DC48DF001C97E3 /* gem_init.c in Sources */ = {isa = PBXBuildFile; fileRef = 53939D5123DC48DE001C97E3 /* gem_init.c */; };
+		53939E3223DC48DF001C97E3 /* array.o in Frameworks */ = {isa = PBXBuildFile; fileRef = 53939D5523DC48DE001C97E3 /* array.o */; };
+		53939E3323DC48DF001C97E3 /* gem_init.o in Frameworks */ = {isa = PBXBuildFile; fileRef = 53939D5723DC48DE001C97E3 /* gem_init.o */; };
+		53939E3423DC48DF001C97E3 /* gem_init.c in Sources */ = {isa = PBXBuildFile; fileRef = 53939D5823DC48DE001C97E3 /* gem_init.c */; };
+		53939E3723DC48DF001C97E3 /* exception.o in Frameworks */ = {isa = PBXBuildFile; fileRef = 53939D5C23DC48DE001C97E3 /* exception.o */; };
+		53939E3823DC48DF001C97E3 /* gem_init.o in Frameworks */ = {isa = PBXBuildFile; fileRef = 53939D5E23DC48DE001C97E3 /* gem_init.o */; };
+		53939E3923DC48DF001C97E3 /* gem_init.c in Sources */ = {isa = PBXBuildFile; fileRef = 53939D5F23DC48DE001C97E3 /* gem_init.c */; };
+		53939E3C23DC48DF001C97E3 /* object.o in Frameworks */ = {isa = PBXBuildFile; fileRef = 53939D6323DC48DE001C97E3 /* object.o */; };
+		53939E7923DC4E1E001C97E3 /* gem_init.c in Sources */ = {isa = PBXBuildFile; fileRef = 53939CFF23DC48DE001C97E3 /* gem_init.c */; };
+		53939E8323DC5016001C97E3 /* mrb_require.c in Sources */ = {isa = PBXBuildFile; fileRef = 53939E8223DC500F001C97E3 /* mrb_require.c */; };
+		53B43B5E23DBF94500F7D6E2 /* error.c in Sources */ = {isa = PBXBuildFile; fileRef = 53B43B3D23DBF94300F7D6E2 /* error.c */; };
+		53B43B5F23DBF94500F7D6E2 /* object.c in Sources */ = {isa = PBXBuildFile; fileRef = 53B43B3E23DBF94300F7D6E2 /* object.c */; };
+		53B43B6023DBF94500F7D6E2 /* gc.c in Sources */ = {isa = PBXBuildFile; fileRef = 53B43B3F23DBF94300F7D6E2 /* gc.c */; };
+		53B43B6123DBF94500F7D6E2 /* numeric.c in Sources */ = {isa = PBXBuildFile; fileRef = 53B43B4023DBF94300F7D6E2 /* numeric.c */; };
+		53B43B6223DBF94500F7D6E2 /* proc.c in Sources */ = {isa = PBXBuildFile; fileRef = 53B43B4123DBF94300F7D6E2 /* proc.c */; };
+		53B43B6323DBF94500F7D6E2 /* hash.c in Sources */ = {isa = PBXBuildFile; fileRef = 53B43B4323DBF94300F7D6E2 /* hash.c */; };
+		53B43B6423DBF94500F7D6E2 /* state.c in Sources */ = {isa = PBXBuildFile; fileRef = 53B43B4423DBF94300F7D6E2 /* state.c */; };
+		53B43B6523DBF94500F7D6E2 /* debug.c in Sources */ = {isa = PBXBuildFile; fileRef = 53B43B4523DBF94300F7D6E2 /* debug.c */; };
+		53B43B6623DBF94500F7D6E2 /* print.c in Sources */ = {isa = PBXBuildFile; fileRef = 53B43B4623DBF94300F7D6E2 /* print.c */; };
+		53B43B6723DBF94500F7D6E2 /* compar.c in Sources */ = {isa = PBXBuildFile; fileRef = 53B43B4723DBF94400F7D6E2 /* compar.c */; };
+		53B43B6823DBF94500F7D6E2 /* version.c in Sources */ = {isa = PBXBuildFile; fileRef = 53B43B4823DBF94400F7D6E2 /* version.c */; };
+		53B43B6923DBF94500F7D6E2 /* class.c in Sources */ = {isa = PBXBuildFile; fileRef = 53B43B4923DBF94400F7D6E2 /* class.c */; };
+		53B43B6A23DBF94500F7D6E2 /* fmt_fp.c in Sources */ = {isa = PBXBuildFile; fileRef = 53B43B4A23DBF94400F7D6E2 /* fmt_fp.c */; };
+		53B43B6B23DBF94500F7D6E2 /* variable.c in Sources */ = {isa = PBXBuildFile; fileRef = 53B43B4B23DBF94400F7D6E2 /* variable.c */; };
+		53B43B6C23DBF94500F7D6E2 /* dump.c in Sources */ = {isa = PBXBuildFile; fileRef = 53B43B4C23DBF94400F7D6E2 /* dump.c */; };
+		53B43B6D23DBF94500F7D6E2 /* vm.c in Sources */ = {isa = PBXBuildFile; fileRef = 53B43B4E23DBF94400F7D6E2 /* vm.c */; };
+		53B43B6E23DBF94500F7D6E2 /* codedump.c in Sources */ = {isa = PBXBuildFile; fileRef = 53B43B4F23DBF94400F7D6E2 /* codedump.c */; };
+		53B43B6F23DBF94500F7D6E2 /* array.c in Sources */ = {isa = PBXBuildFile; fileRef = 53B43B5023DBF94400F7D6E2 /* array.c */; };
+		53B43B7023DBF94500F7D6E2 /* init.c in Sources */ = {isa = PBXBuildFile; fileRef = 53B43B5123DBF94400F7D6E2 /* init.c */; };
+		53B43B7123DBF94500F7D6E2 /* pool.c in Sources */ = {isa = PBXBuildFile; fileRef = 53B43B5223DBF94400F7D6E2 /* pool.c */; };
+		53B43B7223DBF94500F7D6E2 /* range.c in Sources */ = {isa = PBXBuildFile; fileRef = 53B43B5323DBF94400F7D6E2 /* range.c */; };
+		53B43B7323DBF94500F7D6E2 /* symbol.c in Sources */ = {isa = PBXBuildFile; fileRef = 53B43B5423DBF94400F7D6E2 /* symbol.c */; };
+		53B43B7423DBF94500F7D6E2 /* crc.c in Sources */ = {isa = PBXBuildFile; fileRef = 53B43B5523DBF94400F7D6E2 /* crc.c */; };
+		53B43B7523DBF94500F7D6E2 /* backtrace.c in Sources */ = {isa = PBXBuildFile; fileRef = 53B43B5623DBF94400F7D6E2 /* backtrace.c */; };
+		53B43B7623DBF94500F7D6E2 /* enum.c in Sources */ = {isa = PBXBuildFile; fileRef = 53B43B5723DBF94400F7D6E2 /* enum.c */; };
+		53B43B7723DBF94500F7D6E2 /* kernel.c in Sources */ = {isa = PBXBuildFile; fileRef = 53B43B5823DBF94400F7D6E2 /* kernel.c */; };
+		53B43B7823DBF94500F7D6E2 /* etc.c in Sources */ = {isa = PBXBuildFile; fileRef = 53B43B5A23DBF94400F7D6E2 /* etc.c */; };
+		53B43B7923DBF94500F7D6E2 /* string.c in Sources */ = {isa = PBXBuildFile; fileRef = 53B43B5C23DBF94500F7D6E2 /* string.c */; };
+		53B43B7A23DBF94500F7D6E2 /* load.c in Sources */ = {isa = PBXBuildFile; fileRef = 53B43B5D23DBF94500F7D6E2 /* load.c */; };
+		53B43B8323DC1B9900F7D6E2 /* init_mrblib.c in Sources */ = {isa = PBXBuildFile; fileRef = 53B43B8223DC1B9900F7D6E2 /* init_mrblib.c */; };
+		53B43E5423DC1CF400F7D6E2 /* hash-ext.c in Sources */ = {isa = PBXBuildFile; fileRef = 53B43CFB23DC1CF400F7D6E2 /* hash-ext.c */; };
+		53B43E5523DC1CF400F7D6E2 /* vformat.c in Sources */ = {isa = PBXBuildFile; fileRef = 53B43D0523DC1CF400F7D6E2 /* vformat.c */; };
+		53B43E5623DC1CF400F7D6E2 /* driver.c in Sources */ = {isa = PBXBuildFile; fileRef = 53B43D0623DC1CF400F7D6E2 /* driver.c */; };
+		53B43E5723DC1CF400F7D6E2 /* struct.c in Sources */ = {isa = PBXBuildFile; fileRef = 53B43D0E23DC1CF400F7D6E2 /* struct.c */; };
+		53B43E5823DC1CF400F7D6E2 /* cmdprint.c in Sources */ = {isa = PBXBuildFile; fileRef = 53B43D1623DC1CF400F7D6E2 /* cmdprint.c */; };
+		53B43E5923DC1CF400F7D6E2 /* apiprint.c in Sources */ = {isa = PBXBuildFile; fileRef = 53B43D1723DC1CF400F7D6E2 /* apiprint.c */; };
+		53B43E5A23DC1CF400F7D6E2 /* cmdmisc.c in Sources */ = {isa = PBXBuildFile; fileRef = 53B43D1923DC1CF400F7D6E2 /* cmdmisc.c */; };
+		53B43E5B23DC1CF400F7D6E2 /* apibreak.c in Sources */ = {isa = PBXBuildFile; fileRef = 53B43D1A23DC1CF400F7D6E2 /* apibreak.c */; };
+		53B43E5C23DC1CF400F7D6E2 /* cmdbreak.c in Sources */ = {isa = PBXBuildFile; fileRef = 53B43D1B23DC1CF400F7D6E2 /* cmdbreak.c */; };
+		53B43E5D23DC1CF400F7D6E2 /* mrdb.c in Sources */ = {isa = PBXBuildFile; fileRef = 53B43D1C23DC1CF400F7D6E2 /* mrdb.c */; };
+		53B43E5E23DC1CF400F7D6E2 /* cmdrun.c in Sources */ = {isa = PBXBuildFile; fileRef = 53B43D1E23DC1CF400F7D6E2 /* cmdrun.c */; };
+		53B43E5F23DC1CF400F7D6E2 /* apilist.c in Sources */ = {isa = PBXBuildFile; fileRef = 53B43D1F23DC1CF400F7D6E2 /* apilist.c */; };
+		53B43E6023DC1CF400F7D6E2 /* codegen.c in Sources */ = {isa = PBXBuildFile; fileRef = 53B43D2E23DC1CF400F7D6E2 /* codegen.c */; };
+		53B43E6123DC1CF400F7D6E2 /* parse.y in Sources */ = {isa = PBXBuildFile; fileRef = 53B43D3023DC1CF400F7D6E2 /* parse.y */; };
+		53B43E6223DC1CF400F7D6E2 /* method.c in Sources */ = {isa = PBXBuildFile; fileRef = 53B43D3D23DC1CF400F7D6E2 /* method.c */; };
+		53B43E6323DC1CF400F7D6E2 /* mirb.c in Sources */ = {isa = PBXBuildFile; fileRef = 53B43D4223DC1CF400F7D6E2 /* mirb.c */; };
+		53B43E6423DC1CF400F7D6E2 /* pack.c in Sources */ = {isa = PBXBuildFile; fileRef = 53B43D4B23DC1CF400F7D6E2 /* pack.c */; };
+		53B43E6523DC1CF400F7D6E2 /* mrb_sleep.c in Sources */ = {isa = PBXBuildFile; fileRef = 53B43D5423DC1CF400F7D6E2 /* mrb_sleep.c */; };
+		53B43E6623DC1CF400F7D6E2 /* mruby-strip.c in Sources */ = {isa = PBXBuildFile; fileRef = 53B43D5A23DC1CF400F7D6E2 /* mruby-strip.c */; };
+		53B43E6723DC1CF400F7D6E2 /* math.c in Sources */ = {isa = PBXBuildFile; fileRef = 53B43D6823DC1CF400F7D6E2 /* math.c */; };
+		53B43E6823DC1CF400F7D6E2 /* range.c in Sources */ = {isa = PBXBuildFile; fileRef = 53B43D7023DC1CF400F7D6E2 /* range.c */; };
+		53B43E6923DC1CF400F7D6E2 /* sockettest.c in Sources */ = {isa = PBXBuildFile; fileRef = 53B43D7E23DC1CF400F7D6E2 /* sockettest.c */; };
+		53B43E6A23DC1CF400F7D6E2 /* socket.c in Sources */ = {isa = PBXBuildFile; fileRef = 53B43D8723DC1CF400F7D6E2 /* socket.c */; };
+		53B43E6B23DC1CF400F7D6E2 /* mruby_objectspace.c in Sources */ = {isa = PBXBuildFile; fileRef = 53B43D8F23DC1CF400F7D6E2 /* mruby_objectspace.c */; };
+		53B43E6C23DC1CF400F7D6E2 /* complex.c in Sources */ = {isa = PBXBuildFile; fileRef = 53B43D9B23DC1CF400F7D6E2 /* complex.c */; };
+		53B43E6D23DC1CF400F7D6E2 /* kernel.c in Sources */ = {isa = PBXBuildFile; fileRef = 53B43DA323DC1CF400F7D6E2 /* kernel.c */; };
+		53B43E6E23DC1CF400F7D6E2 /* sprintf.c in Sources */ = {isa = PBXBuildFile; fileRef = 53B43DA423DC1CF400F7D6E2 /* sprintf.c */; };
+		53B43E6F23DC1CF400F7D6E2 /* metaprog.c in Sources */ = {isa = PBXBuildFile; fileRef = 53B43DAA23DC1CF400F7D6E2 /* metaprog.c */; };
+		53B43E7023DC1CF400F7D6E2 /* print.c in Sources */ = {isa = PBXBuildFile; fileRef = 53B43DB623DC1CF400F7D6E2 /* print.c */; };
+		53B43E7123DC1CF400F7D6E2 /* random.c in Sources */ = {isa = PBXBuildFile; fileRef = 53B43DBC23DC1CF400F7D6E2 /* random.c */; };
+		53B43E7223DC1CF400F7D6E2 /* inline.c in Sources */ = {isa = PBXBuildFile; fileRef = 53B43DC123DC1CF400F7D6E2 /* inline.c */; };
+		53B43E7323DC1CF400F7D6E2 /* rational.c in Sources */ = {isa = PBXBuildFile; fileRef = 53B43DC923DC1CF400F7D6E2 /* rational.c */; };
+		53B43E7423DC1CF400F7D6E2 /* kernel.c in Sources */ = {isa = PBXBuildFile; fileRef = 53B43DCF23DC1CF400F7D6E2 /* kernel.c */; };
+		53B43E7523DC1CF400F7D6E2 /* class.c in Sources */ = {isa = PBXBuildFile; fileRef = 53B43DD723DC1CF400F7D6E2 /* class.c */; };
+		53B43E7623DC1CF400F7D6E2 /* mruby-exit.c in Sources */ = {isa = PBXBuildFile; fileRef = 53B43DDB23DC1CF400F7D6E2 /* mruby-exit.c */; };
+		53B43E7723DC1CF400F7D6E2 /* numeric_ext.c in Sources */ = {isa = PBXBuildFile; fileRef = 53B43DE323DC1CF400F7D6E2 /* numeric_ext.c */; };
+		53B43E7823DC1CF400F7D6E2 /* fiber.c in Sources */ = {isa = PBXBuildFile; fileRef = 53B43DED23DC1CF400F7D6E2 /* fiber.c */; };
+		53B43E7923DC1CF400F7D6E2 /* time.c in Sources */ = {isa = PBXBuildFile; fileRef = 53B43DF823DC1CF400F7D6E2 /* time.c */; };
+		53B43E7A23DC1CF400F7D6E2 /* mruby_io_test.c in Sources */ = {isa = PBXBuildFile; fileRef = 53B43E0123DC1CF400F7D6E2 /* mruby_io_test.c */; };
+		53B43E7B23DC1CF400F7D6E2 /* file_test.c in Sources */ = {isa = PBXBuildFile; fileRef = 53B43E0B23DC1CF400F7D6E2 /* file_test.c */; };
+		53B43E7C23DC1CF400F7D6E2 /* io.c in Sources */ = {isa = PBXBuildFile; fileRef = 53B43E0C23DC1CF400F7D6E2 /* io.c */; };
+		53B43E7D23DC1CF400F7D6E2 /* mruby_io_gem.c in Sources */ = {isa = PBXBuildFile; fileRef = 53B43E0D23DC1CF400F7D6E2 /* mruby_io_gem.c */; };
+		53B43E7E23DC1CF400F7D6E2 /* file.c in Sources */ = {isa = PBXBuildFile; fileRef = 53B43E0E23DC1CF400F7D6E2 /* file.c */; };
+		53B43E7F23DC1CF400F7D6E2 /* proc.c in Sources */ = {isa = PBXBuildFile; fileRef = 53B43E1423DC1CF400F7D6E2 /* proc.c */; };
+		53B43E8023DC1CF400F7D6E2 /* proc.c in Sources */ = {isa = PBXBuildFile; fileRef = 53B43E1723DC1CF400F7D6E2 /* proc.c */; };
+		53B43E8123DC1CF400F7D6E2 /* symbol.c in Sources */ = {isa = PBXBuildFile; fileRef = 53B43E1F23DC1CF400F7D6E2 /* symbol.c */; };
+		53B43E8223DC1CF400F7D6E2 /* string.c in Sources */ = {isa = PBXBuildFile; fileRef = 53B43E2923DC1CF400F7D6E2 /* string.c */; };
+		53B43E8323DC1CF400F7D6E2 /* array.c in Sources */ = {isa = PBXBuildFile; fileRef = 53B43E3123DC1CF400F7D6E2 /* array.c */; };
+		53B43E8523DC1CF400F7D6E2 /* eval.c in Sources */ = {isa = PBXBuildFile; fileRef = 53B43E3C23DC1CF400F7D6E2 /* eval.c */; };
+		53B43E8623DC1CF400F7D6E2 /* exception.c in Sources */ = {isa = PBXBuildFile; fileRef = 53B43E4023DC1CF400F7D6E2 /* exception.c */; };
+		53B43E8723DC1CF400F7D6E2 /* exception.c in Sources */ = {isa = PBXBuildFile; fileRef = 53B43E4323DC1CF400F7D6E2 /* exception.c */; };
+		53B43E8823DC1CF400F7D6E2 /* object.c in Sources */ = {isa = PBXBuildFile; fileRef = 53B43E4C23DC1CF400F7D6E2 /* object.c */; };
+		53B43E8923DC1CF400F7D6E2 /* mruby.c in Sources */ = {isa = PBXBuildFile; fileRef = 53B43E5123DC1CF400F7D6E2 /* mruby.c */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		53939EE323DEAFBB001C97E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 53939EDF23DEAFBB001C97E3 /* sqlite.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 53B43B0F23DBF65E00F7D6E2;
+			remoteInfo = sqlite;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		53B43B2F23DBF8E300F7D6E2 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		53939C8A23DC482A001C97E3 /* mrblib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = mrblib.c; path = "../build/host-debug/mrblib/mrblib.c"; sourceTree = "<group>"; };
+		53939C9223DC48DE001C97E3 /* mrblib.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; path = mrblib.o; sourceTree = "<group>"; };
+		53939C9423DC48DE001C97E3 /* mrblib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mrblib.c; sourceTree = "<group>"; };
+		53939C9823DC48DE001C97E3 /* gem_init.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gem_init.c; sourceTree = "<group>"; };
+		53939C9F23DC48DE001C97E3 /* gem_init.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gem_init.c; sourceTree = "<group>"; };
+		53939CA423DC48DE001C97E3 /* gem_init.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gem_init.c; sourceTree = "<group>"; };
+		53939CAA23DC48DE001C97E3 /* gem_init.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; path = gem_init.o; sourceTree = "<group>"; };
+		53939CAB23DC48DE001C97E3 /* gem_init.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gem_init.c; sourceTree = "<group>"; };
+		53939CB223DC48DE001C97E3 /* codegen.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; path = codegen.o; sourceTree = "<group>"; };
+		53939CB323DC48DE001C97E3 /* y.tab.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; path = y.tab.o; sourceTree = "<group>"; };
+		53939CB523DC48DE001C97E3 /* gem_init.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; path = gem_init.o; sourceTree = "<group>"; };
+		53939CB623DC48DE001C97E3 /* gem_init.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gem_init.c; sourceTree = "<group>"; };
+		53939CB923DC48DE001C97E3 /* method.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; path = method.o; sourceTree = "<group>"; };
+		53939CBC23DC48DE001C97E3 /* gem_init.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; path = gem_init.o; sourceTree = "<group>"; };
+		53939CBD23DC48DE001C97E3 /* gem_init.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gem_init.c; sourceTree = "<group>"; };
+		53939CC023DC48DE001C97E3 /* pack.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; path = pack.o; sourceTree = "<group>"; };
+		53939CC323DC48DE001C97E3 /* gem_init.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; path = gem_init.o; sourceTree = "<group>"; };
+		53939CC423DC48DE001C97E3 /* gem_init.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gem_init.c; sourceTree = "<group>"; };
+		53939CC723DC48DE001C97E3 /* gem_init.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; path = gem_init.o; sourceTree = "<group>"; };
+		53939CC823DC48DE001C97E3 /* gem_init.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gem_init.c; sourceTree = "<group>"; };
+		53939CCC23DC48DE001C97E3 /* math.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; path = math.o; sourceTree = "<group>"; };
+		53939CCE23DC48DE001C97E3 /* gem_init.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; path = gem_init.o; sourceTree = "<group>"; };
+		53939CCF23DC48DE001C97E3 /* gem_init.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gem_init.c; sourceTree = "<group>"; };
+		53939CD223DC48DE001C97E3 /* range.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; path = range.o; sourceTree = "<group>"; };
+		53939CD523DC48DE001C97E3 /* gem_init.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; path = gem_init.o; sourceTree = "<group>"; };
+		53939CD623DC48DE001C97E3 /* gem_init.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gem_init.c; sourceTree = "<group>"; };
+		53939CD923DC48DE001C97E3 /* gem_init.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; path = gem_init.o; sourceTree = "<group>"; };
+		53939CDA23DC48DE001C97E3 /* gem_init.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gem_init.c; sourceTree = "<group>"; };
+		53939CDD23DC48DE001C97E3 /* mruby_objectspace.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; path = mruby_objectspace.o; sourceTree = "<group>"; };
+		53939CE023DC48DE001C97E3 /* gem_init.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; path = gem_init.o; sourceTree = "<group>"; };
+		53939CE123DC48DE001C97E3 /* gem_init.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gem_init.c; sourceTree = "<group>"; };
+		53939CE623DC48DE001C97E3 /* kernel.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; path = kernel.o; sourceTree = "<group>"; };
+		53939CE723DC48DE001C97E3 /* sprintf.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; path = sprintf.o; sourceTree = "<group>"; };
+		53939CE923DC48DE001C97E3 /* gem_init.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; path = gem_init.o; sourceTree = "<group>"; };
+		53939CEA23DC48DE001C97E3 /* gem_init.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gem_init.c; sourceTree = "<group>"; };
+		53939CED23DC48DE001C97E3 /* metaprog.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; path = metaprog.o; sourceTree = "<group>"; };
+		53939CF023DC48DE001C97E3 /* gem_init.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; path = gem_init.o; sourceTree = "<group>"; };
+		53939CF123DC48DE001C97E3 /* gem_init.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gem_init.c; sourceTree = "<group>"; };
+		53939CF523DC48DE001C97E3 /* print.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; path = print.o; sourceTree = "<group>"; };
+		53939CF723DC48DE001C97E3 /* gem_init.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; path = gem_init.o; sourceTree = "<group>"; };
+		53939CF823DC48DE001C97E3 /* gem_init.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gem_init.c; sourceTree = "<group>"; };
+		53939CFC23DC48DE001C97E3 /* random.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; path = random.o; sourceTree = "<group>"; };
+		53939CFF23DC48DE001C97E3 /* gem_init.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gem_init.c; sourceTree = "<group>"; };
+		53939D0423DC48DE001C97E3 /* gem_init.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gem_init.c; sourceTree = "<group>"; };
+		53939D0623DC48DE001C97E3 /* gem_init.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; path = gem_init.o; sourceTree = "<group>"; };
+		53939D0723DC48DE001C97E3 /* gem_init.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gem_init.c; sourceTree = "<group>"; };
+		53939D0B23DC48DE001C97E3 /* kernel.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; path = kernel.o; sourceTree = "<group>"; };
+		53939D0E23DC48DE001C97E3 /* gem_init.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; path = gem_init.o; sourceTree = "<group>"; };
+		53939D0F23DC48DE001C97E3 /* gem_init.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gem_init.c; sourceTree = "<group>"; };
+		53939D1323DC48DE001C97E3 /* class.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; path = class.o; sourceTree = "<group>"; };
+		53939D1523DC48DE001C97E3 /* gem_init.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; path = gem_init.o; sourceTree = "<group>"; };
+		53939D1623DC48DE001C97E3 /* gem_init.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gem_init.c; sourceTree = "<group>"; };
+		53939D1923DC48DE001C97E3 /* numeric_ext.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; path = numeric_ext.o; sourceTree = "<group>"; };
+		53939D1C23DC48DE001C97E3 /* gem_init.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; path = gem_init.o; sourceTree = "<group>"; };
+		53939D1D23DC48DE001C97E3 /* gem_init.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gem_init.c; sourceTree = "<group>"; };
+		53939D2023DC48DE001C97E3 /* gem_init.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; path = gem_init.o; sourceTree = "<group>"; };
+		53939D2123DC48DE001C97E3 /* gem_init.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gem_init.c; sourceTree = "<group>"; };
+		53939D2523DC48DE001C97E3 /* fiber.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; path = fiber.o; sourceTree = "<group>"; };
+		53939D2723DC48DE001C97E3 /* gem_init.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; path = gem_init.o; sourceTree = "<group>"; };
+		53939D2823DC48DE001C97E3 /* gem_init.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gem_init.c; sourceTree = "<group>"; };
+		53939D2B23DC48DE001C97E3 /* time.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; path = time.o; sourceTree = "<group>"; };
+		53939D2E23DC48DE001C97E3 /* gem_init.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; path = gem_init.o; sourceTree = "<group>"; };
+		53939D2F23DC48DE001C97E3 /* gem_init.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gem_init.c; sourceTree = "<group>"; };
+		53939D3523DC48DE001C97E3 /* file.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; path = file.o; sourceTree = "<group>"; };
+		53939D3623DC48DE001C97E3 /* io.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; path = io.o; sourceTree = "<group>"; };
+		53939D3723DC48DE001C97E3 /* file_test.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; path = file_test.o; sourceTree = "<group>"; };
+		53939D3923DC48DE001C97E3 /* mruby_io_gem.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; path = mruby_io_gem.o; sourceTree = "<group>"; };
+		53939D3B23DC48DE001C97E3 /* gem_init.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; path = gem_init.o; sourceTree = "<group>"; };
+		53939D3C23DC48DE001C97E3 /* gem_init.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gem_init.c; sourceTree = "<group>"; };
+		53939D3F23DC48DE001C97E3 /* proc.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; path = proc.o; sourceTree = "<group>"; };
+		53939D4223DC48DE001C97E3 /* gem_init.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; path = gem_init.o; sourceTree = "<group>"; };
+		53939D4323DC48DE001C97E3 /* gem_init.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gem_init.c; sourceTree = "<group>"; };
+		53939D4623DC48DE001C97E3 /* symbol.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; path = symbol.o; sourceTree = "<group>"; };
+		53939D4923DC48DE001C97E3 /* gem_init.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; path = gem_init.o; sourceTree = "<group>"; };
+		53939D4A23DC48DE001C97E3 /* gem_init.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gem_init.c; sourceTree = "<group>"; };
+		53939D4E23DC48DE001C97E3 /* string.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; path = string.o; sourceTree = "<group>"; };
+		53939D5023DC48DE001C97E3 /* gem_init.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; path = gem_init.o; sourceTree = "<group>"; };
+		53939D5123DC48DE001C97E3 /* gem_init.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gem_init.c; sourceTree = "<group>"; };
+		53939D5523DC48DE001C97E3 /* array.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; path = array.o; sourceTree = "<group>"; };
+		53939D5723DC48DE001C97E3 /* gem_init.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; path = gem_init.o; sourceTree = "<group>"; };
+		53939D5823DC48DE001C97E3 /* gem_init.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gem_init.c; sourceTree = "<group>"; };
+		53939D5C23DC48DE001C97E3 /* exception.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; path = exception.o; sourceTree = "<group>"; };
+		53939D5E23DC48DE001C97E3 /* gem_init.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; path = gem_init.o; sourceTree = "<group>"; };
+		53939D5F23DC48DE001C97E3 /* gem_init.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gem_init.c; sourceTree = "<group>"; };
+		53939D6323DC48DE001C97E3 /* object.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; path = object.o; sourceTree = "<group>"; };
+		53939D6723DC48DE001C97E3 /* LEGAL */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LEGAL; sourceTree = "<group>"; };
+		53939E7C23DC500F001C97E3 /* mrbgem.rake */ = {isa = PBXFileReference; lastKnownFileType = text; path = mrbgem.rake; sourceTree = "<group>"; };
+		53939E7D23DC500F001C97E3 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		53939E7E23DC500F001C97E3 /* run_test.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = run_test.rb; sourceTree = "<group>"; };
+		53939E7F23DC500F001C97E3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		53939E8023DC500F001C97E3 /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .travis.yml; sourceTree = "<group>"; };
+		53939E8223DC500F001C97E3 /* mrb_require.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = mrb_require.c; sourceTree = "<group>"; };
+		53939EDF23DEAFBB001C97E3 /* sqlite.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = sqlite.xcodeproj; path = ../sqlite/sqlite.xcodeproj; sourceTree = "<group>"; };
+		53B43B3123DBF8E300F7D6E2 /* libmruby.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libmruby.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		53B43B3D23DBF94300F7D6E2 /* error.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = error.c; path = ../../../../lib/mruby/src/error.c; sourceTree = "<group>"; };
+		53B43B3E23DBF94300F7D6E2 /* object.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = object.c; path = ../../../../lib/mruby/src/object.c; sourceTree = "<group>"; };
+		53B43B3F23DBF94300F7D6E2 /* gc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = gc.c; path = ../../../../lib/mruby/src/gc.c; sourceTree = "<group>"; };
+		53B43B4023DBF94300F7D6E2 /* numeric.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = numeric.c; path = ../../../../lib/mruby/src/numeric.c; sourceTree = "<group>"; };
+		53B43B4123DBF94300F7D6E2 /* proc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = proc.c; path = ../../../../lib/mruby/src/proc.c; sourceTree = "<group>"; };
+		53B43B4223DBF94300F7D6E2 /* mruby_core.rake */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = mruby_core.rake; path = ../../../../lib/mruby/src/mruby_core.rake; sourceTree = "<group>"; };
+		53B43B4323DBF94300F7D6E2 /* hash.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = hash.c; path = ../../../../lib/mruby/src/hash.c; sourceTree = "<group>"; };
+		53B43B4423DBF94300F7D6E2 /* state.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = state.c; path = ../../../../lib/mruby/src/state.c; sourceTree = "<group>"; };
+		53B43B4523DBF94300F7D6E2 /* debug.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = debug.c; path = ../../../../lib/mruby/src/debug.c; sourceTree = "<group>"; };
+		53B43B4623DBF94300F7D6E2 /* print.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = print.c; path = ../../../../lib/mruby/src/print.c; sourceTree = "<group>"; };
+		53B43B4723DBF94400F7D6E2 /* compar.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = compar.c; path = ../../../../lib/mruby/src/compar.c; sourceTree = "<group>"; };
+		53B43B4823DBF94400F7D6E2 /* version.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = version.c; path = ../../../../lib/mruby/src/version.c; sourceTree = "<group>"; };
+		53B43B4923DBF94400F7D6E2 /* class.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = class.c; path = ../../../../lib/mruby/src/class.c; sourceTree = "<group>"; };
+		53B43B4A23DBF94400F7D6E2 /* fmt_fp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = fmt_fp.c; path = ../../../../lib/mruby/src/fmt_fp.c; sourceTree = "<group>"; };
+		53B43B4B23DBF94400F7D6E2 /* variable.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = variable.c; path = ../../../../lib/mruby/src/variable.c; sourceTree = "<group>"; };
+		53B43B4C23DBF94400F7D6E2 /* dump.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = dump.c; path = ../../../../lib/mruby/src/dump.c; sourceTree = "<group>"; };
+		53B43B4D23DBF94400F7D6E2 /* error.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = error.h; path = ../../../../lib/mruby/src/error.h; sourceTree = "<group>"; };
+		53B43B4E23DBF94400F7D6E2 /* vm.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = vm.c; path = ../../../../lib/mruby/src/vm.c; sourceTree = "<group>"; };
+		53B43B4F23DBF94400F7D6E2 /* codedump.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = codedump.c; path = ../../../../lib/mruby/src/codedump.c; sourceTree = "<group>"; };
+		53B43B5023DBF94400F7D6E2 /* array.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = array.c; path = ../../../../lib/mruby/src/array.c; sourceTree = "<group>"; };
+		53B43B5123DBF94400F7D6E2 /* init.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = init.c; path = ../../../../lib/mruby/src/init.c; sourceTree = "<group>"; };
+		53B43B5223DBF94400F7D6E2 /* pool.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = pool.c; path = ../../../../lib/mruby/src/pool.c; sourceTree = "<group>"; };
+		53B43B5323DBF94400F7D6E2 /* range.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = range.c; path = ../../../../lib/mruby/src/range.c; sourceTree = "<group>"; };
+		53B43B5423DBF94400F7D6E2 /* symbol.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = symbol.c; path = ../../../../lib/mruby/src/symbol.c; sourceTree = "<group>"; };
+		53B43B5523DBF94400F7D6E2 /* crc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = crc.c; path = ../../../../lib/mruby/src/crc.c; sourceTree = "<group>"; };
+		53B43B5623DBF94400F7D6E2 /* backtrace.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = backtrace.c; path = ../../../../lib/mruby/src/backtrace.c; sourceTree = "<group>"; };
+		53B43B5723DBF94400F7D6E2 /* enum.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = enum.c; path = ../../../../lib/mruby/src/enum.c; sourceTree = "<group>"; };
+		53B43B5823DBF94400F7D6E2 /* kernel.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = kernel.c; path = ../../../../lib/mruby/src/kernel.c; sourceTree = "<group>"; };
+		53B43B5923DBF94400F7D6E2 /* value_array.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = value_array.h; path = ../../../../lib/mruby/src/value_array.h; sourceTree = "<group>"; };
+		53B43B5A23DBF94400F7D6E2 /* etc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = etc.c; path = ../../../../lib/mruby/src/etc.c; sourceTree = "<group>"; };
+		53B43B5B23DBF94400F7D6E2 /* opcode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = opcode.h; path = ../../../../lib/mruby/src/opcode.h; sourceTree = "<group>"; };
+		53B43B5C23DBF94500F7D6E2 /* string.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = string.c; path = ../../../../lib/mruby/src/string.c; sourceTree = "<group>"; };
+		53B43B5D23DBF94500F7D6E2 /* load.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = load.c; path = ../../../../lib/mruby/src/load.c; sourceTree = "<group>"; };
+		53B43B8223DC1B9900F7D6E2 /* init_mrblib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = init_mrblib.c; path = ../../../lib/mruby/mrblib/init_mrblib.c; sourceTree = "<group>"; };
+		53B43CF323DC1CF300F7D6E2 /* full-core.gembox */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "full-core.gembox"; sourceTree = "<group>"; };
+		53B43CF523DC1CF300F7D6E2 /* mrbgem.rake */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mrbgem.rake; sourceTree = "<group>"; };
+		53B43CF723DC1CF300F7D6E2 /* hash.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = hash.rb; sourceTree = "<group>"; };
+		53B43CF923DC1CF300F7D6E2 /* hash.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = hash.rb; sourceTree = "<group>"; };
+		53B43CFB23DC1CF400F7D6E2 /* hash-ext.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "hash-ext.c"; sourceTree = "<group>"; };
+		53B43CFD23DC1CF400F7D6E2 /* mrbgem.rake */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mrbgem.rake; sourceTree = "<group>"; };
+		53B43CFF23DC1CF400F7D6E2 /* toplevel.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = toplevel.rb; sourceTree = "<group>"; };
+		53B43D0123DC1CF400F7D6E2 /* toplevel.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = toplevel.rb; sourceTree = "<group>"; };
+		53B43D0323DC1CF400F7D6E2 /* mrbgem.rake */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mrbgem.rake; sourceTree = "<group>"; };
+		53B43D0423DC1CF400F7D6E2 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		53B43D0523DC1CF400F7D6E2 /* vformat.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vformat.c; sourceTree = "<group>"; };
+		53B43D0623DC1CF400F7D6E2 /* driver.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = driver.c; sourceTree = "<group>"; };
+		53B43D0823DC1CF400F7D6E2 /* mrbgem.rake */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mrbgem.rake; sourceTree = "<group>"; };
+		53B43D0A23DC1CF400F7D6E2 /* struct.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = struct.rb; sourceTree = "<group>"; };
+		53B43D0C23DC1CF400F7D6E2 /* struct.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = struct.rb; sourceTree = "<group>"; };
+		53B43D0E23DC1CF400F7D6E2 /* struct.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = struct.c; sourceTree = "<group>"; };
+		53B43D1023DC1CF400F7D6E2 /* mrbgem.rake */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mrbgem.rake; sourceTree = "<group>"; };
+		53B43D1323DC1CF400F7D6E2 /* mrdberror.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mrdberror.h; sourceTree = "<group>"; };
+		53B43D1423DC1CF400F7D6E2 /* mrdb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mrdb.h; sourceTree = "<group>"; };
+		53B43D1523DC1CF400F7D6E2 /* apilist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = apilist.h; sourceTree = "<group>"; };
+		53B43D1623DC1CF400F7D6E2 /* cmdprint.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cmdprint.c; sourceTree = "<group>"; };
+		53B43D1723DC1CF400F7D6E2 /* apiprint.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = apiprint.c; sourceTree = "<group>"; };
+		53B43D1823DC1CF400F7D6E2 /* mrdbconf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mrdbconf.h; sourceTree = "<group>"; };
+		53B43D1923DC1CF400F7D6E2 /* cmdmisc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cmdmisc.c; sourceTree = "<group>"; };
+		53B43D1A23DC1CF400F7D6E2 /* apibreak.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = apibreak.c; sourceTree = "<group>"; };
+		53B43D1B23DC1CF400F7D6E2 /* cmdbreak.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cmdbreak.c; sourceTree = "<group>"; };
+		53B43D1C23DC1CF400F7D6E2 /* mrdb.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mrdb.c; sourceTree = "<group>"; };
+		53B43D1D23DC1CF400F7D6E2 /* apiprint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = apiprint.h; sourceTree = "<group>"; };
+		53B43D1E23DC1CF400F7D6E2 /* cmdrun.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cmdrun.c; sourceTree = "<group>"; };
+		53B43D1F23DC1CF400F7D6E2 /* apilist.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = apilist.c; sourceTree = "<group>"; };
+		53B43D2023DC1CF400F7D6E2 /* apibreak.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = apibreak.h; sourceTree = "<group>"; };
+		53B43D2223DC1CF400F7D6E2 /* mrdb.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = mrdb.rb; sourceTree = "<group>"; };
+		53B43D2323DC1CF400F7D6E2 /* print.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = print.rb; sourceTree = "<group>"; };
+		53B43D2523DC1CF400F7D6E2 /* mrbgem.rake */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mrbgem.rake; sourceTree = "<group>"; };
+		53B43D2723DC1CF400F7D6E2 /* lazy.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = lazy.rb; sourceTree = "<group>"; };
+		53B43D2923DC1CF400F7D6E2 /* lazy.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = lazy.rb; sourceTree = "<group>"; };
+		53B43D2B23DC1CF400F7D6E2 /* mrbgem.rake */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mrbgem.rake; sourceTree = "<group>"; };
+		53B43D2D23DC1CF400F7D6E2 /* lex.def */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = lex.def; sourceTree = "<group>"; };
+		53B43D2E23DC1CF400F7D6E2 /* codegen.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = codegen.c; sourceTree = "<group>"; };
+		53B43D2F23DC1CF400F7D6E2 /* node.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = node.h; sourceTree = "<group>"; };
+		53B43D3023DC1CF400F7D6E2 /* parse.y */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.yacc; path = parse.y; sourceTree = "<group>"; };
+		53B43D3123DC1CF400F7D6E2 /* keywords */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = keywords; sourceTree = "<group>"; };
+		53B43D3323DC1CF400F7D6E2 /* mrbc.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = mrbc.rb; sourceTree = "<group>"; };
+		53B43D3523DC1CF400F7D6E2 /* mrbgem.rake */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mrbgem.rake; sourceTree = "<group>"; };
+		53B43D3723DC1CF400F7D6E2 /* method.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = method.rb; sourceTree = "<group>"; };
+		53B43D3823DC1CF400F7D6E2 /* kernel.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = kernel.rb; sourceTree = "<group>"; };
+		53B43D3A23DC1CF400F7D6E2 /* method.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = method.rb; sourceTree = "<group>"; };
+		53B43D3B23DC1CF400F7D6E2 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		53B43D3D23DC1CF400F7D6E2 /* method.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = method.c; sourceTree = "<group>"; };
+		53B43D3F23DC1CF400F7D6E2 /* mrbgem.rake */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mrbgem.rake; sourceTree = "<group>"; };
+		53B43D4223DC1CF400F7D6E2 /* mirb.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mirb.c; sourceTree = "<group>"; };
+		53B43D4423DC1CF400F7D6E2 /* mirb.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = mirb.rb; sourceTree = "<group>"; };
+		53B43D4623DC1CF400F7D6E2 /* mrbgem.rake */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mrbgem.rake; sourceTree = "<group>"; };
+		53B43D4823DC1CF400F7D6E2 /* pack.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = pack.rb; sourceTree = "<group>"; };
+		53B43D4923DC1CF400F7D6E2 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		53B43D4B23DC1CF400F7D6E2 /* pack.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pack.c; sourceTree = "<group>"; };
+		53B43D4D23DC1CF400F7D6E2 /* mrbgem.rake */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mrbgem.rake; sourceTree = "<group>"; };
+		53B43D4F23DC1CF400F7D6E2 /* sleep_test.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = sleep_test.rb; sourceTree = "<group>"; };
+		53B43D5123DC1CF400F7D6E2 /* sleep.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = sleep.rb; sourceTree = "<group>"; };
+		53B43D5223DC1CF400F7D6E2 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		53B43D5423DC1CF400F7D6E2 /* mrb_sleep.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mrb_sleep.c; sourceTree = "<group>"; };
+		53B43D5523DC1CF400F7D6E2 /* default.gembox */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = default.gembox; sourceTree = "<group>"; };
+		53B43D5723DC1CF400F7D6E2 /* mrbgem.rake */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mrbgem.rake; sourceTree = "<group>"; };
+		53B43D5A23DC1CF400F7D6E2 /* mruby-strip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "mruby-strip.c"; sourceTree = "<group>"; };
+		53B43D5C23DC1CF400F7D6E2 /* mruby-strip.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = "mruby-strip.rb"; sourceTree = "<group>"; };
+		53B43D5E23DC1CF400F7D6E2 /* mrbgem.rake */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mrbgem.rake; sourceTree = "<group>"; };
+		53B43D6023DC1CF400F7D6E2 /* enumerator.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = enumerator.rb; sourceTree = "<group>"; };
+		53B43D6223DC1CF400F7D6E2 /* enumerator.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = enumerator.rb; sourceTree = "<group>"; };
+		53B43D6423DC1CF400F7D6E2 /* mrbgem.rake */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mrbgem.rake; sourceTree = "<group>"; };
+		53B43D6623DC1CF400F7D6E2 /* math.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = math.rb; sourceTree = "<group>"; };
+		53B43D6823DC1CF400F7D6E2 /* math.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = math.c; sourceTree = "<group>"; };
+		53B43D6A23DC1CF400F7D6E2 /* mrbgem.rake */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mrbgem.rake; sourceTree = "<group>"; };
+		53B43D6C23DC1CF400F7D6E2 /* range.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = range.rb; sourceTree = "<group>"; };
+		53B43D6E23DC1CF400F7D6E2 /* range.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = range.rb; sourceTree = "<group>"; };
+		53B43D7023DC1CF400F7D6E2 /* range.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = range.c; sourceTree = "<group>"; };
+		53B43D7223DC1CF400F7D6E2 /* mrbgem.rake */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mrbgem.rake; sourceTree = "<group>"; };
+		53B43D7423DC1CF400F7D6E2 /* enum.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = enum.rb; sourceTree = "<group>"; };
+		53B43D7623DC1CF400F7D6E2 /* enum.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = enum.rb; sourceTree = "<group>"; };
+		53B43D7823DC1CF400F7D6E2 /* mrbgem.rake */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mrbgem.rake; sourceTree = "<group>"; };
+		53B43D7A23DC1CF400F7D6E2 /* socket.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = socket.rb; sourceTree = "<group>"; };
+		53B43D7C23DC1CF400F7D6E2 /* socket.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = socket.rb; sourceTree = "<group>"; };
+		53B43D7D23DC1CF400F7D6E2 /* ipsocket.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = ipsocket.rb; sourceTree = "<group>"; };
+		53B43D7E23DC1CF400F7D6E2 /* sockettest.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sockettest.c; sourceTree = "<group>"; };
+		53B43D7F23DC1CF400F7D6E2 /* udpsocket.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = udpsocket.rb; sourceTree = "<group>"; };
+		53B43D8023DC1CF400F7D6E2 /* addrinfo.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = addrinfo.rb; sourceTree = "<group>"; };
+		53B43D8123DC1CF400F7D6E2 /* tcpsocket.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = tcpsocket.rb; sourceTree = "<group>"; };
+		53B43D8223DC1CF400F7D6E2 /* basicsocket.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = basicsocket.rb; sourceTree = "<group>"; };
+		53B43D8323DC1CF400F7D6E2 /* unix.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = unix.rb; sourceTree = "<group>"; };
+		53B43D8423DC1CF400F7D6E2 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		53B43D8623DC1CF400F7D6E2 /* const.cstub */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = const.cstub; sourceTree = "<group>"; };
+		53B43D8723DC1CF400F7D6E2 /* socket.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = socket.c; sourceTree = "<group>"; };
+		53B43D8823DC1CF400F7D6E2 /* const.def */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = const.def; sourceTree = "<group>"; };
+		53B43D8923DC1CF400F7D6E2 /* gen.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = gen.rb; sourceTree = "<group>"; };
+		53B43D8B23DC1CF400F7D6E2 /* mrbgem.rake */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mrbgem.rake; sourceTree = "<group>"; };
+		53B43D8D23DC1CF400F7D6E2 /* objectspace.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = objectspace.rb; sourceTree = "<group>"; };
+		53B43D8F23DC1CF400F7D6E2 /* mruby_objectspace.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mruby_objectspace.c; sourceTree = "<group>"; };
+		53B43D9123DC1CF400F7D6E2 /* mrbgem.rake */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mrbgem.rake; sourceTree = "<group>"; };
+		53B43D9223DC1CF400F7D6E2 /* mruby-config.bat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "mruby-config.bat"; sourceTree = "<group>"; };
+		53B43D9323DC1CF400F7D6E2 /* mruby-config */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "mruby-config"; sourceTree = "<group>"; };
+		53B43D9523DC1CF400F7D6E2 /* mrbgem.rake */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mrbgem.rake; sourceTree = "<group>"; };
+		53B43D9723DC1CF400F7D6E2 /* complex.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = complex.rb; sourceTree = "<group>"; };
+		53B43D9923DC1CF400F7D6E2 /* complex.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = complex.rb; sourceTree = "<group>"; };
+		53B43D9B23DC1CF400F7D6E2 /* complex.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = complex.c; sourceTree = "<group>"; };
+		53B43D9D23DC1CF400F7D6E2 /* mrbgem.rake */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mrbgem.rake; sourceTree = "<group>"; };
+		53B43D9F23DC1CF400F7D6E2 /* string.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = string.rb; sourceTree = "<group>"; };
+		53B43DA123DC1CF400F7D6E2 /* sprintf.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = sprintf.rb; sourceTree = "<group>"; };
+		53B43DA323DC1CF400F7D6E2 /* kernel.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = kernel.c; sourceTree = "<group>"; };
+		53B43DA423DC1CF400F7D6E2 /* sprintf.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sprintf.c; sourceTree = "<group>"; };
+		53B43DA623DC1CF400F7D6E2 /* mrbgem.rake */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mrbgem.rake; sourceTree = "<group>"; };
+		53B43DA823DC1CF400F7D6E2 /* metaprog.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = metaprog.rb; sourceTree = "<group>"; };
+		53B43DAA23DC1CF400F7D6E2 /* metaprog.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = metaprog.c; sourceTree = "<group>"; };
+		53B43DAC23DC1CF400F7D6E2 /* mrbgem.rake */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mrbgem.rake; sourceTree = "<group>"; };
+		53B43DAE23DC1CF400F7D6E2 /* chain.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = chain.rb; sourceTree = "<group>"; };
+		53B43DB023DC1CF400F7D6E2 /* enum_chain.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = enum_chain.rb; sourceTree = "<group>"; };
+		53B43DB223DC1CF400F7D6E2 /* mrbgem.rake */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mrbgem.rake; sourceTree = "<group>"; };
+		53B43DB423DC1CF400F7D6E2 /* print.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = print.rb; sourceTree = "<group>"; };
+		53B43DB623DC1CF400F7D6E2 /* print.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = print.c; sourceTree = "<group>"; };
+		53B43DB823DC1CF400F7D6E2 /* mrbgem.rake */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mrbgem.rake; sourceTree = "<group>"; };
+		53B43DBA23DC1CF400F7D6E2 /* random.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = random.rb; sourceTree = "<group>"; };
+		53B43DBC23DC1CF400F7D6E2 /* random.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = random.c; sourceTree = "<group>"; };
+		53B43DBE23DC1CF400F7D6E2 /* mrbgem.rake */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mrbgem.rake; sourceTree = "<group>"; };
+		53B43DC023DC1CF400F7D6E2 /* inline.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = inline.rb; sourceTree = "<group>"; };
+		53B43DC123DC1CF400F7D6E2 /* inline.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = inline.c; sourceTree = "<group>"; };
+		53B43DC323DC1CF400F7D6E2 /* mrbgem.rake */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mrbgem.rake; sourceTree = "<group>"; };
+		53B43DC523DC1CF400F7D6E2 /* rational.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = rational.rb; sourceTree = "<group>"; };
+		53B43DC723DC1CF400F7D6E2 /* rational.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = rational.rb; sourceTree = "<group>"; };
+		53B43DC923DC1CF400F7D6E2 /* rational.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = rational.c; sourceTree = "<group>"; };
+		53B43DCB23DC1CF400F7D6E2 /* mrbgem.rake */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mrbgem.rake; sourceTree = "<group>"; };
+		53B43DCD23DC1CF400F7D6E2 /* kernel.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = kernel.rb; sourceTree = "<group>"; };
+		53B43DCF23DC1CF400F7D6E2 /* kernel.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = kernel.c; sourceTree = "<group>"; };
+		53B43DD123DC1CF400F7D6E2 /* mrbgem.rake */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mrbgem.rake; sourceTree = "<group>"; };
+		53B43DD323DC1CF400F7D6E2 /* module.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = module.rb; sourceTree = "<group>"; };
+		53B43DD523DC1CF400F7D6E2 /* module.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = module.rb; sourceTree = "<group>"; };
+		53B43DD723DC1CF400F7D6E2 /* class.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = class.c; sourceTree = "<group>"; };
+		53B43DD923DC1CF400F7D6E2 /* mrbgem.rake */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mrbgem.rake; sourceTree = "<group>"; };
+		53B43DDB23DC1CF400F7D6E2 /* mruby-exit.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "mruby-exit.c"; sourceTree = "<group>"; };
+		53B43DDD23DC1CF400F7D6E2 /* mrbgem.rake */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mrbgem.rake; sourceTree = "<group>"; };
+		53B43DDF23DC1CF400F7D6E2 /* numeric_ext.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = numeric_ext.rb; sourceTree = "<group>"; };
+		53B43DE123DC1CF400F7D6E2 /* numeric.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = numeric.rb; sourceTree = "<group>"; };
+		53B43DE323DC1CF400F7D6E2 /* numeric_ext.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = numeric_ext.c; sourceTree = "<group>"; };
+		53B43DE523DC1CF400F7D6E2 /* mrbgem.rake */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mrbgem.rake; sourceTree = "<group>"; };
+		53B43DE723DC1CF400F7D6E2 /* compar.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = compar.rb; sourceTree = "<group>"; };
+		53B43DE923DC1CF400F7D6E2 /* mrbgem.rake */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mrbgem.rake; sourceTree = "<group>"; };
+		53B43DEB23DC1CF400F7D6E2 /* fiber.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = fiber.rb; sourceTree = "<group>"; };
+		53B43DED23DC1CF400F7D6E2 /* fiber.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = fiber.c; sourceTree = "<group>"; };
+		53B43DEF23DC1CF400F7D6E2 /* mrbgem.rake */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mrbgem.rake; sourceTree = "<group>"; };
+		53B43DF123DC1CF400F7D6E2 /* time.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = time.rb; sourceTree = "<group>"; };
+		53B43DF323DC1CF400F7D6E2 /* time.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = time.rb; sourceTree = "<group>"; };
+		53B43DF623DC1CF400F7D6E2 /* time.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = time.h; sourceTree = "<group>"; };
+		53B43DF823DC1CF400F7D6E2 /* time.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = time.c; sourceTree = "<group>"; };
+		53B43DFA23DC1CF400F7D6E2 /* mrbgem.rake */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mrbgem.rake; sourceTree = "<group>"; };
+		53B43DFC23DC1CF400F7D6E2 /* file.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = file.rb; sourceTree = "<group>"; };
+		53B43DFD23DC1CF400F7D6E2 /* file_constants.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = file_constants.rb; sourceTree = "<group>"; };
+		53B43DFE23DC1CF400F7D6E2 /* io.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = io.rb; sourceTree = "<group>"; };
+		53B43DFF23DC1CF400F7D6E2 /* kernel.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = kernel.rb; sourceTree = "<group>"; };
+		53B43E0123DC1CF400F7D6E2 /* mruby_io_test.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mruby_io_test.c; sourceTree = "<group>"; };
+		53B43E0223DC1CF400F7D6E2 /* file.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = file.rb; sourceTree = "<group>"; };
+		53B43E0323DC1CF400F7D6E2 /* io.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = io.rb; sourceTree = "<group>"; };
+		53B43E0423DC1CF400F7D6E2 /* file_test.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = file_test.rb; sourceTree = "<group>"; };
+		53B43E0823DC1CF400F7D6E2 /* io.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = io.h; sourceTree = "<group>"; };
+		53B43E0923DC1CF400F7D6E2 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		53B43E0B23DC1CF400F7D6E2 /* file_test.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = file_test.c; sourceTree = "<group>"; };
+		53B43E0C23DC1CF400F7D6E2 /* io.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = io.c; sourceTree = "<group>"; };
+		53B43E0D23DC1CF400F7D6E2 /* mruby_io_gem.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mruby_io_gem.c; sourceTree = "<group>"; };
+		53B43E0E23DC1CF400F7D6E2 /* file.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = file.c; sourceTree = "<group>"; };
+		53B43E1023DC1CF400F7D6E2 /* mrbgem.rake */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mrbgem.rake; sourceTree = "<group>"; };
+		53B43E1223DC1CF400F7D6E2 /* proc.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = proc.rb; sourceTree = "<group>"; };
+		53B43E1423DC1CF400F7D6E2 /* proc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = proc.c; sourceTree = "<group>"; };
+		53B43E1523DC1CF400F7D6E2 /* proc.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = proc.rb; sourceTree = "<group>"; };
+		53B43E1723DC1CF400F7D6E2 /* proc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = proc.c; sourceTree = "<group>"; };
+		53B43E1923DC1CF400F7D6E2 /* mrbgem.rake */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mrbgem.rake; sourceTree = "<group>"; };
+		53B43E1B23DC1CF400F7D6E2 /* symbol.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = symbol.rb; sourceTree = "<group>"; };
+		53B43E1D23DC1CF400F7D6E2 /* symbol.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = symbol.rb; sourceTree = "<group>"; };
+		53B43E1F23DC1CF400F7D6E2 /* symbol.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = symbol.c; sourceTree = "<group>"; };
+		53B43E2123DC1CF400F7D6E2 /* mrbgem.rake */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mrbgem.rake; sourceTree = "<group>"; };
+		53B43E2323DC1CF400F7D6E2 /* string.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = string.rb; sourceTree = "<group>"; };
+		53B43E2523DC1CF400F7D6E2 /* string.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = string.rb; sourceTree = "<group>"; };
+		53B43E2623DC1CF400F7D6E2 /* numeric.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = numeric.rb; sourceTree = "<group>"; };
+		53B43E2723DC1CF400F7D6E2 /* range.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = range.rb; sourceTree = "<group>"; };
+		53B43E2923DC1CF400F7D6E2 /* string.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = string.c; sourceTree = "<group>"; };
+		53B43E2B23DC1CF400F7D6E2 /* mrbgem.rake */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mrbgem.rake; sourceTree = "<group>"; };
+		53B43E2D23DC1CF400F7D6E2 /* array.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = array.rb; sourceTree = "<group>"; };
+		53B43E2F23DC1CF400F7D6E2 /* array.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = array.rb; sourceTree = "<group>"; };
+		53B43E3123DC1CF400F7D6E2 /* array.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = array.c; sourceTree = "<group>"; };
+		53B43E3823DC1CF400F7D6E2 /* mrbgem.rake */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mrbgem.rake; sourceTree = "<group>"; };
+		53B43E3A23DC1CF400F7D6E2 /* eval.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = eval.rb; sourceTree = "<group>"; };
+		53B43E3C23DC1CF400F7D6E2 /* eval.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = eval.c; sourceTree = "<group>"; };
+		53B43E3E23DC1CF400F7D6E2 /* mrbgem.rake */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mrbgem.rake; sourceTree = "<group>"; };
+		53B43E4023DC1CF400F7D6E2 /* exception.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = exception.c; sourceTree = "<group>"; };
+		53B43E4123DC1CF400F7D6E2 /* exception.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = exception.rb; sourceTree = "<group>"; };
+		53B43E4323DC1CF400F7D6E2 /* exception.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = exception.c; sourceTree = "<group>"; };
+		53B43E4523DC1CF400F7D6E2 /* mrbgem.rake */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mrbgem.rake; sourceTree = "<group>"; };
+		53B43E4723DC1CF400F7D6E2 /* object.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = object.rb; sourceTree = "<group>"; };
+		53B43E4923DC1CF400F7D6E2 /* nil.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = nil.rb; sourceTree = "<group>"; };
+		53B43E4A23DC1CF400F7D6E2 /* object.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = object.rb; sourceTree = "<group>"; };
+		53B43E4C23DC1CF400F7D6E2 /* object.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = object.c; sourceTree = "<group>"; };
+		53B43E4E23DC1CF400F7D6E2 /* mrbgem.rake */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mrbgem.rake; sourceTree = "<group>"; };
+		53B43E5123DC1CF400F7D6E2 /* mruby.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mruby.c; sourceTree = "<group>"; };
+		53B43E5323DC1CF400F7D6E2 /* mruby.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = mruby.rb; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		53B43B2E23DBF8E300F7D6E2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53939E0F23DC48DF001C97E3 /* gem_init.o in Frameworks */,
+				53939E0E23DC48DF001C97E3 /* fiber.o in Frameworks */,
+				53939DE523DC48DF001C97E3 /* metaprog.o in Frameworks */,
+				53939E2D23DC48DF001C97E3 /* string.o in Frameworks */,
+				53939DBA23DC48DF001C97E3 /* codegen.o in Frameworks */,
+				53939E1E23DC48DF001C97E3 /* mruby_io_gem.o in Frameworks */,
+				53939E3C23DC48DF001C97E3 /* object.o in Frameworks */,
+				53939DD623DC48DF001C97E3 /* gem_init.o in Frameworks */,
+				53939E3823DC48DF001C97E3 /* gem_init.o in Frameworks */,
+				53939DD123DC48DF001C97E3 /* range.o in Frameworks */,
+				53939DFB23DC48DF001C97E3 /* kernel.o in Frameworks */,
+				53939DCD23DC48DF001C97E3 /* math.o in Frameworks */,
+				53939DA323DC48DF001C97E3 /* mrblib.o in Frameworks */,
+				53939DD923DC48DF001C97E3 /* mruby_objectspace.o in Frameworks */,
+				53939DEC23DC48DF001C97E3 /* gem_init.o in Frameworks */,
+				53939DDB23DC48DF001C97E3 /* gem_init.o in Frameworks */,
+				53939E3723DC48DF001C97E3 /* exception.o in Frameworks */,
+				53939E2923DC48DF001C97E3 /* gem_init.o in Frameworks */,
+				53939E3323DC48DF001C97E3 /* gem_init.o in Frameworks */,
+				53939DC923DC48DF001C97E3 /* gem_init.o in Frameworks */,
+				53939E2723DC48DF001C97E3 /* symbol.o in Frameworks */,
+				53939E0A23DC48DF001C97E3 /* gem_init.o in Frameworks */,
+				53939DBB23DC48DF001C97E3 /* y.tab.o in Frameworks */,
+				53939E0223DC48DF001C97E3 /* gem_init.o in Frameworks */,
+				53939DD323DC48DF001C97E3 /* gem_init.o in Frameworks */,
+				53939E1223DC48DF001C97E3 /* time.o in Frameworks */,
+				53939E0123DC48DF001C97E3 /* class.o in Frameworks */,
+				53939E2423DC48DF001C97E3 /* gem_init.o in Frameworks */,
+				53939E1423DC48DF001C97E3 /* gem_init.o in Frameworks */,
+				53939DB423DC48DF001C97E3 /* gem_init.o in Frameworks */,
+				53939DE723DC48DF001C97E3 /* gem_init.o in Frameworks */,
+				53939E1B23DC48DF001C97E3 /* io.o in Frameworks */,
+				53939DC623DC48DF001C97E3 /* gem_init.o in Frameworks */,
+				53939E3223DC48DF001C97E3 /* array.o in Frameworks */,
+				53939E2223DC48DF001C97E3 /* proc.o in Frameworks */,
+				53939E1A23DC48DF001C97E3 /* file.o in Frameworks */,
+				53939DC423DC48DF001C97E3 /* pack.o in Frameworks */,
+				53939DCE23DC48DF001C97E3 /* gem_init.o in Frameworks */,
+				53939E0723DC48DF001C97E3 /* gem_init.o in Frameworks */,
+				53939DC123DC48DF001C97E3 /* gem_init.o in Frameworks */,
+				53939DBF23DC48DF001C97E3 /* method.o in Frameworks */,
+				53939E2E23DC48DF001C97E3 /* gem_init.o in Frameworks */,
+				53939DF723DC48DF001C97E3 /* gem_init.o in Frameworks */,
+				53939E1C23DC48DF001C97E3 /* file_test.o in Frameworks */,
+				53939DE023DC48DF001C97E3 /* kernel.o in Frameworks */,
+				53939DE223DC48DF001C97E3 /* gem_init.o in Frameworks */,
+				53939DFD23DC48DF001C97E3 /* gem_init.o in Frameworks */,
+				53939DF023DC48DF001C97E3 /* random.o in Frameworks */,
+				53939E0523DC48DF001C97E3 /* numeric_ext.o in Frameworks */,
+				53939E1F23DC48DF001C97E3 /* gem_init.o in Frameworks */,
+				53939DE123DC48DF001C97E3 /* sprintf.o in Frameworks */,
+				53939DEB23DC48DF001C97E3 /* print.o in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		53939C9023DC48DE001C97E3 /* host-debug */ = {
+			isa = PBXGroup;
+			children = (
+				53939C9123DC48DE001C97E3 /* mrblib */,
+				53939C9523DC48DE001C97E3 /* mrbgems */,
+				53939D6423DC48DE001C97E3 /* lib */,
+				53939D6723DC48DE001C97E3 /* LEGAL */,
+			);
+			name = "host-debug";
+			path = "../../../lib/mruby/build/host-debug";
+			sourceTree = "<group>";
+		};
+		53939C9123DC48DE001C97E3 /* mrblib */ = {
+			isa = PBXGroup;
+			children = (
+				53939C9223DC48DE001C97E3 /* mrblib.o */,
+				53939C9423DC48DE001C97E3 /* mrblib.c */,
+			);
+			path = mrblib;
+			sourceTree = "<group>";
+		};
+		53939C9523DC48DE001C97E3 /* mrbgems */ = {
+			isa = PBXGroup;
+			children = (
+				53939C9623DC48DE001C97E3 /* mruby-hash-ext */,
+				53939C9D23DC48DE001C97E3 /* mruby-toplevel-ext */,
+				53939CA223DC48DE001C97E3 /* mruby-struct */,
+				53939CA923DC48DE001C97E3 /* mruby-enum-lazy */,
+				53939CAD23DC48DE001C97E3 /* mruby-compiler */,
+				53939CB423DC48DE001C97E3 /* mruby-method */,
+				53939CBB23DC48DE001C97E3 /* mruby-pack */,
+				53939CC223DC48DE001C97E3 /* mruby-enumerator */,
+				53939CC623DC48DE001C97E3 /* mruby-math */,
+				53939CCD23DC48DE001C97E3 /* mruby-range-ext */,
+				53939CD423DC48DE001C97E3 /* mruby-enum-ext */,
+				53939CD823DC48DE001C97E3 /* mruby-objectspace */,
+				53939CDF23DC48DE001C97E3 /* mruby-sprintf */,
+				53939CE823DC48DE001C97E3 /* mruby-metaprog */,
+				53939CEF23DC48DE001C97E3 /* mruby-print */,
+				53939CF623DC48DE001C97E3 /* mruby-random */,
+				53939CFD23DC48DE001C97E3 /* mruby-require */,
+				53939D0423DC48DE001C97E3 /* gem_init.c */,
+				53939D0523DC48DE001C97E3 /* mruby-kernel-ext */,
+				53939D0D23DC48DE001C97E3 /* mruby-class-ext */,
+				53939D1423DC48DE001C97E3 /* mruby-numeric-ext */,
+				53939D1B23DC48DE001C97E3 /* mruby-compar-ext */,
+				53939D1F23DC48DE001C97E3 /* mruby-fiber */,
+				53939D2623DC48DE001C97E3 /* mruby-time */,
+				53939D2D23DC48DE001C97E3 /* mruby-io */,
+				53939D3A23DC48DE001C97E3 /* mruby-proc-ext */,
+				53939D4123DC48DE001C97E3 /* mruby-symbol-ext */,
+				53939D4823DC48DE001C97E3 /* mruby-string-ext */,
+				53939D4F23DC48DE001C97E3 /* mruby-array-ext */,
+				53939D5623DC48DE001C97E3 /* mruby-error */,
+				53939D5D23DC48DE001C97E3 /* mruby-object-ext */,
+			);
+			path = mrbgems;
+			sourceTree = "<group>";
+		};
+		53939C9623DC48DE001C97E3 /* mruby-hash-ext */ = {
+			isa = PBXGroup;
+			children = (
+				53939C9823DC48DE001C97E3 /* gem_init.c */,
+			);
+			path = "mruby-hash-ext";
+			sourceTree = "<group>";
+		};
+		53939C9D23DC48DE001C97E3 /* mruby-toplevel-ext */ = {
+			isa = PBXGroup;
+			children = (
+				53939C9F23DC48DE001C97E3 /* gem_init.c */,
+			);
+			path = "mruby-toplevel-ext";
+			sourceTree = "<group>";
+		};
+		53939CA223DC48DE001C97E3 /* mruby-struct */ = {
+			isa = PBXGroup;
+			children = (
+				53939CA423DC48DE001C97E3 /* gem_init.c */,
+			);
+			path = "mruby-struct";
+			sourceTree = "<group>";
+		};
+		53939CA923DC48DE001C97E3 /* mruby-enum-lazy */ = {
+			isa = PBXGroup;
+			children = (
+				53939CAA23DC48DE001C97E3 /* gem_init.o */,
+				53939CAB23DC48DE001C97E3 /* gem_init.c */,
+			);
+			path = "mruby-enum-lazy";
+			sourceTree = "<group>";
+		};
+		53939CAD23DC48DE001C97E3 /* mruby-compiler */ = {
+			isa = PBXGroup;
+			children = (
+				53939CAE23DC48DE001C97E3 /* core */,
+			);
+			path = "mruby-compiler";
+			sourceTree = "<group>";
+		};
+		53939CAE23DC48DE001C97E3 /* core */ = {
+			isa = PBXGroup;
+			children = (
+				53939CB223DC48DE001C97E3 /* codegen.o */,
+				53939CB323DC48DE001C97E3 /* y.tab.o */,
+			);
+			path = core;
+			sourceTree = "<group>";
+		};
+		53939CB423DC48DE001C97E3 /* mruby-method */ = {
+			isa = PBXGroup;
+			children = (
+				53939CB523DC48DE001C97E3 /* gem_init.o */,
+				53939CB623DC48DE001C97E3 /* gem_init.c */,
+				53939CB823DC48DE001C97E3 /* src */,
+			);
+			path = "mruby-method";
+			sourceTree = "<group>";
+		};
+		53939CB823DC48DE001C97E3 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				53939CB923DC48DE001C97E3 /* method.o */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		53939CBB23DC48DE001C97E3 /* mruby-pack */ = {
+			isa = PBXGroup;
+			children = (
+				53939CBC23DC48DE001C97E3 /* gem_init.o */,
+				53939CBD23DC48DE001C97E3 /* gem_init.c */,
+				53939CBF23DC48DE001C97E3 /* src */,
+			);
+			path = "mruby-pack";
+			sourceTree = "<group>";
+		};
+		53939CBF23DC48DE001C97E3 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				53939CC023DC48DE001C97E3 /* pack.o */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		53939CC223DC48DE001C97E3 /* mruby-enumerator */ = {
+			isa = PBXGroup;
+			children = (
+				53939CC323DC48DE001C97E3 /* gem_init.o */,
+				53939CC423DC48DE001C97E3 /* gem_init.c */,
+			);
+			path = "mruby-enumerator";
+			sourceTree = "<group>";
+		};
+		53939CC623DC48DE001C97E3 /* mruby-math */ = {
+			isa = PBXGroup;
+			children = (
+				53939CC723DC48DE001C97E3 /* gem_init.o */,
+				53939CC823DC48DE001C97E3 /* gem_init.c */,
+				53939CCA23DC48DE001C97E3 /* src */,
+			);
+			path = "mruby-math";
+			sourceTree = "<group>";
+		};
+		53939CCA23DC48DE001C97E3 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				53939CCC23DC48DE001C97E3 /* math.o */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		53939CCD23DC48DE001C97E3 /* mruby-range-ext */ = {
+			isa = PBXGroup;
+			children = (
+				53939CCE23DC48DE001C97E3 /* gem_init.o */,
+				53939CCF23DC48DE001C97E3 /* gem_init.c */,
+				53939CD123DC48DE001C97E3 /* src */,
+			);
+			path = "mruby-range-ext";
+			sourceTree = "<group>";
+		};
+		53939CD123DC48DE001C97E3 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				53939CD223DC48DE001C97E3 /* range.o */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		53939CD423DC48DE001C97E3 /* mruby-enum-ext */ = {
+			isa = PBXGroup;
+			children = (
+				53939CD523DC48DE001C97E3 /* gem_init.o */,
+				53939CD623DC48DE001C97E3 /* gem_init.c */,
+			);
+			path = "mruby-enum-ext";
+			sourceTree = "<group>";
+		};
+		53939CD823DC48DE001C97E3 /* mruby-objectspace */ = {
+			isa = PBXGroup;
+			children = (
+				53939CD923DC48DE001C97E3 /* gem_init.o */,
+				53939CDA23DC48DE001C97E3 /* gem_init.c */,
+				53939CDC23DC48DE001C97E3 /* src */,
+			);
+			path = "mruby-objectspace";
+			sourceTree = "<group>";
+		};
+		53939CDC23DC48DE001C97E3 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				53939CDD23DC48DE001C97E3 /* mruby_objectspace.o */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		53939CDF23DC48DE001C97E3 /* mruby-sprintf */ = {
+			isa = PBXGroup;
+			children = (
+				53939CE023DC48DE001C97E3 /* gem_init.o */,
+				53939CE123DC48DE001C97E3 /* gem_init.c */,
+				53939CE323DC48DE001C97E3 /* src */,
+			);
+			path = "mruby-sprintf";
+			sourceTree = "<group>";
+		};
+		53939CE323DC48DE001C97E3 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				53939CE623DC48DE001C97E3 /* kernel.o */,
+				53939CE723DC48DE001C97E3 /* sprintf.o */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		53939CE823DC48DE001C97E3 /* mruby-metaprog */ = {
+			isa = PBXGroup;
+			children = (
+				53939CE923DC48DE001C97E3 /* gem_init.o */,
+				53939CEA23DC48DE001C97E3 /* gem_init.c */,
+				53939CEC23DC48DE001C97E3 /* src */,
+			);
+			path = "mruby-metaprog";
+			sourceTree = "<group>";
+		};
+		53939CEC23DC48DE001C97E3 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				53939CED23DC48DE001C97E3 /* metaprog.o */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		53939CEF23DC48DE001C97E3 /* mruby-print */ = {
+			isa = PBXGroup;
+			children = (
+				53939CF023DC48DE001C97E3 /* gem_init.o */,
+				53939CF123DC48DE001C97E3 /* gem_init.c */,
+				53939CF323DC48DE001C97E3 /* src */,
+			);
+			path = "mruby-print";
+			sourceTree = "<group>";
+		};
+		53939CF323DC48DE001C97E3 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				53939CF523DC48DE001C97E3 /* print.o */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		53939CF623DC48DE001C97E3 /* mruby-random */ = {
+			isa = PBXGroup;
+			children = (
+				53939CF723DC48DE001C97E3 /* gem_init.o */,
+				53939CF823DC48DE001C97E3 /* gem_init.c */,
+				53939CFA23DC48DE001C97E3 /* src */,
+			);
+			path = "mruby-random";
+			sourceTree = "<group>";
+		};
+		53939CFA23DC48DE001C97E3 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				53939CFC23DC48DE001C97E3 /* random.o */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		53939CFD23DC48DE001C97E3 /* mruby-require */ = {
+			isa = PBXGroup;
+			children = (
+				53939CFF23DC48DE001C97E3 /* gem_init.c */,
+				53939D0123DC48DE001C97E3 /* src */,
+			);
+			path = "mruby-require";
+			sourceTree = "<group>";
+		};
+		53939D0123DC48DE001C97E3 /* src */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		53939D0523DC48DE001C97E3 /* mruby-kernel-ext */ = {
+			isa = PBXGroup;
+			children = (
+				53939D0623DC48DE001C97E3 /* gem_init.o */,
+				53939D0723DC48DE001C97E3 /* gem_init.c */,
+				53939D0923DC48DE001C97E3 /* src */,
+			);
+			path = "mruby-kernel-ext";
+			sourceTree = "<group>";
+		};
+		53939D0923DC48DE001C97E3 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				53939D0B23DC48DE001C97E3 /* kernel.o */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		53939D0D23DC48DE001C97E3 /* mruby-class-ext */ = {
+			isa = PBXGroup;
+			children = (
+				53939D0E23DC48DE001C97E3 /* gem_init.o */,
+				53939D0F23DC48DE001C97E3 /* gem_init.c */,
+				53939D1123DC48DE001C97E3 /* src */,
+			);
+			path = "mruby-class-ext";
+			sourceTree = "<group>";
+		};
+		53939D1123DC48DE001C97E3 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				53939D1323DC48DE001C97E3 /* class.o */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		53939D1423DC48DE001C97E3 /* mruby-numeric-ext */ = {
+			isa = PBXGroup;
+			children = (
+				53939D1523DC48DE001C97E3 /* gem_init.o */,
+				53939D1623DC48DE001C97E3 /* gem_init.c */,
+				53939D1823DC48DE001C97E3 /* src */,
+			);
+			path = "mruby-numeric-ext";
+			sourceTree = "<group>";
+		};
+		53939D1823DC48DE001C97E3 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				53939D1923DC48DE001C97E3 /* numeric_ext.o */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		53939D1B23DC48DE001C97E3 /* mruby-compar-ext */ = {
+			isa = PBXGroup;
+			children = (
+				53939D1C23DC48DE001C97E3 /* gem_init.o */,
+				53939D1D23DC48DE001C97E3 /* gem_init.c */,
+			);
+			path = "mruby-compar-ext";
+			sourceTree = "<group>";
+		};
+		53939D1F23DC48DE001C97E3 /* mruby-fiber */ = {
+			isa = PBXGroup;
+			children = (
+				53939D2023DC48DE001C97E3 /* gem_init.o */,
+				53939D2123DC48DE001C97E3 /* gem_init.c */,
+				53939D2323DC48DE001C97E3 /* src */,
+			);
+			path = "mruby-fiber";
+			sourceTree = "<group>";
+		};
+		53939D2323DC48DE001C97E3 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				53939D2523DC48DE001C97E3 /* fiber.o */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		53939D2623DC48DE001C97E3 /* mruby-time */ = {
+			isa = PBXGroup;
+			children = (
+				53939D2723DC48DE001C97E3 /* gem_init.o */,
+				53939D2823DC48DE001C97E3 /* gem_init.c */,
+				53939D2A23DC48DE001C97E3 /* src */,
+			);
+			path = "mruby-time";
+			sourceTree = "<group>";
+		};
+		53939D2A23DC48DE001C97E3 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				53939D2B23DC48DE001C97E3 /* time.o */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		53939D2D23DC48DE001C97E3 /* mruby-io */ = {
+			isa = PBXGroup;
+			children = (
+				53939D2E23DC48DE001C97E3 /* gem_init.o */,
+				53939D2F23DC48DE001C97E3 /* gem_init.c */,
+				53939D3123DC48DE001C97E3 /* src */,
+			);
+			path = "mruby-io";
+			sourceTree = "<group>";
+		};
+		53939D3123DC48DE001C97E3 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				53939D3523DC48DE001C97E3 /* file.o */,
+				53939D3623DC48DE001C97E3 /* io.o */,
+				53939D3723DC48DE001C97E3 /* file_test.o */,
+				53939D3923DC48DE001C97E3 /* mruby_io_gem.o */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		53939D3A23DC48DE001C97E3 /* mruby-proc-ext */ = {
+			isa = PBXGroup;
+			children = (
+				53939D3B23DC48DE001C97E3 /* gem_init.o */,
+				53939D3C23DC48DE001C97E3 /* gem_init.c */,
+				53939D3E23DC48DE001C97E3 /* src */,
+			);
+			path = "mruby-proc-ext";
+			sourceTree = "<group>";
+		};
+		53939D3E23DC48DE001C97E3 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				53939D3F23DC48DE001C97E3 /* proc.o */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		53939D4123DC48DE001C97E3 /* mruby-symbol-ext */ = {
+			isa = PBXGroup;
+			children = (
+				53939D4223DC48DE001C97E3 /* gem_init.o */,
+				53939D4323DC48DE001C97E3 /* gem_init.c */,
+				53939D4523DC48DE001C97E3 /* src */,
+			);
+			path = "mruby-symbol-ext";
+			sourceTree = "<group>";
+		};
+		53939D4523DC48DE001C97E3 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				53939D4623DC48DE001C97E3 /* symbol.o */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		53939D4823DC48DE001C97E3 /* mruby-string-ext */ = {
+			isa = PBXGroup;
+			children = (
+				53939D4923DC48DE001C97E3 /* gem_init.o */,
+				53939D4A23DC48DE001C97E3 /* gem_init.c */,
+				53939D4C23DC48DE001C97E3 /* src */,
+			);
+			path = "mruby-string-ext";
+			sourceTree = "<group>";
+		};
+		53939D4C23DC48DE001C97E3 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				53939D4E23DC48DE001C97E3 /* string.o */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		53939D4F23DC48DE001C97E3 /* mruby-array-ext */ = {
+			isa = PBXGroup;
+			children = (
+				53939D5023DC48DE001C97E3 /* gem_init.o */,
+				53939D5123DC48DE001C97E3 /* gem_init.c */,
+				53939D5323DC48DE001C97E3 /* src */,
+			);
+			path = "mruby-array-ext";
+			sourceTree = "<group>";
+		};
+		53939D5323DC48DE001C97E3 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				53939D5523DC48DE001C97E3 /* array.o */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		53939D5623DC48DE001C97E3 /* mruby-error */ = {
+			isa = PBXGroup;
+			children = (
+				53939D5723DC48DE001C97E3 /* gem_init.o */,
+				53939D5823DC48DE001C97E3 /* gem_init.c */,
+				53939D5A23DC48DE001C97E3 /* src */,
+			);
+			path = "mruby-error";
+			sourceTree = "<group>";
+		};
+		53939D5A23DC48DE001C97E3 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				53939D5C23DC48DE001C97E3 /* exception.o */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		53939D5D23DC48DE001C97E3 /* mruby-object-ext */ = {
+			isa = PBXGroup;
+			children = (
+				53939D5E23DC48DE001C97E3 /* gem_init.o */,
+				53939D5F23DC48DE001C97E3 /* gem_init.c */,
+				53939D6123DC48DE001C97E3 /* src */,
+			);
+			path = "mruby-object-ext";
+			sourceTree = "<group>";
+		};
+		53939D6123DC48DE001C97E3 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				53939D6323DC48DE001C97E3 /* object.o */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		53939D6423DC48DE001C97E3 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		53939E7A23DC500F001C97E3 /* mrbgems */ = {
+			isa = PBXGroup;
+			children = (
+				53939E7B23DC500F001C97E3 /* mruby-require */,
+			);
+			name = mrbgems;
+			path = ../../../lib/mruby/build/mrbgems;
+			sourceTree = "<group>";
+		};
+		53939E7B23DC500F001C97E3 /* mruby-require */ = {
+			isa = PBXGroup;
+			children = (
+				53939E7C23DC500F001C97E3 /* mrbgem.rake */,
+				53939E7D23DC500F001C97E3 /* Makefile */,
+				53939E7E23DC500F001C97E3 /* run_test.rb */,
+				53939E7F23DC500F001C97E3 /* README.md */,
+				53939E8023DC500F001C97E3 /* .travis.yml */,
+				53939E8123DC500F001C97E3 /* src */,
+			);
+			path = "mruby-require";
+			sourceTree = "<group>";
+		};
+		53939E8123DC500F001C97E3 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				53939E8223DC500F001C97E3 /* mrb_require.c */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		53939EE023DEAFBB001C97E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				53939EE423DEAFBB001C97E3 /* libsqlite.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		53B43B2823DBF8E300F7D6E2 = {
+			isa = PBXGroup;
+			children = (
+				53939E7A23DC500F001C97E3 /* mrbgems */,
+				53939C9023DC48DE001C97E3 /* host-debug */,
+				53B43CF223DC1CF300F7D6E2 /* mrbgems */,
+				53B43B8223DC1B9900F7D6E2 /* init_mrblib.c */,
+				53B43B3323DBF8E300F7D6E2 /* mruby */,
+				53B43B3223DBF8E300F7D6E2 /* Products */,
+				53939EDF23DEAFBB001C97E3 /* sqlite.xcodeproj */,
+			);
+			sourceTree = "<group>";
+		};
+		53B43B3223DBF8E300F7D6E2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				53B43B3123DBF8E300F7D6E2 /* libmruby.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		53B43B3323DBF8E300F7D6E2 /* mruby */ = {
+			isa = PBXGroup;
+			children = (
+				53B43B5023DBF94400F7D6E2 /* array.c */,
+				53B43B5623DBF94400F7D6E2 /* backtrace.c */,
+				53B43B4923DBF94400F7D6E2 /* class.c */,
+				53B43B4F23DBF94400F7D6E2 /* codedump.c */,
+				53B43B4723DBF94400F7D6E2 /* compar.c */,
+				53B43B5523DBF94400F7D6E2 /* crc.c */,
+				53B43B4523DBF94300F7D6E2 /* debug.c */,
+				53B43B4C23DBF94400F7D6E2 /* dump.c */,
+				53B43B5723DBF94400F7D6E2 /* enum.c */,
+				53B43B3D23DBF94300F7D6E2 /* error.c */,
+				53B43B4D23DBF94400F7D6E2 /* error.h */,
+				53B43B5A23DBF94400F7D6E2 /* etc.c */,
+				53B43B4A23DBF94400F7D6E2 /* fmt_fp.c */,
+				53B43B3F23DBF94300F7D6E2 /* gc.c */,
+				53B43B4323DBF94300F7D6E2 /* hash.c */,
+				53B43B5123DBF94400F7D6E2 /* init.c */,
+				53B43B5823DBF94400F7D6E2 /* kernel.c */,
+				53B43B5D23DBF94500F7D6E2 /* load.c */,
+				53B43B4223DBF94300F7D6E2 /* mruby_core.rake */,
+				53B43B4023DBF94300F7D6E2 /* numeric.c */,
+				53B43B3E23DBF94300F7D6E2 /* object.c */,
+				53B43B5B23DBF94400F7D6E2 /* opcode.h */,
+				53B43B5223DBF94400F7D6E2 /* pool.c */,
+				53B43B4623DBF94300F7D6E2 /* print.c */,
+				53B43B4123DBF94300F7D6E2 /* proc.c */,
+				53B43B5323DBF94400F7D6E2 /* range.c */,
+				53B43B4423DBF94300F7D6E2 /* state.c */,
+				53B43B5C23DBF94500F7D6E2 /* string.c */,
+				53B43B5423DBF94400F7D6E2 /* symbol.c */,
+				53B43B5923DBF94400F7D6E2 /* value_array.h */,
+				53B43B4B23DBF94400F7D6E2 /* variable.c */,
+				53B43B4823DBF94400F7D6E2 /* version.c */,
+				53B43B4E23DBF94400F7D6E2 /* vm.c */,
+			);
+			path = mruby;
+			sourceTree = "<group>";
+		};
+		53B43CF223DC1CF300F7D6E2 /* mrbgems */ = {
+			isa = PBXGroup;
+			children = (
+				53939C8A23DC482A001C97E3 /* mrblib.c */,
+				53B43CF323DC1CF300F7D6E2 /* full-core.gembox */,
+				53B43CF423DC1CF300F7D6E2 /* mruby-hash-ext */,
+				53B43CFC23DC1CF400F7D6E2 /* mruby-toplevel-ext */,
+				53B43D0223DC1CF400F7D6E2 /* mruby-test */,
+				53B43D0723DC1CF400F7D6E2 /* mruby-struct */,
+				53B43D0F23DC1CF400F7D6E2 /* mruby-bin-debugger */,
+				53B43D2423DC1CF400F7D6E2 /* mruby-enum-lazy */,
+				53B43D2A23DC1CF400F7D6E2 /* mruby-compiler */,
+				53B43D3423DC1CF400F7D6E2 /* mruby-method */,
+				53B43D3E23DC1CF400F7D6E2 /* mruby-bin-mirb */,
+				53B43D4523DC1CF400F7D6E2 /* mruby-pack */,
+				53B43D4C23DC1CF400F7D6E2 /* mruby-sleep */,
+				53B43D5523DC1CF400F7D6E2 /* default.gembox */,
+				53B43D5623DC1CF400F7D6E2 /* mruby-bin-strip */,
+				53B43D5D23DC1CF400F7D6E2 /* mruby-enumerator */,
+				53B43D6323DC1CF400F7D6E2 /* mruby-math */,
+				53B43D6923DC1CF400F7D6E2 /* mruby-range-ext */,
+				53B43D7123DC1CF400F7D6E2 /* mruby-enum-ext */,
+				53B43D7723DC1CF400F7D6E2 /* mruby-socket */,
+				53B43D8A23DC1CF400F7D6E2 /* mruby-objectspace */,
+				53B43D9023DC1CF400F7D6E2 /* mruby-bin-config */,
+				53B43D9423DC1CF400F7D6E2 /* mruby-complex */,
+				53B43D9C23DC1CF400F7D6E2 /* mruby-sprintf */,
+				53B43DA523DC1CF400F7D6E2 /* mruby-metaprog */,
+				53B43DAB23DC1CF400F7D6E2 /* mruby-enum-chain */,
+				53B43DB123DC1CF400F7D6E2 /* mruby-print */,
+				53B43DB723DC1CF400F7D6E2 /* mruby-random */,
+				53B43DBD23DC1CF400F7D6E2 /* mruby-inline-struct */,
+				53B43DC223DC1CF400F7D6E2 /* mruby-rational */,
+				53B43DCA23DC1CF400F7D6E2 /* mruby-kernel-ext */,
+				53B43DD023DC1CF400F7D6E2 /* mruby-class-ext */,
+				53B43DD823DC1CF400F7D6E2 /* mruby-exit */,
+				53B43DDC23DC1CF400F7D6E2 /* mruby-numeric-ext */,
+				53B43DE423DC1CF400F7D6E2 /* mruby-compar-ext */,
+				53B43DE823DC1CF400F7D6E2 /* mruby-fiber */,
+				53B43DEE23DC1CF400F7D6E2 /* mruby-time */,
+				53B43DF923DC1CF400F7D6E2 /* mruby-io */,
+				53B43E0F23DC1CF400F7D6E2 /* mruby-proc-ext */,
+				53B43E1823DC1CF400F7D6E2 /* mruby-symbol-ext */,
+				53B43E2023DC1CF400F7D6E2 /* mruby-string-ext */,
+				53B43E2A23DC1CF400F7D6E2 /* mruby-array-ext */,
+				53B43E3723DC1CF400F7D6E2 /* mruby-eval */,
+				53B43E3D23DC1CF400F7D6E2 /* mruby-error */,
+				53B43E4423DC1CF400F7D6E2 /* mruby-object-ext */,
+				53B43E4D23DC1CF400F7D6E2 /* mruby-bin-mruby */,
+			);
+			name = mrbgems;
+			path = ../../../lib/mruby/mrbgems;
+			sourceTree = "<group>";
+		};
+		53B43CF423DC1CF300F7D6E2 /* mruby-hash-ext */ = {
+			isa = PBXGroup;
+			children = (
+				53B43CF523DC1CF300F7D6E2 /* mrbgem.rake */,
+				53B43CF623DC1CF300F7D6E2 /* mrblib */,
+				53B43CF823DC1CF300F7D6E2 /* test */,
+				53B43CFA23DC1CF400F7D6E2 /* src */,
+			);
+			path = "mruby-hash-ext";
+			sourceTree = "<group>";
+		};
+		53B43CF623DC1CF300F7D6E2 /* mrblib */ = {
+			isa = PBXGroup;
+			children = (
+				53B43CF723DC1CF300F7D6E2 /* hash.rb */,
+			);
+			path = mrblib;
+			sourceTree = "<group>";
+		};
+		53B43CF823DC1CF300F7D6E2 /* test */ = {
+			isa = PBXGroup;
+			children = (
+				53B43CF923DC1CF300F7D6E2 /* hash.rb */,
+			);
+			path = test;
+			sourceTree = "<group>";
+		};
+		53B43CFA23DC1CF400F7D6E2 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				53B43CFB23DC1CF400F7D6E2 /* hash-ext.c */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		53B43CFC23DC1CF400F7D6E2 /* mruby-toplevel-ext */ = {
+			isa = PBXGroup;
+			children = (
+				53B43CFD23DC1CF400F7D6E2 /* mrbgem.rake */,
+				53B43CFE23DC1CF400F7D6E2 /* mrblib */,
+				53B43D0023DC1CF400F7D6E2 /* test */,
+			);
+			path = "mruby-toplevel-ext";
+			sourceTree = "<group>";
+		};
+		53B43CFE23DC1CF400F7D6E2 /* mrblib */ = {
+			isa = PBXGroup;
+			children = (
+				53B43CFF23DC1CF400F7D6E2 /* toplevel.rb */,
+			);
+			path = mrblib;
+			sourceTree = "<group>";
+		};
+		53B43D0023DC1CF400F7D6E2 /* test */ = {
+			isa = PBXGroup;
+			children = (
+				53B43D0123DC1CF400F7D6E2 /* toplevel.rb */,
+			);
+			path = test;
+			sourceTree = "<group>";
+		};
+		53B43D0223DC1CF400F7D6E2 /* mruby-test */ = {
+			isa = PBXGroup;
+			children = (
+				53B43D0323DC1CF400F7D6E2 /* mrbgem.rake */,
+				53B43D0423DC1CF400F7D6E2 /* README.md */,
+				53B43D0523DC1CF400F7D6E2 /* vformat.c */,
+				53B43D0623DC1CF400F7D6E2 /* driver.c */,
+			);
+			path = "mruby-test";
+			sourceTree = "<group>";
+		};
+		53B43D0723DC1CF400F7D6E2 /* mruby-struct */ = {
+			isa = PBXGroup;
+			children = (
+				53B43D0823DC1CF400F7D6E2 /* mrbgem.rake */,
+				53B43D0923DC1CF400F7D6E2 /* mrblib */,
+				53B43D0B23DC1CF400F7D6E2 /* test */,
+				53B43D0D23DC1CF400F7D6E2 /* src */,
+			);
+			path = "mruby-struct";
+			sourceTree = "<group>";
+		};
+		53B43D0923DC1CF400F7D6E2 /* mrblib */ = {
+			isa = PBXGroup;
+			children = (
+				53B43D0A23DC1CF400F7D6E2 /* struct.rb */,
+			);
+			path = mrblib;
+			sourceTree = "<group>";
+		};
+		53B43D0B23DC1CF400F7D6E2 /* test */ = {
+			isa = PBXGroup;
+			children = (
+				53B43D0C23DC1CF400F7D6E2 /* struct.rb */,
+			);
+			path = test;
+			sourceTree = "<group>";
+		};
+		53B43D0D23DC1CF400F7D6E2 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				53B43D0E23DC1CF400F7D6E2 /* struct.c */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		53B43D0F23DC1CF400F7D6E2 /* mruby-bin-debugger */ = {
+			isa = PBXGroup;
+			children = (
+				53B43D1023DC1CF400F7D6E2 /* mrbgem.rake */,
+				53B43D1123DC1CF400F7D6E2 /* tools */,
+				53B43D2123DC1CF400F7D6E2 /* bintest */,
+			);
+			path = "mruby-bin-debugger";
+			sourceTree = "<group>";
+		};
+		53B43D1123DC1CF400F7D6E2 /* tools */ = {
+			isa = PBXGroup;
+			children = (
+				53B43D1223DC1CF400F7D6E2 /* mrdb */,
+			);
+			path = tools;
+			sourceTree = "<group>";
+		};
+		53B43D1223DC1CF400F7D6E2 /* mrdb */ = {
+			isa = PBXGroup;
+			children = (
+				53B43D1323DC1CF400F7D6E2 /* mrdberror.h */,
+				53B43D1423DC1CF400F7D6E2 /* mrdb.h */,
+				53B43D1523DC1CF400F7D6E2 /* apilist.h */,
+				53B43D1623DC1CF400F7D6E2 /* cmdprint.c */,
+				53B43D1723DC1CF400F7D6E2 /* apiprint.c */,
+				53B43D1823DC1CF400F7D6E2 /* mrdbconf.h */,
+				53B43D1923DC1CF400F7D6E2 /* cmdmisc.c */,
+				53B43D1A23DC1CF400F7D6E2 /* apibreak.c */,
+				53B43D1B23DC1CF400F7D6E2 /* cmdbreak.c */,
+				53B43D1C23DC1CF400F7D6E2 /* mrdb.c */,
+				53B43D1D23DC1CF400F7D6E2 /* apiprint.h */,
+				53B43D1E23DC1CF400F7D6E2 /* cmdrun.c */,
+				53B43D1F23DC1CF400F7D6E2 /* apilist.c */,
+				53B43D2023DC1CF400F7D6E2 /* apibreak.h */,
+			);
+			path = mrdb;
+			sourceTree = "<group>";
+		};
+		53B43D2123DC1CF400F7D6E2 /* bintest */ = {
+			isa = PBXGroup;
+			children = (
+				53B43D2223DC1CF400F7D6E2 /* mrdb.rb */,
+				53B43D2323DC1CF400F7D6E2 /* print.rb */,
+			);
+			path = bintest;
+			sourceTree = "<group>";
+		};
+		53B43D2423DC1CF400F7D6E2 /* mruby-enum-lazy */ = {
+			isa = PBXGroup;
+			children = (
+				53B43D2523DC1CF400F7D6E2 /* mrbgem.rake */,
+				53B43D2623DC1CF400F7D6E2 /* mrblib */,
+				53B43D2823DC1CF400F7D6E2 /* test */,
+			);
+			path = "mruby-enum-lazy";
+			sourceTree = "<group>";
+		};
+		53B43D2623DC1CF400F7D6E2 /* mrblib */ = {
+			isa = PBXGroup;
+			children = (
+				53B43D2723DC1CF400F7D6E2 /* lazy.rb */,
+			);
+			path = mrblib;
+			sourceTree = "<group>";
+		};
+		53B43D2823DC1CF400F7D6E2 /* test */ = {
+			isa = PBXGroup;
+			children = (
+				53B43D2923DC1CF400F7D6E2 /* lazy.rb */,
+			);
+			path = test;
+			sourceTree = "<group>";
+		};
+		53B43D2A23DC1CF400F7D6E2 /* mruby-compiler */ = {
+			isa = PBXGroup;
+			children = (
+				53B43D2B23DC1CF400F7D6E2 /* mrbgem.rake */,
+				53B43D2C23DC1CF400F7D6E2 /* core */,
+				53B43D3223DC1CF400F7D6E2 /* bintest */,
+			);
+			path = "mruby-compiler";
+			sourceTree = "<group>";
+		};
+		53B43D2C23DC1CF400F7D6E2 /* core */ = {
+			isa = PBXGroup;
+			children = (
+				53B43D2D23DC1CF400F7D6E2 /* lex.def */,
+				53B43D2E23DC1CF400F7D6E2 /* codegen.c */,
+				53B43D2F23DC1CF400F7D6E2 /* node.h */,
+				53B43D3023DC1CF400F7D6E2 /* parse.y */,
+				53B43D3123DC1CF400F7D6E2 /* keywords */,
+			);
+			path = core;
+			sourceTree = "<group>";
+		};
+		53B43D3223DC1CF400F7D6E2 /* bintest */ = {
+			isa = PBXGroup;
+			children = (
+				53B43D3323DC1CF400F7D6E2 /* mrbc.rb */,
+			);
+			path = bintest;
+			sourceTree = "<group>";
+		};
+		53B43D3423DC1CF400F7D6E2 /* mruby-method */ = {
+			isa = PBXGroup;
+			children = (
+				53B43D3523DC1CF400F7D6E2 /* mrbgem.rake */,
+				53B43D3623DC1CF400F7D6E2 /* mrblib */,
+				53B43D3923DC1CF400F7D6E2 /* test */,
+				53B43D3B23DC1CF400F7D6E2 /* README.md */,
+				53B43D3C23DC1CF400F7D6E2 /* src */,
+			);
+			path = "mruby-method";
+			sourceTree = "<group>";
+		};
+		53B43D3623DC1CF400F7D6E2 /* mrblib */ = {
+			isa = PBXGroup;
+			children = (
+				53B43D3723DC1CF400F7D6E2 /* method.rb */,
+				53B43D3823DC1CF400F7D6E2 /* kernel.rb */,
+			);
+			path = mrblib;
+			sourceTree = "<group>";
+		};
+		53B43D3923DC1CF400F7D6E2 /* test */ = {
+			isa = PBXGroup;
+			children = (
+				53B43D3A23DC1CF400F7D6E2 /* method.rb */,
+			);
+			path = test;
+			sourceTree = "<group>";
+		};
+		53B43D3C23DC1CF400F7D6E2 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				53B43D3D23DC1CF400F7D6E2 /* method.c */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		53B43D3E23DC1CF400F7D6E2 /* mruby-bin-mirb */ = {
+			isa = PBXGroup;
+			children = (
+				53B43D3F23DC1CF400F7D6E2 /* mrbgem.rake */,
+				53B43D4023DC1CF400F7D6E2 /* tools */,
+				53B43D4323DC1CF400F7D6E2 /* bintest */,
+			);
+			path = "mruby-bin-mirb";
+			sourceTree = "<group>";
+		};
+		53B43D4023DC1CF400F7D6E2 /* tools */ = {
+			isa = PBXGroup;
+			children = (
+				53B43D4123DC1CF400F7D6E2 /* mirb */,
+			);
+			path = tools;
+			sourceTree = "<group>";
+		};
+		53B43D4123DC1CF400F7D6E2 /* mirb */ = {
+			isa = PBXGroup;
+			children = (
+				53B43D4223DC1CF400F7D6E2 /* mirb.c */,
+			);
+			path = mirb;
+			sourceTree = "<group>";
+		};
+		53B43D4323DC1CF400F7D6E2 /* bintest */ = {
+			isa = PBXGroup;
+			children = (
+				53B43D4423DC1CF400F7D6E2 /* mirb.rb */,
+			);
+			path = bintest;
+			sourceTree = "<group>";
+		};
+		53B43D4523DC1CF400F7D6E2 /* mruby-pack */ = {
+			isa = PBXGroup;
+			children = (
+				53B43D4623DC1CF400F7D6E2 /* mrbgem.rake */,
+				53B43D4723DC1CF400F7D6E2 /* test */,
+				53B43D4923DC1CF400F7D6E2 /* README.md */,
+				53B43D4A23DC1CF400F7D6E2 /* src */,
+			);
+			path = "mruby-pack";
+			sourceTree = "<group>";
+		};
+		53B43D4723DC1CF400F7D6E2 /* test */ = {
+			isa = PBXGroup;
+			children = (
+				53B43D4823DC1CF400F7D6E2 /* pack.rb */,
+			);
+			path = test;
+			sourceTree = "<group>";
+		};
+		53B43D4A23DC1CF400F7D6E2 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				53B43D4B23DC1CF400F7D6E2 /* pack.c */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		53B43D4C23DC1CF400F7D6E2 /* mruby-sleep */ = {
+			isa = PBXGroup;
+			children = (
+				53B43D4D23DC1CF400F7D6E2 /* mrbgem.rake */,
+				53B43D4E23DC1CF400F7D6E2 /* test */,
+				53B43D5023DC1CF400F7D6E2 /* example */,
+				53B43D5223DC1CF400F7D6E2 /* README.md */,
+				53B43D5323DC1CF400F7D6E2 /* src */,
+			);
+			path = "mruby-sleep";
+			sourceTree = "<group>";
+		};
+		53B43D4E23DC1CF400F7D6E2 /* test */ = {
+			isa = PBXGroup;
+			children = (
+				53B43D4F23DC1CF400F7D6E2 /* sleep_test.rb */,
+			);
+			path = test;
+			sourceTree = "<group>";
+		};
+		53B43D5023DC1CF400F7D6E2 /* example */ = {
+			isa = PBXGroup;
+			children = (
+				53B43D5123DC1CF400F7D6E2 /* sleep.rb */,
+			);
+			path = example;
+			sourceTree = "<group>";
+		};
+		53B43D5323DC1CF400F7D6E2 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				53B43D5423DC1CF400F7D6E2 /* mrb_sleep.c */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		53B43D5623DC1CF400F7D6E2 /* mruby-bin-strip */ = {
+			isa = PBXGroup;
+			children = (
+				53B43D5723DC1CF400F7D6E2 /* mrbgem.rake */,
+				53B43D5823DC1CF400F7D6E2 /* tools */,
+				53B43D5B23DC1CF400F7D6E2 /* bintest */,
+			);
+			path = "mruby-bin-strip";
+			sourceTree = "<group>";
+		};
+		53B43D5823DC1CF400F7D6E2 /* tools */ = {
+			isa = PBXGroup;
+			children = (
+				53B43D5923DC1CF400F7D6E2 /* mruby-strip */,
+			);
+			path = tools;
+			sourceTree = "<group>";
+		};
+		53B43D5923DC1CF400F7D6E2 /* mruby-strip */ = {
+			isa = PBXGroup;
+			children = (
+				53B43D5A23DC1CF400F7D6E2 /* mruby-strip.c */,
+			);
+			path = "mruby-strip";
+			sourceTree = "<group>";
+		};
+		53B43D5B23DC1CF400F7D6E2 /* bintest */ = {
+			isa = PBXGroup;
+			children = (
+				53B43D5C23DC1CF400F7D6E2 /* mruby-strip.rb */,
+			);
+			path = bintest;
+			sourceTree = "<group>";
+		};
+		53B43D5D23DC1CF400F7D6E2 /* mruby-enumerator */ = {
+			isa = PBXGroup;
+			children = (
+				53B43D5E23DC1CF400F7D6E2 /* mrbgem.rake */,
+				53B43D5F23DC1CF400F7D6E2 /* mrblib */,
+				53B43D6123DC1CF400F7D6E2 /* test */,
+			);
+			path = "mruby-enumerator";
+			sourceTree = "<group>";
+		};
+		53B43D5F23DC1CF400F7D6E2 /* mrblib */ = {
+			isa = PBXGroup;
+			children = (
+				53B43D6023DC1CF400F7D6E2 /* enumerator.rb */,
+			);
+			path = mrblib;
+			sourceTree = "<group>";
+		};
+		53B43D6123DC1CF400F7D6E2 /* test */ = {
+			isa = PBXGroup;
+			children = (
+				53B43D6223DC1CF400F7D6E2 /* enumerator.rb */,
+			);
+			path = test;
+			sourceTree = "<group>";
+		};
+		53B43D6323DC1CF400F7D6E2 /* mruby-math */ = {
+			isa = PBXGroup;
+			children = (
+				53B43D6423DC1CF400F7D6E2 /* mrbgem.rake */,
+				53B43D6523DC1CF400F7D6E2 /* test */,
+				53B43D6723DC1CF400F7D6E2 /* src */,
+			);
+			path = "mruby-math";
+			sourceTree = "<group>";
+		};
+		53B43D6523DC1CF400F7D6E2 /* test */ = {
+			isa = PBXGroup;
+			children = (
+				53B43D6623DC1CF400F7D6E2 /* math.rb */,
+			);
+			path = test;
+			sourceTree = "<group>";
+		};
+		53B43D6723DC1CF400F7D6E2 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				53B43D6823DC1CF400F7D6E2 /* math.c */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		53B43D6923DC1CF400F7D6E2 /* mruby-range-ext */ = {
+			isa = PBXGroup;
+			children = (
+				53B43D6A23DC1CF400F7D6E2 /* mrbgem.rake */,
+				53B43D6B23DC1CF400F7D6E2 /* mrblib */,
+				53B43D6D23DC1CF400F7D6E2 /* test */,
+				53B43D6F23DC1CF400F7D6E2 /* src */,
+			);
+			path = "mruby-range-ext";
+			sourceTree = "<group>";
+		};
+		53B43D6B23DC1CF400F7D6E2 /* mrblib */ = {
+			isa = PBXGroup;
+			children = (
+				53B43D6C23DC1CF400F7D6E2 /* range.rb */,
+			);
+			path = mrblib;
+			sourceTree = "<group>";
+		};
+		53B43D6D23DC1CF400F7D6E2 /* test */ = {
+			isa = PBXGroup;
+			children = (
+				53B43D6E23DC1CF400F7D6E2 /* range.rb */,
+			);
+			path = test;
+			sourceTree = "<group>";
+		};
+		53B43D6F23DC1CF400F7D6E2 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				53B43D7023DC1CF400F7D6E2 /* range.c */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		53B43D7123DC1CF400F7D6E2 /* mruby-enum-ext */ = {
+			isa = PBXGroup;
+			children = (
+				53B43D7223DC1CF400F7D6E2 /* mrbgem.rake */,
+				53B43D7323DC1CF400F7D6E2 /* mrblib */,
+				53B43D7523DC1CF400F7D6E2 /* test */,
+			);
+			path = "mruby-enum-ext";
+			sourceTree = "<group>";
+		};
+		53B43D7323DC1CF400F7D6E2 /* mrblib */ = {
+			isa = PBXGroup;
+			children = (
+				53B43D7423DC1CF400F7D6E2 /* enum.rb */,
+			);
+			path = mrblib;
+			sourceTree = "<group>";
+		};
+		53B43D7523DC1CF400F7D6E2 /* test */ = {
+			isa = PBXGroup;
+			children = (
+				53B43D7623DC1CF400F7D6E2 /* enum.rb */,
+			);
+			path = test;
+			sourceTree = "<group>";
+		};
+		53B43D7723DC1CF400F7D6E2 /* mruby-socket */ = {
+			isa = PBXGroup;
+			children = (
+				53B43D7823DC1CF400F7D6E2 /* mrbgem.rake */,
+				53B43D7923DC1CF400F7D6E2 /* mrblib */,
+				53B43D7B23DC1CF400F7D6E2 /* test */,
+				53B43D8423DC1CF400F7D6E2 /* README.md */,
+				53B43D8523DC1CF400F7D6E2 /* src */,
+			);
+			path = "mruby-socket";
+			sourceTree = "<group>";
+		};
+		53B43D7923DC1CF400F7D6E2 /* mrblib */ = {
+			isa = PBXGroup;
+			children = (
+				53B43D7A23DC1CF400F7D6E2 /* socket.rb */,
+			);
+			path = mrblib;
+			sourceTree = "<group>";
+		};
+		53B43D7B23DC1CF400F7D6E2 /* test */ = {
+			isa = PBXGroup;
+			children = (
+				53B43D7C23DC1CF400F7D6E2 /* socket.rb */,
+				53B43D7D23DC1CF400F7D6E2 /* ipsocket.rb */,
+				53B43D7E23DC1CF400F7D6E2 /* sockettest.c */,
+				53B43D7F23DC1CF400F7D6E2 /* udpsocket.rb */,
+				53B43D8023DC1CF400F7D6E2 /* addrinfo.rb */,
+				53B43D8123DC1CF400F7D6E2 /* tcpsocket.rb */,
+				53B43D8223DC1CF400F7D6E2 /* basicsocket.rb */,
+				53B43D8323DC1CF400F7D6E2 /* unix.rb */,
+			);
+			path = test;
+			sourceTree = "<group>";
+		};
+		53B43D8523DC1CF400F7D6E2 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				53B43D8623DC1CF400F7D6E2 /* const.cstub */,
+				53B43D8723DC1CF400F7D6E2 /* socket.c */,
+				53B43D8823DC1CF400F7D6E2 /* const.def */,
+				53B43D8923DC1CF400F7D6E2 /* gen.rb */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		53B43D8A23DC1CF400F7D6E2 /* mruby-objectspace */ = {
+			isa = PBXGroup;
+			children = (
+				53B43D8B23DC1CF400F7D6E2 /* mrbgem.rake */,
+				53B43D8C23DC1CF400F7D6E2 /* test */,
+				53B43D8E23DC1CF400F7D6E2 /* src */,
+			);
+			path = "mruby-objectspace";
+			sourceTree = "<group>";
+		};
+		53B43D8C23DC1CF400F7D6E2 /* test */ = {
+			isa = PBXGroup;
+			children = (
+				53B43D8D23DC1CF400F7D6E2 /* objectspace.rb */,
+			);
+			path = test;
+			sourceTree = "<group>";
+		};
+		53B43D8E23DC1CF400F7D6E2 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				53B43D8F23DC1CF400F7D6E2 /* mruby_objectspace.c */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		53B43D9023DC1CF400F7D6E2 /* mruby-bin-config */ = {
+			isa = PBXGroup;
+			children = (
+				53B43D9123DC1CF400F7D6E2 /* mrbgem.rake */,
+				53B43D9223DC1CF400F7D6E2 /* mruby-config.bat */,
+				53B43D9323DC1CF400F7D6E2 /* mruby-config */,
+			);
+			path = "mruby-bin-config";
+			sourceTree = "<group>";
+		};
+		53B43D9423DC1CF400F7D6E2 /* mruby-complex */ = {
+			isa = PBXGroup;
+			children = (
+				53B43D9523DC1CF400F7D6E2 /* mrbgem.rake */,
+				53B43D9623DC1CF400F7D6E2 /* mrblib */,
+				53B43D9823DC1CF400F7D6E2 /* test */,
+				53B43D9A23DC1CF400F7D6E2 /* src */,
+			);
+			path = "mruby-complex";
+			sourceTree = "<group>";
+		};
+		53B43D9623DC1CF400F7D6E2 /* mrblib */ = {
+			isa = PBXGroup;
+			children = (
+				53B43D9723DC1CF400F7D6E2 /* complex.rb */,
+			);
+			path = mrblib;
+			sourceTree = "<group>";
+		};
+		53B43D9823DC1CF400F7D6E2 /* test */ = {
+			isa = PBXGroup;
+			children = (
+				53B43D9923DC1CF400F7D6E2 /* complex.rb */,
+			);
+			path = test;
+			sourceTree = "<group>";
+		};
+		53B43D9A23DC1CF400F7D6E2 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				53B43D9B23DC1CF400F7D6E2 /* complex.c */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		53B43D9C23DC1CF400F7D6E2 /* mruby-sprintf */ = {
+			isa = PBXGroup;
+			children = (
+				53B43D9D23DC1CF400F7D6E2 /* mrbgem.rake */,
+				53B43D9E23DC1CF400F7D6E2 /* mrblib */,
+				53B43DA023DC1CF400F7D6E2 /* test */,
+				53B43DA223DC1CF400F7D6E2 /* src */,
+			);
+			path = "mruby-sprintf";
+			sourceTree = "<group>";
+		};
+		53B43D9E23DC1CF400F7D6E2 /* mrblib */ = {
+			isa = PBXGroup;
+			children = (
+				53B43D9F23DC1CF400F7D6E2 /* string.rb */,
+			);
+			path = mrblib;
+			sourceTree = "<group>";
+		};
+		53B43DA023DC1CF400F7D6E2 /* test */ = {
+			isa = PBXGroup;
+			children = (
+				53B43DA123DC1CF400F7D6E2 /* sprintf.rb */,
+			);
+			path = test;
+			sourceTree = "<group>";
+		};
+		53B43DA223DC1CF400F7D6E2 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				53B43DA323DC1CF400F7D6E2 /* kernel.c */,
+				53B43DA423DC1CF400F7D6E2 /* sprintf.c */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		53B43DA523DC1CF400F7D6E2 /* mruby-metaprog */ = {
+			isa = PBXGroup;
+			children = (
+				53B43DA623DC1CF400F7D6E2 /* mrbgem.rake */,
+				53B43DA723DC1CF400F7D6E2 /* test */,
+				53B43DA923DC1CF400F7D6E2 /* src */,
+			);
+			path = "mruby-metaprog";
+			sourceTree = "<group>";
+		};
+		53B43DA723DC1CF400F7D6E2 /* test */ = {
+			isa = PBXGroup;
+			children = (
+				53B43DA823DC1CF400F7D6E2 /* metaprog.rb */,
+			);
+			path = test;
+			sourceTree = "<group>";
+		};
+		53B43DA923DC1CF400F7D6E2 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				53B43DAA23DC1CF400F7D6E2 /* metaprog.c */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		53B43DAB23DC1CF400F7D6E2 /* mruby-enum-chain */ = {
+			isa = PBXGroup;
+			children = (
+				53B43DAC23DC1CF400F7D6E2 /* mrbgem.rake */,
+				53B43DAD23DC1CF400F7D6E2 /* mrblib */,
+				53B43DAF23DC1CF400F7D6E2 /* test */,
+			);
+			path = "mruby-enum-chain";
+			sourceTree = "<group>";
+		};
+		53B43DAD23DC1CF400F7D6E2 /* mrblib */ = {
+			isa = PBXGroup;
+			children = (
+				53B43DAE23DC1CF400F7D6E2 /* chain.rb */,
+			);
+			path = mrblib;
+			sourceTree = "<group>";
+		};
+		53B43DAF23DC1CF400F7D6E2 /* test */ = {
+			isa = PBXGroup;
+			children = (
+				53B43DB023DC1CF400F7D6E2 /* enum_chain.rb */,
+			);
+			path = test;
+			sourceTree = "<group>";
+		};
+		53B43DB123DC1CF400F7D6E2 /* mruby-print */ = {
+			isa = PBXGroup;
+			children = (
+				53B43DB223DC1CF400F7D6E2 /* mrbgem.rake */,
+				53B43DB323DC1CF400F7D6E2 /* mrblib */,
+				53B43DB523DC1CF400F7D6E2 /* src */,
+			);
+			path = "mruby-print";
+			sourceTree = "<group>";
+		};
+		53B43DB323DC1CF400F7D6E2 /* mrblib */ = {
+			isa = PBXGroup;
+			children = (
+				53B43DB423DC1CF400F7D6E2 /* print.rb */,
+			);
+			path = mrblib;
+			sourceTree = "<group>";
+		};
+		53B43DB523DC1CF400F7D6E2 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				53B43DB623DC1CF400F7D6E2 /* print.c */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		53B43DB723DC1CF400F7D6E2 /* mruby-random */ = {
+			isa = PBXGroup;
+			children = (
+				53B43DB823DC1CF400F7D6E2 /* mrbgem.rake */,
+				53B43DB923DC1CF400F7D6E2 /* test */,
+				53B43DBB23DC1CF400F7D6E2 /* src */,
+			);
+			path = "mruby-random";
+			sourceTree = "<group>";
+		};
+		53B43DB923DC1CF400F7D6E2 /* test */ = {
+			isa = PBXGroup;
+			children = (
+				53B43DBA23DC1CF400F7D6E2 /* random.rb */,
+			);
+			path = test;
+			sourceTree = "<group>";
+		};
+		53B43DBB23DC1CF400F7D6E2 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				53B43DBC23DC1CF400F7D6E2 /* random.c */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		53B43DBD23DC1CF400F7D6E2 /* mruby-inline-struct */ = {
+			isa = PBXGroup;
+			children = (
+				53B43DBE23DC1CF400F7D6E2 /* mrbgem.rake */,
+				53B43DBF23DC1CF400F7D6E2 /* test */,
+			);
+			path = "mruby-inline-struct";
+			sourceTree = "<group>";
+		};
+		53B43DBF23DC1CF400F7D6E2 /* test */ = {
+			isa = PBXGroup;
+			children = (
+				53B43DC023DC1CF400F7D6E2 /* inline.rb */,
+				53B43DC123DC1CF400F7D6E2 /* inline.c */,
+			);
+			path = test;
+			sourceTree = "<group>";
+		};
+		53B43DC223DC1CF400F7D6E2 /* mruby-rational */ = {
+			isa = PBXGroup;
+			children = (
+				53B43DC323DC1CF400F7D6E2 /* mrbgem.rake */,
+				53B43DC423DC1CF400F7D6E2 /* mrblib */,
+				53B43DC623DC1CF400F7D6E2 /* test */,
+				53B43DC823DC1CF400F7D6E2 /* src */,
+			);
+			path = "mruby-rational";
+			sourceTree = "<group>";
+		};
+		53B43DC423DC1CF400F7D6E2 /* mrblib */ = {
+			isa = PBXGroup;
+			children = (
+				53B43DC523DC1CF400F7D6E2 /* rational.rb */,
+			);
+			path = mrblib;
+			sourceTree = "<group>";
+		};
+		53B43DC623DC1CF400F7D6E2 /* test */ = {
+			isa = PBXGroup;
+			children = (
+				53B43DC723DC1CF400F7D6E2 /* rational.rb */,
+			);
+			path = test;
+			sourceTree = "<group>";
+		};
+		53B43DC823DC1CF400F7D6E2 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				53B43DC923DC1CF400F7D6E2 /* rational.c */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		53B43DCA23DC1CF400F7D6E2 /* mruby-kernel-ext */ = {
+			isa = PBXGroup;
+			children = (
+				53B43DCB23DC1CF400F7D6E2 /* mrbgem.rake */,
+				53B43DCC23DC1CF400F7D6E2 /* test */,
+				53B43DCE23DC1CF400F7D6E2 /* src */,
+			);
+			path = "mruby-kernel-ext";
+			sourceTree = "<group>";
+		};
+		53B43DCC23DC1CF400F7D6E2 /* test */ = {
+			isa = PBXGroup;
+			children = (
+				53B43DCD23DC1CF400F7D6E2 /* kernel.rb */,
+			);
+			path = test;
+			sourceTree = "<group>";
+		};
+		53B43DCE23DC1CF400F7D6E2 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				53B43DCF23DC1CF400F7D6E2 /* kernel.c */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		53B43DD023DC1CF400F7D6E2 /* mruby-class-ext */ = {
+			isa = PBXGroup;
+			children = (
+				53B43DD123DC1CF400F7D6E2 /* mrbgem.rake */,
+				53B43DD223DC1CF400F7D6E2 /* mrblib */,
+				53B43DD423DC1CF400F7D6E2 /* test */,
+				53B43DD623DC1CF400F7D6E2 /* src */,
+			);
+			path = "mruby-class-ext";
+			sourceTree = "<group>";
+		};
+		53B43DD223DC1CF400F7D6E2 /* mrblib */ = {
+			isa = PBXGroup;
+			children = (
+				53B43DD323DC1CF400F7D6E2 /* module.rb */,
+			);
+			path = mrblib;
+			sourceTree = "<group>";
+		};
+		53B43DD423DC1CF400F7D6E2 /* test */ = {
+			isa = PBXGroup;
+			children = (
+				53B43DD523DC1CF400F7D6E2 /* module.rb */,
+			);
+			path = test;
+			sourceTree = "<group>";
+		};
+		53B43DD623DC1CF400F7D6E2 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				53B43DD723DC1CF400F7D6E2 /* class.c */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		53B43DD823DC1CF400F7D6E2 /* mruby-exit */ = {
+			isa = PBXGroup;
+			children = (
+				53B43DD923DC1CF400F7D6E2 /* mrbgem.rake */,
+				53B43DDA23DC1CF400F7D6E2 /* src */,
+			);
+			path = "mruby-exit";
+			sourceTree = "<group>";
+		};
+		53B43DDA23DC1CF400F7D6E2 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				53B43DDB23DC1CF400F7D6E2 /* mruby-exit.c */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		53B43DDC23DC1CF400F7D6E2 /* mruby-numeric-ext */ = {
+			isa = PBXGroup;
+			children = (
+				53B43DDD23DC1CF400F7D6E2 /* mrbgem.rake */,
+				53B43DDE23DC1CF400F7D6E2 /* mrblib */,
+				53B43DE023DC1CF400F7D6E2 /* test */,
+				53B43DE223DC1CF400F7D6E2 /* src */,
+			);
+			path = "mruby-numeric-ext";
+			sourceTree = "<group>";
+		};
+		53B43DDE23DC1CF400F7D6E2 /* mrblib */ = {
+			isa = PBXGroup;
+			children = (
+				53B43DDF23DC1CF400F7D6E2 /* numeric_ext.rb */,
+			);
+			path = mrblib;
+			sourceTree = "<group>";
+		};
+		53B43DE023DC1CF400F7D6E2 /* test */ = {
+			isa = PBXGroup;
+			children = (
+				53B43DE123DC1CF400F7D6E2 /* numeric.rb */,
+			);
+			path = test;
+			sourceTree = "<group>";
+		};
+		53B43DE223DC1CF400F7D6E2 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				53B43DE323DC1CF400F7D6E2 /* numeric_ext.c */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		53B43DE423DC1CF400F7D6E2 /* mruby-compar-ext */ = {
+			isa = PBXGroup;
+			children = (
+				53B43DE523DC1CF400F7D6E2 /* mrbgem.rake */,
+				53B43DE623DC1CF400F7D6E2 /* mrblib */,
+			);
+			path = "mruby-compar-ext";
+			sourceTree = "<group>";
+		};
+		53B43DE623DC1CF400F7D6E2 /* mrblib */ = {
+			isa = PBXGroup;
+			children = (
+				53B43DE723DC1CF400F7D6E2 /* compar.rb */,
+			);
+			path = mrblib;
+			sourceTree = "<group>";
+		};
+		53B43DE823DC1CF400F7D6E2 /* mruby-fiber */ = {
+			isa = PBXGroup;
+			children = (
+				53B43DE923DC1CF400F7D6E2 /* mrbgem.rake */,
+				53B43DEA23DC1CF400F7D6E2 /* test */,
+				53B43DEC23DC1CF400F7D6E2 /* src */,
+			);
+			path = "mruby-fiber";
+			sourceTree = "<group>";
+		};
+		53B43DEA23DC1CF400F7D6E2 /* test */ = {
+			isa = PBXGroup;
+			children = (
+				53B43DEB23DC1CF400F7D6E2 /* fiber.rb */,
+			);
+			path = test;
+			sourceTree = "<group>";
+		};
+		53B43DEC23DC1CF400F7D6E2 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				53B43DED23DC1CF400F7D6E2 /* fiber.c */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		53B43DEE23DC1CF400F7D6E2 /* mruby-time */ = {
+			isa = PBXGroup;
+			children = (
+				53B43DEF23DC1CF400F7D6E2 /* mrbgem.rake */,
+				53B43DF023DC1CF400F7D6E2 /* mrblib */,
+				53B43DF223DC1CF400F7D6E2 /* test */,
+				53B43DF423DC1CF400F7D6E2 /* include */,
+				53B43DF723DC1CF400F7D6E2 /* src */,
+			);
+			path = "mruby-time";
+			sourceTree = "<group>";
+		};
+		53B43DF023DC1CF400F7D6E2 /* mrblib */ = {
+			isa = PBXGroup;
+			children = (
+				53B43DF123DC1CF400F7D6E2 /* time.rb */,
+			);
+			path = mrblib;
+			sourceTree = "<group>";
+		};
+		53B43DF223DC1CF400F7D6E2 /* test */ = {
+			isa = PBXGroup;
+			children = (
+				53B43DF323DC1CF400F7D6E2 /* time.rb */,
+			);
+			path = test;
+			sourceTree = "<group>";
+		};
+		53B43DF423DC1CF400F7D6E2 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				53B43DF523DC1CF400F7D6E2 /* mruby */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		53B43DF523DC1CF400F7D6E2 /* mruby */ = {
+			isa = PBXGroup;
+			children = (
+				53B43DF623DC1CF400F7D6E2 /* time.h */,
+			);
+			path = mruby;
+			sourceTree = "<group>";
+		};
+		53B43DF723DC1CF400F7D6E2 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				53B43DF823DC1CF400F7D6E2 /* time.c */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		53B43DF923DC1CF400F7D6E2 /* mruby-io */ = {
+			isa = PBXGroup;
+			children = (
+				53B43DFA23DC1CF400F7D6E2 /* mrbgem.rake */,
+				53B43DFB23DC1CF400F7D6E2 /* mrblib */,
+				53B43E0023DC1CF400F7D6E2 /* test */,
+				53B43E0523DC1CF400F7D6E2 /* include */,
+				53B43E0923DC1CF400F7D6E2 /* README.md */,
+				53B43E0A23DC1CF400F7D6E2 /* src */,
+			);
+			path = "mruby-io";
+			sourceTree = "<group>";
+		};
+		53B43DFB23DC1CF400F7D6E2 /* mrblib */ = {
+			isa = PBXGroup;
+			children = (
+				53B43DFC23DC1CF400F7D6E2 /* file.rb */,
+				53B43DFD23DC1CF400F7D6E2 /* file_constants.rb */,
+				53B43DFE23DC1CF400F7D6E2 /* io.rb */,
+				53B43DFF23DC1CF400F7D6E2 /* kernel.rb */,
+			);
+			path = mrblib;
+			sourceTree = "<group>";
+		};
+		53B43E0023DC1CF400F7D6E2 /* test */ = {
+			isa = PBXGroup;
+			children = (
+				53B43E0123DC1CF400F7D6E2 /* mruby_io_test.c */,
+				53B43E0223DC1CF400F7D6E2 /* file.rb */,
+				53B43E0323DC1CF400F7D6E2 /* io.rb */,
+				53B43E0423DC1CF400F7D6E2 /* file_test.rb */,
+			);
+			path = test;
+			sourceTree = "<group>";
+		};
+		53B43E0523DC1CF400F7D6E2 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				53B43E0623DC1CF400F7D6E2 /* mruby */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		53B43E0623DC1CF400F7D6E2 /* mruby */ = {
+			isa = PBXGroup;
+			children = (
+				53B43E0723DC1CF400F7D6E2 /* ext */,
+			);
+			path = mruby;
+			sourceTree = "<group>";
+		};
+		53B43E0723DC1CF400F7D6E2 /* ext */ = {
+			isa = PBXGroup;
+			children = (
+				53B43E0823DC1CF400F7D6E2 /* io.h */,
+			);
+			path = ext;
+			sourceTree = "<group>";
+		};
+		53B43E0A23DC1CF400F7D6E2 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				53B43E0B23DC1CF400F7D6E2 /* file_test.c */,
+				53B43E0C23DC1CF400F7D6E2 /* io.c */,
+				53B43E0D23DC1CF400F7D6E2 /* mruby_io_gem.c */,
+				53B43E0E23DC1CF400F7D6E2 /* file.c */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		53B43E0F23DC1CF400F7D6E2 /* mruby-proc-ext */ = {
+			isa = PBXGroup;
+			children = (
+				53B43E1023DC1CF400F7D6E2 /* mrbgem.rake */,
+				53B43E1123DC1CF400F7D6E2 /* mrblib */,
+				53B43E1323DC1CF400F7D6E2 /* test */,
+				53B43E1623DC1CF400F7D6E2 /* src */,
+			);
+			path = "mruby-proc-ext";
+			sourceTree = "<group>";
+		};
+		53B43E1123DC1CF400F7D6E2 /* mrblib */ = {
+			isa = PBXGroup;
+			children = (
+				53B43E1223DC1CF400F7D6E2 /* proc.rb */,
+			);
+			path = mrblib;
+			sourceTree = "<group>";
+		};
+		53B43E1323DC1CF400F7D6E2 /* test */ = {
+			isa = PBXGroup;
+			children = (
+				53B43E1423DC1CF400F7D6E2 /* proc.c */,
+				53B43E1523DC1CF400F7D6E2 /* proc.rb */,
+			);
+			path = test;
+			sourceTree = "<group>";
+		};
+		53B43E1623DC1CF400F7D6E2 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				53B43E1723DC1CF400F7D6E2 /* proc.c */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		53B43E1823DC1CF400F7D6E2 /* mruby-symbol-ext */ = {
+			isa = PBXGroup;
+			children = (
+				53B43E1923DC1CF400F7D6E2 /* mrbgem.rake */,
+				53B43E1A23DC1CF400F7D6E2 /* mrblib */,
+				53B43E1C23DC1CF400F7D6E2 /* test */,
+				53B43E1E23DC1CF400F7D6E2 /* src */,
+			);
+			path = "mruby-symbol-ext";
+			sourceTree = "<group>";
+		};
+		53B43E1A23DC1CF400F7D6E2 /* mrblib */ = {
+			isa = PBXGroup;
+			children = (
+				53B43E1B23DC1CF400F7D6E2 /* symbol.rb */,
+			);
+			path = mrblib;
+			sourceTree = "<group>";
+		};
+		53B43E1C23DC1CF400F7D6E2 /* test */ = {
+			isa = PBXGroup;
+			children = (
+				53B43E1D23DC1CF400F7D6E2 /* symbol.rb */,
+			);
+			path = test;
+			sourceTree = "<group>";
+		};
+		53B43E1E23DC1CF400F7D6E2 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				53B43E1F23DC1CF400F7D6E2 /* symbol.c */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		53B43E2023DC1CF400F7D6E2 /* mruby-string-ext */ = {
+			isa = PBXGroup;
+			children = (
+				53B43E2123DC1CF400F7D6E2 /* mrbgem.rake */,
+				53B43E2223DC1CF400F7D6E2 /* mrblib */,
+				53B43E2423DC1CF400F7D6E2 /* test */,
+				53B43E2823DC1CF400F7D6E2 /* src */,
+			);
+			path = "mruby-string-ext";
+			sourceTree = "<group>";
+		};
+		53B43E2223DC1CF400F7D6E2 /* mrblib */ = {
+			isa = PBXGroup;
+			children = (
+				53B43E2323DC1CF400F7D6E2 /* string.rb */,
+			);
+			path = mrblib;
+			sourceTree = "<group>";
+		};
+		53B43E2423DC1CF400F7D6E2 /* test */ = {
+			isa = PBXGroup;
+			children = (
+				53B43E2523DC1CF400F7D6E2 /* string.rb */,
+				53B43E2623DC1CF400F7D6E2 /* numeric.rb */,
+				53B43E2723DC1CF400F7D6E2 /* range.rb */,
+			);
+			path = test;
+			sourceTree = "<group>";
+		};
+		53B43E2823DC1CF400F7D6E2 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				53B43E2923DC1CF400F7D6E2 /* string.c */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		53B43E2A23DC1CF400F7D6E2 /* mruby-array-ext */ = {
+			isa = PBXGroup;
+			children = (
+				53B43E2B23DC1CF400F7D6E2 /* mrbgem.rake */,
+				53B43E2C23DC1CF400F7D6E2 /* mrblib */,
+				53B43E2E23DC1CF400F7D6E2 /* test */,
+				53B43E3023DC1CF400F7D6E2 /* src */,
+			);
+			path = "mruby-array-ext";
+			sourceTree = "<group>";
+		};
+		53B43E2C23DC1CF400F7D6E2 /* mrblib */ = {
+			isa = PBXGroup;
+			children = (
+				53B43E2D23DC1CF400F7D6E2 /* array.rb */,
+			);
+			path = mrblib;
+			sourceTree = "<group>";
+		};
+		53B43E2E23DC1CF400F7D6E2 /* test */ = {
+			isa = PBXGroup;
+			children = (
+				53B43E2F23DC1CF400F7D6E2 /* array.rb */,
+			);
+			path = test;
+			sourceTree = "<group>";
+		};
+		53B43E3023DC1CF400F7D6E2 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				53B43E3123DC1CF400F7D6E2 /* array.c */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		53B43E3723DC1CF400F7D6E2 /* mruby-eval */ = {
+			isa = PBXGroup;
+			children = (
+				53B43E3823DC1CF400F7D6E2 /* mrbgem.rake */,
+				53B43E3923DC1CF400F7D6E2 /* test */,
+				53B43E3B23DC1CF400F7D6E2 /* src */,
+			);
+			path = "mruby-eval";
+			sourceTree = "<group>";
+		};
+		53B43E3923DC1CF400F7D6E2 /* test */ = {
+			isa = PBXGroup;
+			children = (
+				53B43E3A23DC1CF400F7D6E2 /* eval.rb */,
+			);
+			path = test;
+			sourceTree = "<group>";
+		};
+		53B43E3B23DC1CF400F7D6E2 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				53B43E3C23DC1CF400F7D6E2 /* eval.c */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		53B43E3D23DC1CF400F7D6E2 /* mruby-error */ = {
+			isa = PBXGroup;
+			children = (
+				53B43E3E23DC1CF400F7D6E2 /* mrbgem.rake */,
+				53B43E3F23DC1CF400F7D6E2 /* test */,
+				53B43E4223DC1CF400F7D6E2 /* src */,
+			);
+			path = "mruby-error";
+			sourceTree = "<group>";
+		};
+		53B43E3F23DC1CF400F7D6E2 /* test */ = {
+			isa = PBXGroup;
+			children = (
+				53B43E4023DC1CF400F7D6E2 /* exception.c */,
+				53B43E4123DC1CF400F7D6E2 /* exception.rb */,
+			);
+			path = test;
+			sourceTree = "<group>";
+		};
+		53B43E4223DC1CF400F7D6E2 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				53B43E4323DC1CF400F7D6E2 /* exception.c */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		53B43E4423DC1CF400F7D6E2 /* mruby-object-ext */ = {
+			isa = PBXGroup;
+			children = (
+				53B43E4523DC1CF400F7D6E2 /* mrbgem.rake */,
+				53B43E4623DC1CF400F7D6E2 /* mrblib */,
+				53B43E4823DC1CF400F7D6E2 /* test */,
+				53B43E4B23DC1CF400F7D6E2 /* src */,
+			);
+			path = "mruby-object-ext";
+			sourceTree = "<group>";
+		};
+		53B43E4623DC1CF400F7D6E2 /* mrblib */ = {
+			isa = PBXGroup;
+			children = (
+				53B43E4723DC1CF400F7D6E2 /* object.rb */,
+			);
+			path = mrblib;
+			sourceTree = "<group>";
+		};
+		53B43E4823DC1CF400F7D6E2 /* test */ = {
+			isa = PBXGroup;
+			children = (
+				53B43E4923DC1CF400F7D6E2 /* nil.rb */,
+				53B43E4A23DC1CF400F7D6E2 /* object.rb */,
+			);
+			path = test;
+			sourceTree = "<group>";
+		};
+		53B43E4B23DC1CF400F7D6E2 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				53B43E4C23DC1CF400F7D6E2 /* object.c */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		53B43E4D23DC1CF400F7D6E2 /* mruby-bin-mruby */ = {
+			isa = PBXGroup;
+			children = (
+				53B43E4E23DC1CF400F7D6E2 /* mrbgem.rake */,
+				53B43E4F23DC1CF400F7D6E2 /* tools */,
+				53B43E5223DC1CF400F7D6E2 /* bintest */,
+			);
+			path = "mruby-bin-mruby";
+			sourceTree = "<group>";
+		};
+		53B43E4F23DC1CF400F7D6E2 /* tools */ = {
+			isa = PBXGroup;
+			children = (
+				53B43E5023DC1CF400F7D6E2 /* mruby */,
+			);
+			path = tools;
+			sourceTree = "<group>";
+		};
+		53B43E5023DC1CF400F7D6E2 /* mruby */ = {
+			isa = PBXGroup;
+			children = (
+				53B43E5123DC1CF400F7D6E2 /* mruby.c */,
+			);
+			path = mruby;
+			sourceTree = "<group>";
+		};
+		53B43E5223DC1CF400F7D6E2 /* bintest */ = {
+			isa = PBXGroup;
+			children = (
+				53B43E5323DC1CF400F7D6E2 /* mruby.rb */,
+			);
+			path = bintest;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		53B43B3023DBF8E300F7D6E2 /* mruby */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 53B43B3A23DBF8E300F7D6E2 /* Build configuration list for PBXNativeTarget "mruby" */;
+			buildPhases = (
+				53B43B2D23DBF8E300F7D6E2 /* Sources */,
+				53B43B2E23DBF8E300F7D6E2 /* Frameworks */,
+				53B43B2F23DBF8E300F7D6E2 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = mruby;
+			productName = mruby;
+			productReference = 53B43B3123DBF8E300F7D6E2 /* libmruby.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		53B43B2923DBF8E300F7D6E2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "David Siaw";
+				TargetAttributes = {
+					53B43B3023DBF8E300F7D6E2 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 53B43B2C23DBF8E300F7D6E2 /* Build configuration list for PBXProject "mruby" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 53B43B2823DBF8E300F7D6E2;
+			productRefGroup = 53B43B3223DBF8E300F7D6E2 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 53939EE023DEAFBB001C97E3 /* Products */;
+					ProjectRef = 53939EDF23DEAFBB001C97E3 /* sqlite.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				53B43B3023DBF8E300F7D6E2 /* mruby */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		53939EE423DEAFBB001C97E3 /* libsqlite.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libsqlite.a;
+			remoteRef = 53939EE323DEAFBB001C97E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXSourcesBuildPhase section */
+		53B43B2D23DBF8E300F7D6E2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53B43B7A23DBF94500F7D6E2 /* load.c in Sources */,
+				53939E0823DC48DF001C97E3 /* gem_init.c in Sources */,
+				53B43E6123DC1CF400F7D6E2 /* parse.y in Sources */,
+				53B43E6923DC1CF400F7D6E2 /* sockettest.c in Sources */,
+				53B43E7A23DC1CF400F7D6E2 /* mruby_io_test.c in Sources */,
+				53939E2023DC48DF001C97E3 /* gem_init.c in Sources */,
+				53B43B7623DBF94500F7D6E2 /* enum.c in Sources */,
+				53939DFE23DC48DF001C97E3 /* gem_init.c in Sources */,
+				53939DE823DC48DF001C97E3 /* gem_init.c in Sources */,
+				53B43E5B23DC1CF400F7D6E2 /* apibreak.c in Sources */,
+				53B43E7723DC1CF400F7D6E2 /* numeric_ext.c in Sources */,
+				53939E7923DC4E1E001C97E3 /* gem_init.c in Sources */,
+				53939DAC23DC48DF001C97E3 /* gem_init.c in Sources */,
+				53939DD723DC48DF001C97E3 /* gem_init.c in Sources */,
+				53B43B6623DBF94500F7D6E2 /* print.c in Sources */,
+				53B43E6523DC1CF400F7D6E2 /* mrb_sleep.c in Sources */,
+				53939C8B23DC482A001C97E3 /* mrblib.c in Sources */,
+				53939DB023DC48DF001C97E3 /* gem_init.c in Sources */,
+				53B43E6623DC1CF400F7D6E2 /* mruby-strip.c in Sources */,
+				53939E2A23DC48DF001C97E3 /* gem_init.c in Sources */,
+				53939E1023DC48DF001C97E3 /* gem_init.c in Sources */,
+				53B43E6323DC1CF400F7D6E2 /* mirb.c in Sources */,
+				53B43B6423DBF94500F7D6E2 /* state.c in Sources */,
+				53B43E7C23DC1CF400F7D6E2 /* io.c in Sources */,
+				53B43B7823DBF94500F7D6E2 /* etc.c in Sources */,
+				53B43E7B23DC1CF400F7D6E2 /* file_test.c in Sources */,
+				53939DD423DC48DF001C97E3 /* gem_init.c in Sources */,
+				53939DC223DC48DF001C97E3 /* gem_init.c in Sources */,
+				53B43E8523DC1CF400F7D6E2 /* eval.c in Sources */,
+				53939DA523DC48DF001C97E3 /* mrblib.c in Sources */,
+				53B43E7E23DC1CF400F7D6E2 /* file.c in Sources */,
+				53939DCF23DC48DF001C97E3 /* gem_init.c in Sources */,
+				53B43B6223DBF94500F7D6E2 /* proc.c in Sources */,
+				53B43E6F23DC1CF400F7D6E2 /* metaprog.c in Sources */,
+				53939DDC23DC48DF001C97E3 /* gem_init.c in Sources */,
+				53B43E5423DC1CF400F7D6E2 /* hash-ext.c in Sources */,
+				53B43B7723DBF94500F7D6E2 /* kernel.c in Sources */,
+				53B43E8023DC1CF400F7D6E2 /* proc.c in Sources */,
+				53B43E8323DC1CF400F7D6E2 /* array.c in Sources */,
+				53B43B6323DBF94500F7D6E2 /* hash.c in Sources */,
+				53939DF623DC48DF001C97E3 /* gem_init.c in Sources */,
+				53B43E8823DC1CF400F7D6E2 /* object.c in Sources */,
+				53B43B6823DBF94500F7D6E2 /* version.c in Sources */,
+				53B43E7923DC1CF400F7D6E2 /* time.c in Sources */,
+				53B43B7923DBF94500F7D6E2 /* string.c in Sources */,
+				53B43B7123DBF94500F7D6E2 /* pool.c in Sources */,
+				53B43E5E23DC1CF400F7D6E2 /* cmdrun.c in Sources */,
+				53B43B7223DBF94500F7D6E2 /* range.c in Sources */,
+				53B43B6C23DBF94500F7D6E2 /* dump.c in Sources */,
+				53B43E6B23DC1CF400F7D6E2 /* mruby_objectspace.c in Sources */,
+				53B43E6A23DC1CF400F7D6E2 /* socket.c in Sources */,
+				53B43B6B23DBF94500F7D6E2 /* variable.c in Sources */,
+				53B43B5F23DBF94500F7D6E2 /* object.c in Sources */,
+				53B43E6E23DC1CF400F7D6E2 /* sprintf.c in Sources */,
+				53939E1523DC48DF001C97E3 /* gem_init.c in Sources */,
+				53939DBD23DC48DF001C97E3 /* gem_init.c in Sources */,
+				53B43B8323DC1B9900F7D6E2 /* init_mrblib.c in Sources */,
+				53939DA723DC48DF001C97E3 /* gem_init.c in Sources */,
+				53B43E7423DC1CF400F7D6E2 /* kernel.c in Sources */,
+				53B43B6D23DBF94500F7D6E2 /* vm.c in Sources */,
+				53B43E5823DC1CF400F7D6E2 /* cmdprint.c in Sources */,
+				53B43E6723DC1CF400F7D6E2 /* math.c in Sources */,
+				53939E2523DC48DF001C97E3 /* gem_init.c in Sources */,
+				53B43E6C23DC1CF400F7D6E2 /* complex.c in Sources */,
+				53B43E7623DC1CF400F7D6E2 /* mruby-exit.c in Sources */,
+				53939E2F23DC48DF001C97E3 /* gem_init.c in Sources */,
+				53B43E5D23DC1CF400F7D6E2 /* mrdb.c in Sources */,
+				53B43E5723DC1CF400F7D6E2 /* struct.c in Sources */,
+				53B43E8223DC1CF400F7D6E2 /* string.c in Sources */,
+				53B43E5A23DC1CF400F7D6E2 /* cmdmisc.c in Sources */,
+				53B43E7323DC1CF400F7D6E2 /* rational.c in Sources */,
+				53B43B7323DBF94500F7D6E2 /* symbol.c in Sources */,
+				53B43E6823DC1CF400F7D6E2 /* range.c in Sources */,
+				53B43B7523DBF94500F7D6E2 /* backtrace.c in Sources */,
+				53B43E5923DC1CF400F7D6E2 /* apiprint.c in Sources */,
+				53B43E8623DC1CF400F7D6E2 /* exception.c in Sources */,
+				53B43B6F23DBF94500F7D6E2 /* array.c in Sources */,
+				53939E0323DC48DF001C97E3 /* gem_init.c in Sources */,
+				53B43E6023DC1CF400F7D6E2 /* codegen.c in Sources */,
+				53B43E8123DC1CF400F7D6E2 /* symbol.c in Sources */,
+				53B43E6423DC1CF400F7D6E2 /* pack.c in Sources */,
+				53B43E5F23DC1CF400F7D6E2 /* apilist.c in Sources */,
+				53B43E6223DC1CF400F7D6E2 /* method.c in Sources */,
+				53939E3423DC48DF001C97E3 /* gem_init.c in Sources */,
+				53939DCA23DC48DF001C97E3 /* gem_init.c in Sources */,
+				53B43E7523DC1CF400F7D6E2 /* class.c in Sources */,
+				53939DF823DC48DF001C97E3 /* gem_init.c in Sources */,
+				53B43E6D23DC1CF400F7D6E2 /* kernel.c in Sources */,
+				53939DE323DC48DF001C97E3 /* gem_init.c in Sources */,
+				53B43E8923DC1CF400F7D6E2 /* mruby.c in Sources */,
+				53B43B6923DBF94500F7D6E2 /* class.c in Sources */,
+				53B43B6123DBF94500F7D6E2 /* numeric.c in Sources */,
+				53939E8323DC5016001C97E3 /* mrb_require.c in Sources */,
+				53B43E7F23DC1CF400F7D6E2 /* proc.c in Sources */,
+				53B43E8723DC1CF400F7D6E2 /* exception.c in Sources */,
+				53B43B7023DBF94500F7D6E2 /* init.c in Sources */,
+				53939E3923DC48DF001C97E3 /* gem_init.c in Sources */,
+				53939DC723DC48DF001C97E3 /* gem_init.c in Sources */,
+				53B43B5E23DBF94500F7D6E2 /* error.c in Sources */,
+				53B43E5523DC1CF400F7D6E2 /* vformat.c in Sources */,
+				53B43B6023DBF94500F7D6E2 /* gc.c in Sources */,
+				53939DB523DC48DF001C97E3 /* gem_init.c in Sources */,
+				53B43B7423DBF94500F7D6E2 /* crc.c in Sources */,
+				53B43E5623DC1CF400F7D6E2 /* driver.c in Sources */,
+				53B43B6A23DBF94500F7D6E2 /* fmt_fp.c in Sources */,
+				53B43B6523DBF94500F7D6E2 /* debug.c in Sources */,
+				53B43E7023DC1CF400F7D6E2 /* print.c in Sources */,
+				53B43B6723DBF94500F7D6E2 /* compar.c in Sources */,
+				53939E0B23DC48DF001C97E3 /* gem_init.c in Sources */,
+				53B43E7223DC1CF400F7D6E2 /* inline.c in Sources */,
+				53B43E5C23DC1CF400F7D6E2 /* cmdbreak.c in Sources */,
+				53B43E7123DC1CF400F7D6E2 /* random.c in Sources */,
+				53B43E7D23DC1CF400F7D6E2 /* mruby_io_gem.c in Sources */,
+				53B43B6E23DBF94500F7D6E2 /* codedump.c in Sources */,
+				53939DED23DC48DF001C97E3 /* gem_init.c in Sources */,
+				53B43E7823DC1CF400F7D6E2 /* fiber.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		53B43B3823DBF8E300F7D6E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/../../../lib/mruby/include";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		53B43B3923DBF8E300F7D6E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/../../../lib/mruby/include";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		53B43B3B23DBF8E300F7D6E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5E4H7UGZSF;
+				GCC_PREPROCESSOR_DEFINITIONS = "MRB_ENABLE_DEBUG_HOOK=1";
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/../../../lib/mruby/include",
+					"$(PROJECT_DIR)/../../../lib/mruby/mrbgems/mruby-io/include",
+					"$(PROJECT_DIR)/../../../lib/mruby/mrbgems/mruby-time/include",
+					"$(PROJECT_DIR)/../../../lib/mruby/mrbgems/mruby-compiler/core",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		53B43B3C23DBF8E300F7D6E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5E4H7UGZSF;
+				GCC_PREPROCESSOR_DEFINITIONS = "MRB_ENABLE_DEBUG_HOOK=1";
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/../../../lib/mruby/include",
+					"$(PROJECT_DIR)/../../../lib/mruby/mrbgems/mruby-io/include",
+					"$(PROJECT_DIR)/../../../lib/mruby/mrbgems/mruby-time/include",
+					"$(PROJECT_DIR)/../../../lib/mruby/mrbgems/mruby-compiler/core",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		53B43B2C23DBF8E300F7D6E2 /* Build configuration list for PBXProject "mruby" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				53B43B3823DBF8E300F7D6E2 /* Debug */,
+				53B43B3923DBF8E300F7D6E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		53B43B3A23DBF8E300F7D6E2 /* Build configuration list for PBXNativeTarget "mruby" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				53B43B3B23DBF8E300F7D6E2 /* Debug */,
+				53B43B3C23DBF8E300F7D6E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 53B43B2923DBF8E300F7D6E2 /* Project object */;
+}

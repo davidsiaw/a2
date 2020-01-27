@@ -15,7 +15,7 @@ public:
 			throw new InitException("Unable to initialize " "SDL", SDL_GetError());
 		}
 
-		if (IMG_Init(IMG_INIT_JPG | IMG_INIT_PNG | IMG_INIT_TIF | IMG_INIT_WEBP) != (IMG_INIT_JPG | IMG_INIT_PNG | IMG_INIT_TIF | IMG_INIT_WEBP))
+		if (IMG_Init(IMG_INIT_JPG | IMG_INIT_PNG | IMG_INIT_TIF) != (IMG_INIT_JPG | IMG_INIT_PNG | IMG_INIT_TIF))
 		{
 			throw new InitException("Unable to initialize " "SDLImage", IMG_GetError());
 		}
@@ -25,7 +25,7 @@ public:
 			throw new InitException("Unable to initialize " "SDLTTF", TTF_GetError());
 		}
 
-		if (Mix_Init(MIX_INIT_FLAC | MIX_INIT_MP3 | MIX_INIT_OGG | MIX_INIT_MID) != (MIX_INIT_FLAC | MIX_INIT_MP3 | MIX_INIT_OGG | MIX_INIT_MID))
+		if (Mix_Init(MIX_INIT_FLAC  | MIX_INIT_OGG | MIX_INIT_MID) != (MIX_INIT_FLAC  | MIX_INIT_OGG | MIX_INIT_MID))
 		{
 			throw new InitException("Unable to initialize " "SDLMixer", Mix_GetError());
 		}

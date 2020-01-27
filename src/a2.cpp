@@ -20,6 +20,11 @@ void run()
 	system_class->bind_instance_method("set_image", &System::set_image);
 	system_class->bind_instance_method("set_window_title", &System::set_window_title);
 	system_class->bind_instance_method("get_window_title", &System::get_window_title);
+    
+    system_class->bind_method("get_display_count", &System::get_display_count);
+    system_class->bind_method("get_video_width", &System::get_video_width);
+    system_class->bind_method("get_video_height", &System::get_video_height);
+    system_class->bind_method("get_video_refresh", &System::get_video_refresh);
 
 	auto image_class = mrvm.create_closed_class<Image>("Image");
 
@@ -76,13 +81,12 @@ void run()
 	db_result_class->bind_instance_method("double_result", &DbResult::double_result);
 	db_result_class->bind_instance_method("text_result", &DbResult::text_result);
 
-	mrvm.run_file("main.rb");
+	mrvm.run_file("sample/main.rb");
 }
 
 int main(int argc, char *argv[])
 {
 	run();
-	exit(0);
 
 	return EXIT_SUCCESS;
 }
